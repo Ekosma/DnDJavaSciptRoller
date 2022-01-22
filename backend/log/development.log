@@ -44,3 +44,42 @@ FOREIGN KEY ("user_id")
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/1" for ::1 at 2022-01-22 15:38:31 -0600
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms | Allocations: 436)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:44:in `set_user'
+Started GET "/favicon.ico" for ::1 at 2022-01-22 15:38:32 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2022-01-22 15:38:37 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 1.5ms | Allocations: 822)
+
+
+Started GET "/" for ::1 at 2022-01-22 15:38:42 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/amelia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/amelia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.4ms | Allocations: 196)
+Completed 200 OK in 49ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 2271)
+
+
+Started GET "/characters" for ::1 at 2022-01-22 15:38:53 -0600
+Processing by CharactersController#index as HTML
+  [1m[36mCharacter Load (2.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/controllers/characters_controller.rb:8:in `index'
+Completed 200 OK in 26ms (Views: 4.3ms | ActiveRecord: 2.1ms | Allocations: 2206)
+
+
