@@ -3,47 +3,56 @@ body {
   text-align: center;
 }
 
+#navbar {
+  background: #A62300;
+}
+
 .form {
   display: flex;
   flex-direction: column;
 }
 
 #charsheet {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
 .form_box {
-  border: 1px red solid;
-  border-radius: 5px;
+  display: flex;
   text-align: center;
-  margin: auto;
-  padding: 100px 200px;
+  margin: 20px;
+  padding: 50px 100px;
+  box-shadow: 10px 10px 30px -6px rgba(0,0,0,0.75);
 }
 
 .button {
   align-self: center;
   border: 1px yellowgreen solid;
-  border-radius: 5px;
+  border-radius: 100px;
   text-align: center;
   padding: 15px 10px;
   margin: 15px;
-  background-color: yellow;
   width: 200px
-  
 }
 
 .group_1 {
   display: flex;
+  align-self: center;
 }
 
 .group_2 {
   display: flex;
+  align-self: center;
 }
 
 .group_3{
   display: flex;
+  align-self: center;
 }
 
 .group_4 {
   display: flex;
+  align-self: center;
 }
+
