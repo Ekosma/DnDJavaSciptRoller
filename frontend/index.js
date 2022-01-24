@@ -17,22 +17,18 @@ const buttonRandom = document.getElementById("randomizer")
   name.appendChild(nameResult);
 }*/
 
-buttonRandom.onclick = function() {
-
-}
-
 function getRandomTrait(arr) {
   const randomIndex = Math.floor(Math.random() * arr.length);
   const trait = arr[randomIndex];
   return trait;
 }
 
-const name = getRandomTrait(names);
-const race = getRandomTrait(races);
-const charClass = getRandomTrait(charClasses);
-const allignment = getRandomTrait(allignments);
+const randName = getRandomTrait(names);
+const randRace = getRandomTrait(races);
+const randCharClass = getRandomTrait(charClasses);
+const randAllignment = getRandomTrait(allignments);
 
-console.log(name, race, charClass, allignment)
+//console.log(name, race, charClass, allignment)
 
 
 function randomRoll() {
@@ -40,5 +36,13 @@ function randomRoll() {
   theRoll.sort().shift()
   return theRoll.reduce((a, b) => a + b, 0)
 }
-randomRoll()
+//randomRoll()
 
+
+/*function randomGenerator() {
+  const nametrait = document.createElement("nameResult");
+  let randomName = getRandomTrait(randNames);
+  const nameText = document.createTextNode(randomName);
+  nametrait.appendChild(nameText);
+  document.getElementById(name).appendChild(nametrait)
+}*/
