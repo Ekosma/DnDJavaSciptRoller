@@ -6,13 +6,24 @@ const allignments = ["Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neut
 
 const buttonRandom = document.getElementById("randomizer")
 
-function addRandomizerEventListener() {
+/*function addRandomizerEventListener() {
   buttonRandom.addEventListener("click", randomize);
-}
+}*/
 
-function randomize() {
+/*function randomize() {
   const name = document.getElementById("name");
   let randomName = names[Math.floor(Math.random() * names.length)];
   const nameResult = document.createTextNode(randomName);
   name.appendChild(nameResult);
+}*/
+
+buttonRandom.onclick = function() {
+
 }
+
+function randomRoll() {
+  let theRoll = Array.from({length: 4}, () => Math.floor(Math.random() * 6)+1);
+  theRoll.sort().shift()
+  return theRoll.reduce((a, b) => a + b, 0)
+}
+randomRoll()
