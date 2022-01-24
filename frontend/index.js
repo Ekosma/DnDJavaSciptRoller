@@ -4,9 +4,7 @@ const races = ["Dragonborn", "Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "H
 const charClasses = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rouge", "Sorceror", "Warlock", "Wizard"]
 const allignments = ["Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral", "True Neutral", "Chaotic Neutral", "Lawful Evil", "Neutral Evil", "Chaotic Neutral", "Unaligned"]
 
-const buttonRandom = document.getElementById("randomizer")
-
-function getRandomTrait(arr) {
+const getRandomTrait = (arr) => {
   const randomIndex = Math.floor(Math.random() * arr.length);
   const trait = arr[randomIndex];
   return trait;
@@ -17,7 +15,6 @@ function randomRoll() {
   theRoll.sort().shift()
   return theRoll.reduce((a, b) => a + b, 0)
 }
-//randomRoll()
 
 function randomGenerator() {
   document.getElementById("randNameTrait").innerHTML =  getRandomTrait(names);
@@ -32,24 +29,27 @@ function randomGenerator() {
   document.getElementById("randCharRoll").innerHTML =  randomRoll();
 }
 
-/*function randomGenerator() {
-  const nametrait = document.createElement("nameResult");
-  let randomName = getRandomTrait(randNames);
-  const nameText = document.createTextNode(randomName);
-  nametrait.appendChild(nameText);
-  document.getElementById(name).appendChild(nametrait)
-}*/
 
 
 
-/*function addRandomizerEventListener() {
-  buttonRandom.addEventListener("click", randomize);
-}*/
 
-/*function randomize() {
-  const name = document.getElementById("name");
-  let randomName = names[Math.floor(Math.random() * names.length)];
-  const nameResult = document.createTextNode(randomName);
-  name.appendChild(nameResult);
-}*/
 
+
+
+//google sign in hypathetical function 
+
+
+function onSignIn(googleUser) {
+  // Useful data for your client-side scripts:
+  var profile = googleUser.getBasicProfile();
+  console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+  console.log('Full Name: ' + profile.getName());
+  console.log('Given Name: ' + profile.getGivenName());
+  console.log('Family Name: ' + profile.getFamilyName());
+  console.log("Image URL: " + profile.getImageUrl());
+  console.log("Email: " + profile.getEmail());
+
+  // The ID token you need to pass to your backend:
+  var id_token = googleUser.getAuthResponse().id_token;
+  console.log("ID Token: " + id_token);
+}
