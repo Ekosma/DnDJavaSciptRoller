@@ -6,6 +6,42 @@ const allignments = ["Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neut
 
 const buttonRandom = document.getElementById("randomizer")
 
+function getRandomTrait(arr) {
+  const randomIndex = Math.floor(Math.random() * arr.length);
+  const trait = arr[randomIndex];
+  return trait;
+}
+
+function randomRoll() {
+  let theRoll = Array.from({length: 4}, () => Math.floor(Math.random() * 6)+1);
+  theRoll.sort().shift()
+  return theRoll.reduce((a, b) => a + b, 0)
+}
+//randomRoll()
+
+function randomGenerator() {
+  document.getElementById("randNameTrait").innerHTML =  getRandomTrait(names);
+  document.getElementById("randRaceTrait").innerHTML =  getRandomTrait(races);
+  document.getElementById("randCharClassTrait").innerHTML =  getRandomTrait(charClasses);
+  document.getElementById("randAlignTrait").innerHTML =  getRandomTrait(allignments);
+  document.getElementById("randStrRoll").innerHTML =  randomRoll();
+  document.getElementById("randDexRoll").innerHTML =  randomRoll();
+  document.getElementById("randConRoll").innerHTML =  randomRoll();
+  document.getElementById("randIntRoll").innerHTML =  randomRoll();
+  document.getElementById("randWisRoll").innerHTML =  randomRoll();
+  document.getElementById("randCharRoll").innerHTML =  randomRoll();
+}
+
+/*function randomGenerator() {
+  const nametrait = document.createElement("nameResult");
+  let randomName = getRandomTrait(randNames);
+  const nameText = document.createTextNode(randomName);
+  nametrait.appendChild(nameText);
+  document.getElementById(name).appendChild(nametrait)
+}*/
+
+
+
 /*function addRandomizerEventListener() {
   buttonRandom.addEventListener("click", randomize);
 }*/
@@ -17,36 +53,3 @@ const buttonRandom = document.getElementById("randomizer")
   name.appendChild(nameResult);
 }*/
 
-function getRandomTrait(arr) {
-  const randomIndex = Math.floor(Math.random() * arr.length);
-  const trait = arr[randomIndex];
-  return trait;
-}
-
-const randName = getRandomTrait(names);
-const randRace = getRandomTrait(races);
-const randCharClass = getRandomTrait(charClasses);
-const randAllignment = getRandomTrait(allignments);
-
-//console.log(name, race, charClass, allignment)
-
-
-function randomRoll() {
-  let theRoll = Array.from({length: 4}, () => Math.floor(Math.random() * 6)+1);
-  theRoll.sort().shift()
-  return theRoll.reduce((a, b) => a + b, 0)
-}
-//randomRoll()
-
-
-/*function randomGenerator() {
-  const nametrait = document.createElement("nameResult");
-  let randomName = getRandomTrait(randNames);
-  const nameText = document.createTextNode(randomName);
-  nametrait.appendChild(nameText);
-  document.getElementById(name).appendChild(nametrait)
-}*/
-
-/*function randomGenerator() {
-  document.getElementById("randNameTrait").innerHTML +=  getRandomTrait(randNames);
-}*/
