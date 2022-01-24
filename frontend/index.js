@@ -46,3 +46,7 @@ function randomRoll() {
   nametrait.appendChild(nameText);
   document.getElementById(name).appendChild(nametrait)
 }*/
+
+/*function randomGenerator() {
+  document.getElementById("randNameTrait").innerHTML +=  getRandomTrait(randNames);
+}*/
