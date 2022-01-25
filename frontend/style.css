@@ -13,6 +13,8 @@ body {
   padding: 50px;
   margin: 80px;
   border-style: solid;
+  width: 50%;
+  align-self: center;
 }
 
 #charsheet {
