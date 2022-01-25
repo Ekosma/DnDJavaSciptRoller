@@ -17,7 +17,33 @@
   <div id="navbar"> 
     navbar
     <div id="signUp" >
-      Sign Up Here
+       <!-- Button to open the modal login form -->
+<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="psw" required>
+
+      <button type="submit">Login</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+    
+  </form>
+</div> 
     </div>
     <div id="characterList" >
       Your Characters Here
@@ -30,11 +56,11 @@
     <div class="title">
       Title
     </div>
-    <button onclick="randomGenerator()">
+    <button onclick="randomGenerator()" class="button">
       Randomize
     </button>
     <div class="form">
-      <div class="group_1">
+      <div class="main_traits">
         <div id="name" class="form_box">
           Name: 
           <div id="randNameTrait">
@@ -47,8 +73,6 @@
             
           </div>
         </div>
-      </div>
-      <div class="group_2">
         <div id="charClass" class="form_box">
           Class:
           <div id="randCharClassTrait">
@@ -108,6 +132,7 @@
     </button>
   </div>
   <script src="index.js"></script>
+  <script src="createSession.js"></script>
 </body>
 </html>
 
