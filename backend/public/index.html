@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>DnD JavaScript Character Generator</title>
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar"> 
+    navbar
+    <div id="signUp" >
+      <form id="sign-up-form">
+        <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+        <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+        <input type="submit" value="Login" id="signup-form-submit">
+      </form>
+    </div>
+    <div id="characterList" >
+      Your Characters Here
+      <div id="delete">
+        Delete 
+      </div>
+    </div>
+  </div>
+  <div id="charsheet">
+    <div class="title">
+      Title
+    </div>
+    <button onclick="randomGenerator()" class="button">
+      Randomize
+    </button>
+    <div class="form">
+      <div class="main_traits">
+        <div id="name" class="form_box">
+          <b>Name:</b> 
+          <div id="randNameTrait">
+            
+          </div>
+        </div>
+        <div id="race" class="form_box">
+          <b>Race:</b>
+          <div id="randRaceTrait">
+            
+          </div>
+        </div>
+        <div id="charClass" class="form_box">
+          <b>Class:</b>
+          <div id="randCharClassTrait">
+            
+          </div>
+        </div>
+        <div id="align" class="form_box">
+          <b>Alignment:</b>
+          <div id="randAlignTrait">
+            
+          </div>
+        </div>
+      </div>
+      <div class="group_3">
+        <div id="str" class="form_box">
+          <b>Strength:</b>
+          <div id="randStrRoll">
+            
+          </div>
+        </div>
+        <div id="dex" class="form_box">
+          <b>Dexterity:</b>
+          <div id="randDexRoll">
+            
+          </div>
+        </div>
+        <div id="con" class="form_box">
+          <b>Constitution:</b>
+          <div id="randConRoll">
+            
+          </div>
+        </div>
+      </div>
+      <div class="group_2">
+        <div id="int" class="form_box">
+          <b>Intelligence:</b> 
+          <div id="randIntRoll">
+            
+          </div>
+        </div>
+        <div id="wis" class="form_box">
+          <b>Wisdom:</b>
+          <div id="randWisRoll">
+            
+          </div>
+        </div>
+        <div id="charisma" class="form_box">
+          <b>Charisma:</b>
+          <div id="randCharRoll">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <button onclick="">
+      button
+    </button>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
+
