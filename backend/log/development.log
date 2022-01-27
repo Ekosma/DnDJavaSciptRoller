@@ -337,3 +337,399 @@ Started GET "/frontend" for ::1 at 2022-01-26 21:06:25 -0600
   
 ActionController::RoutingError (No route matches [GET] "/frontend"):
   
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-01-26 21:07:56 -0600
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-01-26 21:07:56 -0600
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-01-26 21:14:13 -0600
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-01-26 21:14:13 -0600
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 21:36:55 -0600
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant AuthController):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 21:37:28 -0600
+  
+ActionController::RoutingError (uninitialized constant AuthController):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 21:46:18 -0600
+  
+ActionController::RoutingError (uninitialized constant AuthController):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 21:49:49 -0600
+  
+ActionController::RoutingError (uninitialized constant AuthController):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 21:50:30 -0600
+  
+ActionController::RoutingError (uninitialized constant AuthController):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 21:50:49 -0600
+  
+ActionController::RoutingError (uninitialized constant AuthController):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 21:51:20 -0600
+  
+ActionController::RoutingError (uninitialized constant AuthController):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 21:54:11 -0600
+  
+ActionController::RoutingError (uninitialized constant AuthController):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 21:56:48 -0600
+  
+ArgumentError ('' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:5:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 21:56:54 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 21:57:24 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"user"=>"daisyh", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 38ms (Allocations: 7444)
+
+
+  
+NoMethodError (undefined method `attributes' for User (call 'User.connection' to establish a connection):Class
+Did you mean?  attribute):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 21:58:37 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"user"=>"daisy", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 19ms (Allocations: 1073)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:02:53 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"user"=>"daisy", "password"=>"[FILTERED]"}
+Completed 204 No Content in 0ms (Allocations: 38)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:04:57 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"user"=>"daisy", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `signup'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.3ms | Allocations: 2038)
+
+
+  
+ArgumentError (Unknown type :password_digest):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:06:34 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"user"=>"daisy", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `signup'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.3ms | Allocations: 3502)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:06:48 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"user"=>"daisy", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `signup'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.0ms | Allocations: 2053)
+
+
+  
+ArgumentError (Unknown type :password):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:08:39 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"user"=>"daisy", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `signup'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.0ms | Allocations: 3378)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:09:17 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"user"=>"daisy", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 6ms (Allocations: 1065)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:09:30 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"user"=>"daisy", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 0ms (Allocations: 98)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:09:48 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"user"=>"daisy", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `signup'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.7ms | Allocations: 2023)
+
+
+  
+ArgumentError (Unknown type :password_digest):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:11:14 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"user"=>"daisy", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 6ms (Allocations: 1905)
+
+
+  
+NoMethodError (undefined method `permit' for "daisy":String):
+  
+app/controllers/application_controller.rb:19:in `user_params'
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:13:55 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"user"=>"daisy", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 3ms (Allocations: 987)
+
+
+  
+NoMethodError (undefined method `permit' for "daisy":String):
+  
+app/controllers/application_controller.rb:19:in `user_params'
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:14:39 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"user"=>"daisy", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `signup'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms | Allocations: 2024)
+
+
+  
+ArgumentError (Unknown type :password_digest):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:17:35 -0600
+Processing by ApplicationController#signup as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 298)
+
+
+  
+ArgumentError (Unknown type :password_digest):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:20:42 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 325)
+
+
+  
+ArgumentError (Unknown type :password_digest):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:22:19 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 1ms (Allocations: 117)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/application_controller.rb:20:in `user_params'
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:22:21 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 1ms (Allocations: 110)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/application_controller.rb:20:in `user_params'
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:22:33 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 1ms (Allocations: 110)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/application_controller.rb:20:in `user_params'
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:22:48 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 0ms (Allocations: 110)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/application_controller.rb:20:in `user_params'
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:23:27 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `signup'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.0ms | Allocations: 2043)
+
+
+  
+ArgumentError (Unknown type :password_digest):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:23:54 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `signup'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms | Allocations: 2013)
+
+
+  
+ArgumentError (Unknown type :password_digest):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:24:03 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 292)
+
+
+  
+ArgumentError (Unknown type :password_digest):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:24:47 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `signup'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.3ms | Allocations: 3367)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:25:15 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `signup'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms | Allocations: 2050)
+
+
+  
+ArgumentError (Unknown type :password):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:26:52 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `signup'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.1ms | Allocations: 3444)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:27:23 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 3ms (Allocations: 1105)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/application_controller.rb:19:in `user_params'
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:27:57 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 6ms (Allocations: 1985)
+
+
+  
+NoMethodError (undefined method `permit' for "daisy":String):
+  
+app/controllers/application_controller.rb:19:in `user_params'
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:31:23 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 4ms (Allocations: 1107)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/application_controller.rb:19:in `user_params'
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:33:13 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 4ms (Allocations: 1095)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-26 22:35:35 -0600
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 34ms (ActiveRecord: 0.0ms | Allocations: 3984)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/application_controller.rb:19:in `user_params'
+app/controllers/application_controller.rb:4:in `signup'

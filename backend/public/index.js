@@ -38,6 +38,7 @@ class User {
   }
 }
 
+let myHeaders = new Headers();
 const signUpButton = document.getElementById("signup-form-submit"); 
 
 signUpButton.addEventListener("click", (e) => {
@@ -46,9 +47,20 @@ signUpButton.addEventListener("click", (e) => {
   const username = loginForm.username.value;
   const password = loginForm.password.value;
 
-  let user = new User(username, password)
+  //let user = new User(username, password)
 
-  fetch("https://locaLhost:3000/signup", { method: "POST"}).then(response => {
+  const data = {
+    username: username,
+    password: password,
+  }
+
+  fetch("http://locaLhost:3000/signup", { 
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data), 
+  }).then(response => {
     console.log("look at me", response);
   })
   

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
 
   def signup
-    User.new(params[:username], params[:password])
+    User.new(user_params)
   end
 
   def login
@@ -12,4 +12,11 @@ class ApplicationController < ActionController::API
       render json: {errors: "invalid username"}
     end
   end
+
+  private
+  
+  def user_params
+    params.require(:user).permit(params[:username], params[:password])
+  end
+
 end
