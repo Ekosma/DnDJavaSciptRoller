@@ -54,7 +54,7 @@ signUpButton.addEventListener("click", (e) => {
     password: password,
   }
 
-  fetch("http://locaLhost:3000/signup", { 
+  fetch("http://locaLhost:3000/new", { 
     method: "POST",
     headers: {
       'Content-Type': 'application/json',

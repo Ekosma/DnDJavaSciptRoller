@@ -733,3 +733,94 @@ ActionController::ParameterMissing (param is missing or the value is empty: user
   
 app/controllers/application_controller.rb:19:in `user_params'
 app/controllers/application_controller.rb:4:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-30 10:01:38 -0600
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 18ms (ActiveRecord: 0.0ms | Allocations: 3960)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/application_controller.rb:20:in `user_params'
+app/controllers/application_controller.rb:5:in `signup'
+Started POST "/signup" for 127.0.0.1 at 2022-01-30 10:01:52 -0600
+Processing by ApplicationController#signup as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 113)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/application_controller.rb:20:in `user_params'
+app/controllers/application_controller.rb:5:in `signup'
+Started POST "/create" for 127.0.0.1 at 2022-01-30 10:15:05 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/create"):
+  
+Started POST "/users/create" for 127.0.0.1 at 2022-01-30 10:15:18 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/users/create"):
+  
+Started POST "/create" for 127.0.0.1 at 2022-01-30 10:19:12 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/create"):
+  
+Started POST "/create" for 127.0.0.1 at 2022-01-30 10:29:07 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/create"):
+  
+Started POST "/new" for 127.0.0.1 at 2022-01-30 10:29:25 -0600
+  
+SyntaxError (/Users/amelia/Flatiron/DnDJavaSciptRoller/backend/app/controllers/application_controller.rb:42: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/application_controller.rb:42: syntax error, unexpected end, expecting end-of-input
+app/controllers/application_controller.rb:42: syntax error, unexpected end, expecting end-of-input
+Started POST "/new" for 127.0.0.1 at 2022-01-30 10:29:53 -0600
+Processing by ApplicationController#create as */*
+  Parameters: {"username"=>"daisy", "password"=>"[FILTERED]", "application"=>{"username"=>"daisy", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :username, :application[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+Completed 422 Unprocessable Entity in 324ms (Views: 16.6ms | ActiveRecord: 2.7ms | Allocations: 9504)
+
+
+Started POST "/new" for 127.0.0.1 at 2022-01-30 10:30:38 -0600
+Processing by ApplicationController#create as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :username, :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+Completed 422 Unprocessable Entity in 288ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 2342)
+
+
+Started POST "/new" for 127.0.0.1 at 2022-01-30 10:30:54 -0600
+Processing by ApplicationController#create as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :application[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest") VALUES (?, ?)[0m  [["username", "test"], ["password_digest", "$2a$12$uu28fuB/r5kMdRFDOhSc9.AVQyFzl..TQecqlL/ak8SfM8iL.tyVm"]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+Completed 200 OK in 304ms (Views: 0.3ms | ActiveRecord: 5.8ms | Allocations: 6042)
+
+
