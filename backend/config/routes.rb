@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   #root "application#index"
 
   post 'new', to: 'application#create'
-  #post 'signup', to: 'application#signup'
+  post 'login', to: 'application#login'
 
   
   #resources :characters do 

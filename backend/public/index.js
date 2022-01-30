@@ -40,6 +40,8 @@ class User {
 
 let myHeaders = new Headers();
 const signUpButton = document.getElementById("signup-form-submit"); 
+const logInButton = document.getElementById("login-form-submit"); 
+
 
 signUpButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -63,6 +65,28 @@ signUpButton.addEventListener("click", (e) => {
   }).then(response => {
     console.log("look at me", response);
   })
+})
+
+logInButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const loginForm = document.getElementById("login-form");    
+  const username = loginForm.username.value;
+  const password = loginForm.password.value;
+
+  const data = {
+    username: username,
+    password: password,
+  }
+
+  fetch("http://locaLhost:3000/login", { 
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data), 
+  }).then(response => {
+    console.log("look at me", response);
+  })
   
   /*if (username === "user" && password === "web_dev") {
       alert("You have successfully logged in.");
@@ -71,4 +95,3 @@ signUpButton.addEventListener("click", (e) => {
       console.log("tell me why")
   }*/
 })
-
