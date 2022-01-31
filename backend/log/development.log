@@ -850,3 +850,62 @@ Processing by ApplicationController#login as */*
 Completed 200 OK in 288ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 694)
 
 
+Started POST "/login" for 127.0.0.1 at 2022-01-30 10:48:11 -0600
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 338ms (Views: 0.7ms | ActiveRecord: 2.2ms | Allocations: 6759)
+
+
+Started POST "/new" for 127.0.0.1 at 2022-01-30 10:48:33 -0600
+Processing by ApplicationController#create as */*
+  Parameters: {"username"=>"david", "password"=>"[FILTERED]", "application"=>{"username"=>"david", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "david"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest") VALUES (?, ?)[0m  [["username", "david"], ["password_digest", "$2a$12$ajAOwyeTYMowLjtQvzYW4.6qfvHHKQuAx06v32fSZq3fWbuAU6cvi"]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+Completed 200 OK in 303ms (Views: 0.3ms | ActiveRecord: 4.4ms | Allocations: 2950)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-30 10:51:05 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 295ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 581)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-30 10:51:12 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 291ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 564)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-30 19:30:20 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 370ms (Views: 2.9ms | ActiveRecord: 6.2ms | Allocations: 1024)
+
+
+Started POST "/save" for 127.0.0.1 at 2022-01-30 20:51:24 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/save"):
+  
+Started POST "/save" for 127.0.0.1 at 2022-01-30 20:51:44 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/save"):
+  

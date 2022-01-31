@@ -29,13 +29,3 @@ class ApplicationController < ActionController::API
 
 end
 
-  #def signup
-    #User.new(user_params)
-  #end
-
-  #private
-  
-  #def user_params
-    #params.require(:user).permit(params[:username], params[:password])
-  #end
-

@@ -29,7 +29,55 @@ function randomGenerator() {
   document.getElementById("randCharRoll").innerHTML =  randomRoll();
 }
 
-// sign in process //
+class Character {
+  constructor() {
+    this.name = document.getElementById("randNameTrait").innerHTML
+    this.race = document.getElementById("randRaceTrait").innerHTML
+    this.class = document.getElementById("randCharClassTrait").innerHTML
+    this.allignment = document.getElementById("randAlignTrait").innerHTML
+    this.strength = document.getElementById("randStrRoll").innerHTML
+    this.dexterity = document.getElementById("randDexRoll").innerHTML
+    this.constitution = document.getElementById("randConRoll").innerHTML
+    this.intelligence = document.getElementById("randIntRoll").innerHTML
+    this.wisdom = document.getElementById("randWisRoll").innerHTML
+    this.charisma = document.getElementById("randCharRoll").innerHTML
+  }
+}
+
+
+
+
+//save Character //
+
+const saveButton = document.getElementById("save");
+
+saveButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  let data = new Character()
+  console.log(data)
+  fetch("http://locaLhost:3000/save", { 
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data), 
+  }).then(response => {
+    console.log("save", response);
+  })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+// sign in, sign up, sign out process //
 
 class User {
   constructor(name, password) {
@@ -49,8 +97,6 @@ signUpButton.addEventListener("click", (e) => {
   const username = loginForm.username.value;
   const password = loginForm.password.value;
 
-  //let user = new User(username, password)
-
   const data = {
     username: username,
     password: password,
@@ -63,7 +109,7 @@ signUpButton.addEventListener("click", (e) => {
     },
     body: JSON.stringify(data), 
   }).then(response => {
-    console.log("look at me", response);
+    console.log("sign up form", response);
   })
 })
 
@@ -85,13 +131,10 @@ logInButton.addEventListener("click", (e) => {
     },
     body: JSON.stringify(data), 
   }).then(response => {
-    console.log("look at me", response);
+    console.log("log in form", response);
   })
-  
-  /*if (username === "user" && password === "web_dev") {
-      alert("You have successfully logged in.");
-      location.reload();
-  } else {
-      console.log("tell me why")
-  }*/
 })
+
+/*function signOut() {
+  e.preventDefault(); 
+}*/

@@ -30,6 +30,11 @@
         <input type="submit" value="Log In" id="login-form-submit">
       </form>
     </div>
+    <div id="logout">
+      <button onclick="signOut()">
+        Sign Out
+      </button>
+    </div>
     <div id="characterList" >
       Your Characters Here
       <div id="delete">
@@ -47,7 +52,7 @@
     <div class="form">
       <div class="main_traits">
         <div id="name" class="form_box">
-          <b>Name:</b> 
+          <b id="ranName">Name:</b> 
           <div id="randNameTrait">
             
           </div>
@@ -112,8 +117,8 @@
         </div>
       </div>
     </div>
-    <button onclick="">
-      button
+    <button id="save" class="button">
+      Save
     </button>
   </div>
   <script src="index.js"></script>
