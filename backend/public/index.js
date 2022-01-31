@@ -55,7 +55,7 @@ saveButton.addEventListener("click", (e) => {
   e.preventDefault();
   let data = new Character()
   console.log(data)
-  fetch("http://locaLhost:3000/save", { 
+  fetch("http://locaLhost:3000/characters", { 
     method: "POST",
     headers: {
       'Content-Type': 'application/json',

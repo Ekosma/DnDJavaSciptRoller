@@ -909,3 +909,152 @@ Started POST "/save" for 127.0.0.1 at 2022-01-30 20:51:44 -0600
   
 ActionController::RoutingError (No route matches [POST] "/save"):
   
+Started POST "/login" for 127.0.0.1 at 2022-01-30 20:59:37 -0600
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 330ms (Views: 1.6ms | ActiveRecord: 2.5ms | Allocations: 6880)
+
+
+Started POST "/character/new" for 127.0.0.1 at 2022-01-30 20:59:50 -0600
+  
+ActionController::RoutingError (uninitialized constant UserController
+Did you mean?  UsersController):
+  
+Started POST "/login" for 127.0.0.1 at 2022-01-30 21:00:42 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 334ms (Views: 0.3ms | ActiveRecord: 3.6ms | Allocations: 3961)
+
+
+Started POST "/users/new" for 127.0.0.1 at 2022-01-30 21:00:47 -0600
+  
+ActionController::RoutingError (uninitialized constant UserController
+Did you mean?  UsersController):
+  
+Started POST "/login" for 127.0.0.1 at 2022-01-30 21:02:06 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 347ms (Views: 0.3ms | ActiveRecord: 2.7ms | Allocations: 4006)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-01-30 21:02:10 -0600
+  
+ActionController::RoutingError (uninitialized constant UserController
+Did you mean?  UsersController):
+  
+Started POST "/login" for 127.0.0.1 at 2022-01-30 21:04:15 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 337ms (Views: 0.8ms | ActiveRecord: 3.2ms | Allocations: 3963)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-01-30 21:04:21 -0600
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Vanius", "race"=>"Half-Orc", "class"=>"Wizard", "allignment"=>"Chaotic Neutral", "strength"=>"9", "dexterity"=>"13", "constitution"=>"12", "intelligence"=>"9", "wisdom"=>"8", "charisma"=>"10", "application"=>{"name"=>"Vanius", "race"=>"Half-Orc", "class"=>"Wizard", "allignment"=>"Chaotic Neutral", "strength"=>"9", "dexterity"=>"13", "constitution"=>"12", "intelligence"=>"9", "wisdom"=>"8", "charisma"=>"10"}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 148)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:49:in `user_params'
+app/controllers/users_controller.rb:18:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-01-30 21:08:55 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 309ms (Views: 0.3ms | ActiveRecord: 3.1ms | Allocations: 4006)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-30 21:08:56 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 306ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 564)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-30 21:09:03 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 294ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 564)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-01-30 21:09:10 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Viska", "race"=>"Halfling", "class"=>"Wizard", "allignment"=>"Unaligned", "strength"=>"11", "dexterity"=>"10", "constitution"=>"6", "intelligence"=>"16", "wisdom"=>"15", "charisma"=>"11", "application"=>{"name"=>"Viska", "race"=>"Halfling", "class"=>"Wizard", "allignment"=>"Unaligned", "strength"=>"11", "dexterity"=>"10", "constitution"=>"6", "intelligence"=>"16", "wisdom"=>"15", "charisma"=>"11"}}
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 4738)
+
+
+  
+NoMethodError (undefined method `attributes' for #<Class:0x00007fad924fb518>
+Did you mean?  attribute):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-01-30 21:09:41 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 302ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 3939)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-01-30 21:09:46 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Yos", "race"=>"Half-Elf", "class"=>"Cleric", "allignment"=>"Neutral Evil", "strength"=>"13", "dexterity"=>"16", "constitution"=>"14", "intelligence"=>"12", "wisdom"=>"9", "charisma"=>"10", "application"=>{"name"=>"Yos", "race"=>"Half-Elf", "class"=>"Cleric", "allignment"=>"Neutral Evil", "strength"=>"13", "dexterity"=>"16", "constitution"=>"14", "intelligence"=>"12", "wisdom"=>"9", "charisma"=>"10"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 553)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-01-30 21:10:56 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 305ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 3980)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-01-30 21:11:00 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Catca", "race"=>"Gnome", "class"=>"Sorceror", "allignment"=>"Lawful Evil", "strength"=>"6", "dexterity"=>"16", "constitution"=>"17", "intelligence"=>"12", "wisdom"=>"12", "charisma"=>"15", "application"=>{"name"=>"Catca", "race"=>"Gnome", "class"=>"Sorceror", "allignment"=>"Lawful Evil", "strength"=>"6", "dexterity"=>"16", "constitution"=>"17", "intelligence"=>"12", "wisdom"=>"12", "charisma"=>"15"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 500)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:17:in `create'

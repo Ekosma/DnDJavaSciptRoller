@@ -3,7 +3,7 @@ class CharactersController < ApplicationController
 
   # GET /characters
   def index
-    @characters = Character.alphabetical.all
+    @characters = Character.all
     render json: @characters
   end
 
