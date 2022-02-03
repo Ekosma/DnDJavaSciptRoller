@@ -14,11 +14,11 @@ class CharactersController < ApplicationController
 
   # POST /characters
   def create
-    print(character_params)
+
     @character = Character.new(character_params)
 
     if @character.save
-      render json: @character, status: :created, location: @character
+      render json: @character, status: :created, location: @characters
     else
       render json: @character.errors, status: :unprocessable_entity
     end

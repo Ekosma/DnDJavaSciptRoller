@@ -41,6 +41,7 @@ class Character {
     this.intelligence = document.getElementById("randIntRoll").innerHTML
     this.wisdom = document.getElementById("randWisRoll").innerHTML
     this.charisma = document.getElementById("randCharRoll").innerHTML
+    this.user_id = 3
   }
 }
 
@@ -64,13 +65,6 @@ saveButton.addEventListener("click", (e) => {
     console.log("save", response);
   })
 })
-
-
-
-
-
-
-
 
 
 
