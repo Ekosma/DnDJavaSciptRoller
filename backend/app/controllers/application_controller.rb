@@ -6,6 +6,7 @@ class ApplicationController < ActionController::API
 
   def create
     user = User.new(sign_up_params)
+    print(sign_up_params)
     if user.save
       render json: {status: "SUCCESS", message: "added a new user!", data: user}, status: :ok
     else

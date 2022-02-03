@@ -33,8 +33,8 @@ class Character {
   constructor() {
     this.name = document.getElementById("randNameTrait").innerHTML
     this.race = document.getElementById("randRaceTrait").innerHTML
-    this.class = document.getElementById("randCharClassTrait").innerHTML
-    this.allignment = document.getElementById("randAlignTrait").innerHTML
+    this.character_class = document.getElementById("randCharClassTrait").innerHTML
+    this.alignment = document.getElementById("randAlignTrait").innerHTML
     this.strength = document.getElementById("randStrRoll").innerHTML
     this.dexterity = document.getElementById("randDexRoll").innerHTML
     this.constitution = document.getElementById("randConRoll").innerHTML
@@ -54,7 +54,6 @@ const saveButton = document.getElementById("save");
 saveButton.addEventListener("click", (e) => {
   e.preventDefault();
   let data = new Character()
-  console.log(data)
   fetch("http://locaLhost:3000/characters", { 
     method: "POST",
     headers: {
@@ -79,12 +78,12 @@ saveButton.addEventListener("click", (e) => {
 
 // sign in, sign up, sign out process //
 
-class User {
+/*class User {
   constructor(name, password) {
     this.name = name
     this.password = password
   }
-}
+}*/
 
 let myHeaders = new Headers();
 const signUpButton = document.getElementById("signup-form-submit"); 

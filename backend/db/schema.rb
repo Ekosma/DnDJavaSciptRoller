@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_22_212302) do
+ActiveRecord::Schema.define(version: 2022_02_03_025446) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "race"
-    t.string "class"
+    t.string "character_class"
     t.string "alignment"
     t.integer "strength"
     t.integer "dexterity"

@@ -1058,3 +1058,564 @@ ArgumentError (wrong number of arguments (given 10, expected 1..2)):
 app/models/character.rb:4:in `<class:Character>'
 app/models/character.rb:1:in `<main>'
 app/controllers/characters_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-01-30 21:40:00 -0600
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 379ms (Views: 2.5ms | ActiveRecord: 2.4ms | Allocations: 6777)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-01-30 21:40:07 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Umannos", "race"=>"Dragonborn", "class"=>"Monk", "allignment"=>"Chaotic Neutral", "strength"=>"13", "dexterity"=>"7", "constitution"=>"10", "intelligence"=>"12", "wisdom"=>"13", "charisma"=>"13", "application"=>{"name"=>"Umannos", "race"=>"Dragonborn", "class"=>"Monk", "allignment"=>"Chaotic Neutral", "strength"=>"13", "dexterity"=>"7", "constitution"=>"10", "intelligence"=>"12", "wisdom"=>"13", "charisma"=>"13"}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 802)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-01-30 21:48:50 -0600
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:7:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started POST "/characters" for 127.0.0.1 at 2022-01-30 21:48:53 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/characters"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-01-30 21:50:33 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 313ms (Views: 1.0ms | ActiveRecord: 2.8ms | Allocations: 3629)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-01-30 21:50:36 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Elignoir", "race"=>"Dwarf", "class"=>"Sorceror", "allignment"=>"Lawful Neutral", "strength"=>"17", "dexterity"=>"12", "constitution"=>"11", "intelligence"=>"8", "wisdom"=>"15", "charisma"=>"15", "application"=>{"name"=>"Elignoir", "race"=>"Dwarf", "class"=>"Sorceror", "allignment"=>"Lawful Neutral", "strength"=>"17", "dexterity"=>"12", "constitution"=>"11", "intelligence"=>"8", "wisdom"=>"15", "charisma"=>"15"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 501)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-01-30 21:52:26 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 308ms (Views: 0.3ms | ActiveRecord: 4.3ms | Allocations: 3980)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-01-30 21:52:28 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Esnol", "race"=>"Dwarf", "class"=>"Sorceror", "allignment"=>"Lawful Neutral", "strength"=>"10", "dexterity"=>"10", "constitution"=>"16", "intelligence"=>"13", "wisdom"=>"14", "charisma"=>"11", "application"=>{"name"=>"Esnol", "race"=>"Dwarf", "class"=>"Sorceror", "allignment"=>"Lawful Neutral", "strength"=>"10", "dexterity"=>"10", "constitution"=>"16", "intelligence"=>"13", "wisdom"=>"14", "charisma"=>"11"}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1530)
+
+
+  
+NameError (undefined local variable or method `console' for #<CharactersController:0x007f826fbd1688>):
+  
+app/controllers/characters_controller.rb:17:in `create'
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-02 20:13:27 -0600
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-02 20:13:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:17:08 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 353ms (Views: 0.7ms | ActiveRecord: 2.4ms | Allocations: 3675)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:17:22 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Ziedinghal", "race"=>"Elf", "class"=>"Rouge", "allignment"=>"Chaotic Neutral", "strength"=>"17", "dexterity"=>"12", "constitution"=>"9", "intelligence"=>"14", "wisdom"=>"10", "charisma"=>"13", "application"=>{"name"=>"Ziedinghal", "race"=>"Elf", "class"=>"Rouge", "allignment"=>"Chaotic Neutral", "strength"=>"17", "dexterity"=>"12", "constitution"=>"9", "intelligence"=>"14", "wisdom"=>"10", "charisma"=>"13"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 506)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:19:36 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 324ms (Views: 0.3ms | ActiveRecord: 3.0ms | Allocations: 3999)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:19:41 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Donfer", "race"=>"Dwarf", "class"=>"Sorceror", "allignment"=>"Lawful Evil", "strength"=>"10", "dexterity"=>"11", "constitution"=>"16", "intelligence"=>"10", "wisdom"=>"13", "charisma"=>"11", "application"=>{"name"=>"Donfer", "race"=>"Dwarf", "class"=>"Sorceror", "allignment"=>"Lawful Evil", "strength"=>"10", "dexterity"=>"11", "constitution"=>"16", "intelligence"=>"10", "wisdom"=>"13", "charisma"=>"11"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 500)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:19:55 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 345ms (Views: 0.6ms | ActiveRecord: 2.4ms | Allocations: 4000)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:20:01 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Orinphus", "race"=>"Half-Orc", "class"=>"Barbarian", "allignment"=>"Neutral Evil", "strength"=>"10", "dexterity"=>"7", "constitution"=>"15", "intelligence"=>"13", "wisdom"=>"12", "charisma"=>"12", "application"=>{"name"=>"Orinphus", "race"=>"Half-Orc", "class"=>"Barbarian", "allignment"=>"Neutral Evil", "strength"=>"10", "dexterity"=>"7", "constitution"=>"15", "intelligence"=>"13", "wisdom"=>"12", "charisma"=>"12"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 500)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:21:31 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 320ms (Views: 0.3ms | ActiveRecord: 3.1ms | Allocations: 3940)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:21:45 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Westrynda", "race"=>"Elf", "class"=>"Fighter", "alignment"=>"Neutral Evil", "strength"=>"15", "dexterity"=>"18", "constitution"=>"12", "intelligence"=>"13", "wisdom"=>"14", "charisma"=>"8", "application"=>{"name"=>"Westrynda", "race"=>"Elf", "class"=>"Fighter", "alignment"=>"Neutral Evil", "strength"=>"15", "dexterity"=>"18", "constitution"=>"12", "intelligence"=>"13", "wisdom"=>"14", "charisma"=>"8"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 497)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:25:24 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 320ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 3982)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:25:30 -0600
+  
+SyntaxError (/Users/amelia/Flatiron/DnDJavaSciptRoller/backend/app/controllers/characters_controller.rb:19: `@]' is not allowed as an instance variable name
+/Users/amelia/Flatiron/DnDJavaSciptRoller/backend/app/controllers/characters_controller.rb:19: syntax error, unexpected end-of-input
+    if @]character.save
+       ^):
+  
+app/controllers/characters_controller.rb:19: `@]' is not allowed as an instance variable name
+app/controllers/characters_controller.rb:19: syntax error, unexpected end-of-input
+app/controllers/characters_controller.rb:19: `@]' is not allowed as an instance variable name
+app/controllers/characters_controller.rb:19: syntax error, unexpected end-of-input
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:25:49 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 318ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 3982)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:25:53 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Valhein", "race"=>"Elf", "class"=>"Barbarian", "alignment"=>"Lawful Neutral", "strength"=>"12", "dexterity"=>"13", "constitution"=>"14", "intelligence"=>"15", "wisdom"=>"10", "charisma"=>"13", "application"=>{"name"=>"Valhein", "race"=>"Elf", "class"=>"Barbarian", "alignment"=>"Lawful Neutral", "strength"=>"12", "dexterity"=>"13", "constitution"=>"14", "intelligence"=>"15", "wisdom"=>"10", "charisma"=>"13"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 500)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:26:27 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 372ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 3940)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:26:30 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Elignoir", "race"=>"Half-Orc", "class"=>"Sorceror", "alignment"=>"True Neutral", "strength"=>"12", "dexterity"=>"14", "constitution"=>"8", "intelligence"=>"12", "wisdom"=>"14", "charisma"=>"12", "application"=>{"name"=>"Elignoir", "race"=>"Half-Orc", "class"=>"Sorceror", "alignment"=>"True Neutral", "strength"=>"12", "dexterity"=>"14", "constitution"=>"8", "intelligence"=>"12", "wisdom"=>"14", "charisma"=>"12"}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 144)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: character):
+  
+app/controllers/characters_controller.rb:50:in `character_params'
+app/controllers/characters_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:27:21 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "application"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 366ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 3980)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:27:26 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Sweyda", "race"=>"Elf", "class"=>"Warlock", "alignment"=>"Chaotic Good", "strength"=>"16", "dexterity"=>"11", "constitution"=>"14", "intelligence"=>"17", "wisdom"=>"10", "charisma"=>"10", "application"=>{"name"=>"Sweyda", "race"=>"Elf", "class"=>"Warlock", "alignment"=>"Chaotic Good", "strength"=>"16", "dexterity"=>"11", "constitution"=>"14", "intelligence"=>"17", "wisdom"=>"10", "charisma"=>"10"}}
+[31mUnpermitted parameter: :application[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 657)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:18:in `create'
+Started POST "/new" for 127.0.0.1 at 2022-02-02 20:30:56 -0600
+Processing by ApplicationController#create as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :application[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `create'
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:10:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `create'
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest") VALUES (?, ?)[0m  [["username", "jack"], ["password_digest", "$2a$12$QL8jL5ju4.3GLFqhaWbTT.cQS4JhEC9LhM7a82dYTV1pki59Ke7Ye"]]
+  ↳ app/controllers/application_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:10:in `create'
+Completed 200 OK in 339ms (Views: 0.5ms | ActiveRecord: 8.0ms | Allocations: 6280)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:31:53 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `login'
+Completed 200 OK in 313ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 683)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:32:00 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Juxta", "race"=>"Tiefling", "class"=>"Rouge", "alignment"=>"Lawful Neutral", "strength"=>"14", "dexterity"=>"6", "constitution"=>"10", "intelligence"=>"14", "wisdom"=>"15", "charisma"=>"10", "application"=>{"name"=>"Juxta", "race"=>"Tiefling", "class"=>"Rouge", "alignment"=>"Lawful Neutral", "strength"=>"14", "dexterity"=>"6", "constitution"=>"10", "intelligence"=>"14", "wisdom"=>"15", "charisma"=>"10"}}
+[31mUnpermitted parameter: :application[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 654)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:18:in `create'
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:33:29 -0600
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:33:38 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:18:in `login'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `login'
+Completed 200 OK in 315ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 3870)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:33:43 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Cybel", "race"=>"Tiefling", "class"=>"Rouge", "alignment"=>"True Neutral", "strength"=>"7", "dexterity"=>"13", "constitution"=>"15", "intelligence"=>"15", "wisdom"=>"10", "charisma"=>"15", "character"=>{"name"=>"Cybel", "race"=>"Tiefling", "class"=>"Rouge", "alignment"=>"True Neutral", "strength"=>"7", "dexterity"=>"13", "constitution"=>"15", "intelligence"=>"15", "wisdom"=>"10", "charisma"=>"15"}}
+[31mUnpermitted parameter: :character[0m
+[31mUnpermitted parameter: :character[0m
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.9ms | Allocations: 6600)
+
+
+  
+NoMethodError (undefined method `finder_needs_type_condition?' for nil:NilClass):
+  
+app/controllers/characters_controller.rb:19:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:34:39 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:18:in `login'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `login'
+Completed 200 OK in 491ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 3980)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:34:42 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Divya", "race"=>"Halfling", "class"=>"Ranger", "alignment"=>"Lawful Good", "strength"=>"15", "dexterity"=>"15", "constitution"=>"7", "intelligence"=>"13", "wisdom"=>"8", "charisma"=>"11", "application"=>{"name"=>"Divya", "race"=>"Halfling", "class"=>"Ranger", "alignment"=>"Lawful Good", "strength"=>"15", "dexterity"=>"15", "constitution"=>"7", "intelligence"=>"13", "wisdom"=>"8", "charisma"=>"11"}}
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms | Allocations: 141)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: character):
+  
+app/controllers/characters_controller.rb:50:in `character_params'
+app/controllers/characters_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:35:09 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:18:in `login'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `login'
+Completed 200 OK in 325ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 3981)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:35:13 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Zakzos", "race"=>"Dwarf", "class"=>"Cleric", "alignment"=>"Unaligned", "strength"=>"9", "dexterity"=>"10", "constitution"=>"9", "intelligence"=>"11", "wisdom"=>"9", "charisma"=>"10", "application"=>{"name"=>"Zakzos", "race"=>"Dwarf", "class"=>"Cleric", "alignment"=>"Unaligned", "strength"=>"9", "dexterity"=>"10", "constitution"=>"9", "intelligence"=>"11", "wisdom"=>"9", "charisma"=>"10"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 637)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:18:in `create'
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:37:13 -0600
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:37:26 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:18:in `login'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `login'
+Completed 200 OK in 403ms (Views: 0.3ms | ActiveRecord: 2.7ms | Allocations: 3872)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:37:28 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Foolly", "race"=>"Halfling", "class"=>"Druid", "alignment"=>"Chaotic Neutral", "strength"=>"11", "dexterity"=>"13", "constitution"=>"13", "intelligence"=>"14", "wisdom"=>"10", "charisma"=>"13", "character"=>{"name"=>"Foolly", "race"=>"Halfling", "class"=>"Druid", "alignment"=>"Chaotic Neutral", "strength"=>"11", "dexterity"=>"13", "constitution"=>"13", "intelligence"=>"14", "wisdom"=>"10", "charisma"=>"13"}}
+[31mUnpermitted parameter: :character[0m
+[31mUnpermitted parameter: :character[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.3ms | Allocations: 6158)
+
+
+  
+NoMethodError (undefined method `finder_needs_type_condition?' for nil:NilClass):
+  
+app/controllers/characters_controller.rb:18:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:37:43 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:18:in `login'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `login'
+Completed 200 OK in 368ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 3941)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:37:46 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Opalul", "race"=>"Halfling", "class"=>"Ranger", "alignment"=>"Lawful Neutral", "strength"=>"11", "dexterity"=>"13", "constitution"=>"10", "intelligence"=>"12", "wisdom"=>"14", "charisma"=>"14", "application"=>{"name"=>"Opalul", "race"=>"Halfling", "class"=>"Ranger", "alignment"=>"Lawful Neutral", "strength"=>"11", "dexterity"=>"13", "constitution"=>"10", "intelligence"=>"12", "wisdom"=>"14", "charisma"=>"14"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 630)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:18:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:40:01 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:18:in `login'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `login'
+Completed 200 OK in 331ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 3980)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:40:08 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `login'
+Completed 200 OK in 325ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 564)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:40:11 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Fulcrux", "race"=>"Elf", "class"=>"Barbarian", "alignment"=>"Unaligned", "strength"=>"9", "dexterity"=>"11", "constitution"=>"10", "intelligence"=>"6", "wisdom"=>"15", "charisma"=>"10", "application"=>{"name"=>"Fulcrux", "race"=>"Elf", "class"=>"Barbarian", "alignment"=>"Unaligned", "strength"=>"9", "dexterity"=>"11", "constitution"=>"10", "intelligence"=>"6", "wisdom"=>"15", "charisma"=>"10"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 141)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: character):
+  
+app/controllers/characters_controller.rb:50:in `character_params'
+app/controllers/characters_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:40:31 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:18:in `login'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `login'
+Completed 200 OK in 342ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 3982)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:40:36 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Ordayius", "race"=>"Dragonborn", "class"=>"Barbarian", "alignment"=>"Lawful Evil", "strength"=>"16", "dexterity"=>"12", "constitution"=>"15", "intelligence"=>"15", "wisdom"=>"10", "charisma"=>"15", "application"=>{"name"=>"Ordayius", "race"=>"Dragonborn", "class"=>"Barbarian", "alignment"=>"Lawful Evil", "strength"=>"16", "dexterity"=>"12", "constitution"=>"15", "intelligence"=>"15", "wisdom"=>"10", "charisma"=>"15"}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 141)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: characters):
+  
+app/controllers/characters_controller.rb:50:in `character_params'
+app/controllers/characters_controller.rb:17:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:41:03 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:18:in `login'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `login'
+Completed 200 OK in 334ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 3939)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:41:08 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Eishvack", "race"=>"Halfling", "class"=>"Barbarian", "alignment"=>"Lawful Good", "strength"=>"11", "dexterity"=>"12", "constitution"=>"7", "intelligence"=>"10", "wisdom"=>"11", "charisma"=>"10", "application"=>{"name"=>"Eishvack", "race"=>"Halfling", "class"=>"Barbarian", "alignment"=>"Lawful Good", "strength"=>"11", "dexterity"=>"12", "constitution"=>"7", "intelligence"=>"10", "wisdom"=>"11", "charisma"=>"10"}}
+[31mUnpermitted parameter: :application[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 654)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:18:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:43:10 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:18:in `login'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `login'
+Completed 200 OK in 315ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 3980)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:43:15 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Impelos", "race"=>"Dragonborn", "class"=>"Rouge", "alignment"=>"Lawful Good", "strength"=>"15", "dexterity"=>"16", "constitution"=>"10", "intelligence"=>"9", "wisdom"=>"10", "charisma"=>"11", "user_id"=>3, "application"=>{"name"=>"Impelos", "race"=>"Dragonborn", "class"=>"Rouge", "alignment"=>"Lawful Good", "strength"=>"15", "dexterity"=>"16", "constitution"=>"10", "intelligence"=>"9", "wisdom"=>"10", "charisma"=>"11", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 664)
+
+
+  
+ArgumentError (wrong number of arguments (given 10, expected 1..2)):
+  
+app/models/character.rb:4:in `<class:Character>'
+app/models/character.rb:1:in `<main>'
+app/controllers/characters_controller.rb:18:in `create'
+Started POST "/login" for 127.0.0.1 at 2022-02-02 20:43:29 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18:in `login'
+Completed 200 OK in 333ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 563)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-02 20:43:32 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Dian", "race"=>"Dragonborn", "class"=>"Monk", "alignment"=>"Lawful Evil", "strength"=>"14", "dexterity"=>"18", "constitution"=>"17", "intelligence"=>"11", "wisdom"=>"10", "charisma"=>"9", "user_id"=>3, "application"=>{"name"=>"Dian", "race"=>"Dragonborn", "class"=>"Monk", "alignment"=>"Lawful Evil", "strength"=>"14", "dexterity"=>"18", "constitution"=>"17", "intelligence"=>"11", "wisdom"=>"10", "charisma"=>"9", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+[31mUnpermitted parameter: :application[0m
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.3ms | Allocations: 6847)
+
+
+  
+NoMethodError (undefined method `finder_needs_type_condition?' for nil:NilClass):
+  
+app/controllers/characters_controller.rb:18:in `create'
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameCharactersClassColumn (20220203025446)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acharacters" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "race" varchar DEFAULT NULL, "character_class" varchar DEFAULT NULL, "alignment" varchar DEFAULT NULL, "strength" integer DEFAULT NULL, "dexterity" integer DEFAULT NULL, "constitution" integer DEFAULT NULL, "intelligence" integer DEFAULT NULL, "wisdom" integer DEFAULT NULL, "charisma" integer DEFAULT NULL, "user_id" integer NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_acharacters_on_user_id" ON "acharacters" ("user_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "acharacters" ("id","name","race","character_class","alignment","strength","dexterity","constitution","intelligence","wisdom","charisma","user_id")
+                     SELECT "id","name","race","class","alignment","strength","dexterity","constitution","intelligence","wisdom","charisma","user_id" FROM "characters"[0m
+  [1m[35m (4.0ms)[0m  [1m[35mDROP TABLE "characters"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "characters" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "race" varchar DEFAULT NULL, "character_class" varchar DEFAULT NULL, "alignment" varchar DEFAULT NULL, "strength" integer DEFAULT NULL, "dexterity" integer DEFAULT NULL, "constitution" integer DEFAULT NULL, "intelligence" integer DEFAULT NULL, "wisdom" integer DEFAULT NULL, "charisma" integer DEFAULT NULL, "user_id" integer NOT NULL, CONSTRAINT "fk_rails_53a8ea746c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_characters_on_user_id" ON "characters" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("id","name","race","character_class","alignment","strength","dexterity","constitution","intelligence","wisdom","charisma","user_id")
+                     SELECT "id","name","race","character_class","alignment","strength","dexterity","constitution","intelligence","wisdom","charisma","user_id" FROM "acharacters"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "acharacters"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220203025446"]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

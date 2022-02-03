@@ -14,6 +14,7 @@ class CharactersController < ApplicationController
 
   # POST /characters
   def create
+    print(character_params)
     @character = Character.new(character_params)
 
     if @character.save
@@ -46,6 +47,6 @@ class CharactersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def character_params
-      params.require(:character).permit(:name, :race, :class, :alignment, :strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma)
+      params.permit(:name, :race, :character_class, :alignment, :strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma, :user_id)
     end
 end
