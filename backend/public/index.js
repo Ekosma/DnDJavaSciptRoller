@@ -41,7 +41,7 @@ class Character {
     this.intelligence = document.getElementById("randIntRoll").innerHTML
     this.wisdom = document.getElementById("randWisRoll").innerHTML
     this.charisma = document.getElementById("randCharRoll").innerHTML
-    this.user_id = 3
+    this.user_id = current_user.id
   }
 }
 
@@ -123,10 +123,23 @@ logInButton.addEventListener("click", (e) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data), 
-  }).then(response => {
-    console.log("log in form", response);
-  })
+  }).then(
+    (response => response.json()
+  )
+).then(data => {
+  current_user = new userData(data)
+  });
 })
+
+class userData{
+  constructor(data) {
+    this.name = data.user.username
+    this.id = data.user.id
+  }
+}
+
+
+
 
 /*function signOut() {
   e.preventDefault(); 
