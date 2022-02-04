@@ -59,8 +59,10 @@ saveButton.addEventListener("click", (e) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data), 
-  }).then(response => {
-    console.log("save", response);
+  }).then(response => response.json())
+  .then(response => { 
+    current_user.characters = response;
+    console.log(current_user.characters);
   })
 })
 
@@ -134,7 +136,7 @@ class userData{
   }
 }
 
-//routing to char_sheets//
+// routing to char_sheets //
 
 const nextButton = document.getElementById("next");
 
@@ -155,4 +157,20 @@ displayCharacter = (charData) => {
   document.getElementById("randIntRoll").innerHTML =  charData.intelligence;
   document.getElementById("randWisRoll").innerHTML =  charData.wisdom;
   document.getElementById("randCharRoll").innerHTML =  charData.charisma;
+}
+
+// Form Reset //
+
+newForm = () => {
+  document.getElementById("randNameTrait").innerHTML =  [];
+  document.getElementById("randRaceTrait").innerHTML =  [];
+  document.getElementById("randCharClassTrait").innerHTML =  [];
+  document.getElementById("randAlignTrait").innerHTML =  [];
+  document.getElementById("randStrRoll").innerHTML =  [];
+  document.getElementById("randDexRoll").innerHTML =  [];
+  document.getElementById("randConRoll").innerHTML =  [];
+  document.getElementById("randIntRoll").innerHTML =  [];
+  document.getElementById("randWisRoll").innerHTML =  [];
+  document.getElementById("randCharRoll").innerHTML =  [];
+  current_user.currentCharIndex = -1
 }

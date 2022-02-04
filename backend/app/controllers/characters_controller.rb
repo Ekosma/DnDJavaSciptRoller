@@ -18,7 +18,8 @@ class CharactersController < ApplicationController
     @character = Character.new(character_params)
 
     if @character.save
-      render json: @character, status: :created, location: @characters
+      characters = Character.where("user_id = ?", @character.user_id).alphabetical
+      render json: characters, status: :created, location: @characters
     else
       render json: @character.errors, status: :unprocessable_entity
     end
