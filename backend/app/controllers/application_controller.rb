@@ -16,7 +16,7 @@ class ApplicationController < ActionController::API
   def login
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
-      characters = Character.where("user_id = ?", user.id)
+      characters = Character.where("user_id = ?", user.id).alphabetical
       render json: {user: user, characters: characters}
     else
       render json: {errors: "invalid username"}

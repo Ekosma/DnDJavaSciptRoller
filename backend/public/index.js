@@ -117,6 +117,7 @@ logInButton.addEventListener("click", (e) => {
 ).then(data => {
   console.log(data);
   current_user = new userData(data)
+  displayCharacter(current_user.characters[0])
   });
 })
 
@@ -124,6 +125,8 @@ class userData{
   constructor(data) {
     this.name = data.user.username
     this.id = data.user.id
+    this.characters = data.characters
+    this.currentCharIndex = 0
   }
 }
 
@@ -133,14 +136,19 @@ const nextButton = document.getElementById("next");
 
 nextButton.addEventListener("click", (e) => {
   e.preventDefault();
-  let data = 
-  fetch("http://locaLhost:3000/characters", { 
-    method: "GET",
-  }).then(response => {
-    console.log("next", response);
-  })
+  current_user.currentCharIndex = current_user.currentCharIndex < current_user.characters.length - 1 ? current_user.currentCharIndex + 1 : 0 
+  displayCharacter(current_user.characters[current_user.currentCharIndex])
 })
 
-displayCharacter = () => {
-
+displayCharacter = (charData) => {
+  document.getElementById("randNameTrait").innerHTML =  charData.name;
+  document.getElementById("randRaceTrait").innerHTML =  charData.race;
+  document.getElementById("randCharClassTrait").innerHTML =  charData.charClass;
+  document.getElementById("randAlignTrait").innerHTML =  charData.alignment;
+  document.getElementById("randStrRoll").innerHTML =  charData.strength;
+  document.getElementById("randDexRoll").innerHTML =  charData.dexterity;
+  document.getElementById("randConRoll").innerHTML =  charData.constitution;
+  document.getElementById("randIntRoll").innerHTML =  charData.intelligence;
+  document.getElementById("randWisRoll").innerHTML =  charData.wisdom;
+  document.getElementById("randCharRoll").innerHTML =  charData.charisma;
 }
