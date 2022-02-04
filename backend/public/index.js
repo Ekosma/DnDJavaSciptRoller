@@ -143,7 +143,7 @@ nextButton.addEventListener("click", (e) => {
 displayCharacter = (charData) => {
   document.getElementById("randNameTrait").innerHTML =  charData.name;
   document.getElementById("randRaceTrait").innerHTML =  charData.race;
-  document.getElementById("randCharClassTrait").innerHTML =  charData.charClass;
+  document.getElementById("randCharClassTrait").innerHTML =  charData.character_class;
   document.getElementById("randAlignTrait").innerHTML =  charData.alignment;
   document.getElementById("randStrRoll").innerHTML =  charData.strength;
   document.getElementById("randDexRoll").innerHTML =  charData.dexterity;
