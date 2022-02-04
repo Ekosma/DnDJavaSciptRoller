@@ -2672,3 +2672,148 @@ Processing by ApplicationController#login as */*
 Completed 200 OK in 300ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 1565)
 
 
+Started POST "/new" for 127.0.0.1 at 2022-02-04 15:05:07 -0600
+Processing by ApplicationController#create as */*
+  Parameters: {"username"=>"kevin", "password"=>"[FILTERED]", "application"=>{"username"=>"kevin", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :application[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kevin"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest") VALUES (?, ?)[0m  [["username", "kevin"], ["password_digest", "$2a$12$Hhs3LCs8XUTkLeUS.2Petu6qoodsp4whztpk.McQFajbLpQpiN.j2"]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "kevin"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `create'
+Completed 200 OK in 333ms (Views: 0.6ms | ActiveRecord: 5.8ms | Allocations: 6155)
+
+
+Started POST "/new" for 127.0.0.1 at 2022-02-04 15:06:23 -0600
+Processing by ApplicationController#create as */*
+  Parameters: {"username"=>"ret", "password"=>"[FILTERED]", "application"=>{"username"=>"ret", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ret"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest") VALUES (?, ?)[0m  [["username", "ret"], ["password_digest", "$2a$12$JQe7VkSNaJnk6cKi2dV9Ze9NPZAeQWMzjkBCh3hv7XLhhg9vfrf5u"]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ret"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `create'
+Completed 200 OK in 304ms (Views: 0.2ms | ActiveRecord: 4.5ms | Allocations: 2912)
+
+
+Started POST "/new" for 127.0.0.1 at 2022-02-04 15:09:19 -0600
+Processing by ApplicationController#create as */*
+  Parameters: {"username"=>"gu", "password"=>"[FILTERED]", "application"=>{"username"=>"gu", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "gu"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest") VALUES (?, ?)[0m  [["username", "gu"], ["password_digest", "$2a$12$nlhvTdD7FdSsy6OM1is/QufKqIhHhWeOVTC3cr8d9cGMWgwbehOBG"]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "gu"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `create'
+Completed 200 OK in 337ms (Views: 0.3ms | ActiveRecord: 10.0ms | Allocations: 2906)
+
+
+Started POST "/new" for 127.0.0.1 at 2022-02-04 15:15:34 -0600
+Processing by ApplicationController#create as */*
+  Parameters: {"username"=>"pop", "password"=>"[FILTERED]", "application"=>{"username"=>"pop", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :application[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pop"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest") VALUES (?, ?)[0m  [["username", "pop"], ["password_digest", "$2a$12$VO6tFGMhqcZI9gr9ULiu8eTJDkFhGOdLkeuIZhEjPIU4sV6ZOT9qm"]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pop"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `create'
+Completed 200 OK in 334ms (Views: 0.2ms | ActiveRecord: 5.8ms | Allocations: 6148)
+
+
+Started POST "/new" for 127.0.0.1 at 2022-02-04 15:18:27 -0600
+Processing by ApplicationController#create as */*
+  Parameters: {"username"=>"pop", "password"=>"[FILTERED]", "application"=>{"username"=>"pop", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "pop"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+Completed 422 Unprocessable Entity in 327ms (Views: 13.2ms | ActiveRecord: 0.9ms | Allocations: 3679)
+
+
+Started POST "/new" for 127.0.0.1 at 2022-02-04 15:18:39 -0600
+Processing by ApplicationController#create as */*
+  Parameters: {"username"=>"why", "password"=>"[FILTERED]", "application"=>{"username"=>"why", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "why"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest") VALUES (?, ?)[0m  [["username", "why"], ["password_digest", "$2a$12$SzmATp0ovmYVsBT5Hqs4be4WSi4i0PceImWKRbPXhOr9.53rVJdIm"]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "why"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `create'
+Completed 200 OK in 321ms (Views: 1.3ms | ActiveRecord: 3.3ms | Allocations: 2906)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-04 15:18:50 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Dyne", "race"=>"Dwarf", "character_class"=>"Warlock", "alignment"=>"True Neutral", "strength"=>"11", "dexterity"=>"16", "constitution"=>"13", "intelligence"=>"6", "wisdom"=>"15", "charisma"=>"12", "user_id"=>10, "application"=>{"name"=>"Dyne", "race"=>"Dwarf", "character_class"=>"Warlock", "alignment"=>"True Neutral", "strength"=>"11", "dexterity"=>"16", "constitution"=>"13", "intelligence"=>"6", "wisdom"=>"15", "charisma"=>"12", "user_id"=>10}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+  [1m[36mCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dyne"], ["race", "Dwarf"], ["character_class", "Warlock"], ["alignment", "True Neutral"], ["strength", 11], ["dexterity", 16], ["constitution", 13], ["intelligence", 6], ["wisdom", 15], ["charisma", 12], ["user_id", 10]]
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 22ms (Views: 1.5ms | ActiveRecord: 2.7ms | Allocations: 7643)
+
+
+Started POST "/new" for 127.0.0.1 at 2022-02-04 15:19:19 -0600
+Processing by ApplicationController#create as */*
+  Parameters: {"username"=>"yellow", "password"=>"[FILTERED]", "application"=>{"username"=>"yellow", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "yellow"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest") VALUES (?, ?)[0m  [["username", "yellow"], ["password_digest", "$2a$12$qQ7kM9vN.F6YdRZhCi.wmuDu7oxmwS25R2Q2HenpBjGcxzURThmMS"]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "yellow"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `create'
+Completed 200 OK in 447ms (Views: 0.3ms | ActiveRecord: 3.0ms | Allocations: 2910)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-04 15:19:23 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Orinphus", "race"=>"Gnome", "character_class"=>"Fighter", "alignment"=>"Lawful Good", "strength"=>"13", "dexterity"=>"11", "constitution"=>"14", "intelligence"=>"12", "wisdom"=>"11", "charisma"=>"13", "user_id"=>11, "application"=>{"name"=>"Orinphus", "race"=>"Gnome", "character_class"=>"Fighter", "alignment"=>"Lawful Good", "strength"=>"13", "dexterity"=>"11", "constitution"=>"14", "intelligence"=>"12", "wisdom"=>"11", "charisma"=>"13", "user_id"=>11}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+  [1m[36mCharacter Create (0.5ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Orinphus"], ["race", "Gnome"], ["character_class", "Fighter"], ["alignment", "Lawful Good"], ["strength", 13], ["dexterity", 11], ["constitution", 14], ["intelligence", 12], ["wisdom", 11], ["charisma", 13], ["user_id", 11]]
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 7ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 1898)
+
+

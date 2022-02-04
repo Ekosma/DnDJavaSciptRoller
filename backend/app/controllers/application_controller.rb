@@ -7,7 +7,9 @@ class ApplicationController < ActionController::API
   def create
     user = User.new(sign_up_params)
     if user.save
-      render json: {status: "SUCCESS", message: "added a new user!", data: user}, status: :ok
+      #render json: {status: "SUCCESS", message: "added a new user!", data: user}, status: :ok
+      user = User.find_by(username: params[:username])
+      render json: {user: user}
     else
       render json: {status: "ERROR", message: "couldn't add a user", data: user.errors}, status: :unprocessable_entity
     end

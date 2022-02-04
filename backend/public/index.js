@@ -89,9 +89,13 @@ signUpButton.addEventListener("click", (e) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data), 
-  }).then(response => {
-    console.log("sign up form", response);
-  })
+  }).then(
+    (response => response.json()
+  )
+).then(data => {
+  console.log(data);
+  current_user = new userData(data)
+  });
 })
 
 logInButton.addEventListener("click", (e) => {
