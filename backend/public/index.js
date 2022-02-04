@@ -46,8 +46,6 @@ class Character {
 }
 
 
-
-
 //save Character //
 
 const saveButton = document.getElementById("save");
@@ -67,17 +65,7 @@ saveButton.addEventListener("click", (e) => {
 })
 
 
-
-
-
 // sign in, sign up, sign out process //
-
-/*class User {
-  constructor(name, password) {
-    this.name = name
-    this.password = password
-  }
-}*/
 
 let myHeaders = new Headers();
 const signUpButton = document.getElementById("signup-form-submit"); 
@@ -127,6 +115,7 @@ logInButton.addEventListener("click", (e) => {
     (response => response.json()
   )
 ).then(data => {
+  console.log(data);
   current_user = new userData(data)
   });
 })
@@ -138,9 +127,20 @@ class userData{
   }
 }
 
+//routing to char_sheets//
 
+const nextButton = document.getElementById("next");
 
+nextButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  let data = 
+  fetch("http://locaLhost:3000/characters", { 
+    method: "GET",
+  }).then(response => {
+    console.log("next", response);
+  })
+})
 
-/*function signOut() {
-  e.preventDefault(); 
-}*/
+displayCharacter = () => {
+
+}

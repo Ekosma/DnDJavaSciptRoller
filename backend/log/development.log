@@ -2047,3 +2047,183 @@ Processing by CharactersController#create as */*
 Completed 201 Created in 45ms (Views: 0.6ms | ActiveRecord: 10.3ms | Allocations: 9001)
 
 
+Started POST "/login" for 127.0.0.1 at 2022-02-03 18:18:32 -0600
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 1335ms (Views: 2.5ms | ActiveRecord: 4.7ms | Allocations: 6756)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-03 18:18:58 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 299ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 582)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-03 18:19:00 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 301ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 583)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-03 18:19:19 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Skili", "race"=>"Gnome", "character_class"=>"Ranger", "alignment"=>"Chaotic Neutral", "strength"=>"13", "dexterity"=>"15", "constitution"=>"15", "intelligence"=>"14", "wisdom"=>"14", "charisma"=>"13", "user_id"=>3, "application"=>{"name"=>"Skili", "race"=>"Gnome", "character_class"=>"Ranger", "alignment"=>"Chaotic Neutral", "strength"=>"13", "dexterity"=>"15", "constitution"=>"15", "intelligence"=>"14", "wisdom"=>"14", "charisma"=>"13", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+  [1m[36mCharacter Create (11.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Skili"], ["race", "Gnome"], ["character_class", "Ranger"], ["alignment", "Chaotic Neutral"], ["strength", 13], ["dexterity", 15], ["constitution", 15], ["intelligence", 14], ["wisdom", 14], ["charisma", 13], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 189ms (Views: 8.1ms | ActiveRecord: 18.4ms | Allocations: 8873)
+
+
+Started GET "/characters" for ::1 at 2022-02-03 18:49:21 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+Started GET "/characters" for 127.0.0.1 at 2022-02-03 18:49:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/characters"):
+  
+Started GET "/characters" for 127.0.0.1 at 2022-02-03 18:50:52 -0600
+Processing by CharactersController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/characters_controller.rb:7:in `index'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/controllers/characters_controller.rb:7:in `index'
+Completed 200 OK in 31ms (Views: 26.3ms | ActiveRecord: 1.8ms | Allocations: 7887)
+
+
+Started GET "/characters/3" for 127.0.0.1 at 2022-02-03 18:51:12 -0600
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:45:in `set_character'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 757)
+
+
+Started GET "/characters/3" for 127.0.0.1 at 2022-02-03 18:51:33 -0600
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:45:in `set_character'
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 594)
+
+
+Started GET "/characters/3" for 127.0.0.1 at 2022-02-03 18:51:34 -0600
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCharacter Load (0.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:45:in `set_character'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 593)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-03 18:54:17 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 330ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 4321)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-03 18:54:19 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 325ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 564)
+
+
+Started GET "/characters" for 127.0.0.1 at 2022-02-03 18:54:21 -0600
+Processing by CharactersController#index as */*
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/controllers/characters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1070)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-03 18:54:40 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 311ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 582)
+
+
+Started GET "/characters" for 127.0.0.1 at 2022-02-03 18:54:43 -0600
+Processing by CharactersController#index as */*
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/controllers/characters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1068)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-03 18:56:27 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 200 OK in 340ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 3961)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-03 19:02:02 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 500 Internal Server Error in 323ms (ActiveRecord: 1.1ms | Allocations: 5026)
+
+
+  
+NameError (uninitialized constant ApplicationController::Characters):
+  
+app/controllers/application_controller.rb:19:in `login'
+Started POST "/login" for 127.0.0.1 at 2022-02-03 19:02:27 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+Completed 500 Internal Server Error in 324ms (ActiveRecord: 1.7ms | Allocations: 4152)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1+)):
+  
+app/controllers/application_controller.rb:19:in `login'
+Started POST "/login" for 127.0.0.1 at 2022-02-03 19:04:29 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+Completed 200 OK in 339ms (Views: 0.4ms | ActiveRecord: 3.8ms | Allocations: 10910)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-03 19:06:13 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3)[0m
+  ↳ app/controllers/application_controller.rb:20:in `login'
+Completed 200 OK in 340ms (Views: 15.9ms | ActiveRecord: 3.7ms | Allocations: 11177)
+
+

@@ -6,8 +6,7 @@ Rails.application.routes.draw do
   post 'login', to: 'application#login'
   post 'characters', to: 'characters#create'
   
-  #resources :characters do 
-    #resources :users
+  resources :characters 
   #end
   resources :users do
     resources :characters
