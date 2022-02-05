@@ -66,76 +66,6 @@ saveButton.addEventListener("click", (e) => {
   })
 })
 
-
-// sign in, sign up, sign out process //
-
-let myHeaders = new Headers();
-const signUpButton = document.getElementById("signup-form-submit"); 
-const logInButton = document.getElementById("login-form-submit"); 
-
-
-signUpButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  const loginForm = document.getElementById("sign-up-form");    
-  const username = loginForm.username.value;
-  const password = loginForm.password.value;
-
-  const data = {
-    username: username,
-    password: password,
-  }
-
-  fetch("http://locaLhost:3000/new", { 
-    method: "POST",
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data), 
-  }).then(
-    (response => response.json()
-  )
-).then(data => {
-  console.log(data);
-  current_user = new userData(data)
-  });
-})
-
-logInButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  const loginForm = document.getElementById("login-form");    
-  const username = loginForm.username.value;
-  const password = loginForm.password.value;
-
-  const data = {
-    username: username,
-    password: password,
-  }
-
-  fetch("http://locaLhost:3000/login", { 
-    method: "POST",
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data), 
-  }).then(
-    (response => response.json()
-  )
-).then(data => {
-  console.log(data);
-  current_user = new userData(data)
-  displayCharacter(current_user.characters[0])
-  });
-})
-
-class userData{
-  constructor(data) {
-    this.name = data.user.username
-    this.id = data.user.id
-    this.characters = data.characters
-    this.currentCharIndex = 0
-  }
-}
-
 // routing to char_sheets //
 
 const nextButton = document.getElementById("next");
@@ -173,4 +103,113 @@ newForm = () => {
   document.getElementById("randWisRoll").innerHTML =  [];
   document.getElementById("randCharRoll").innerHTML =  [];
   current_user.currentCharIndex = -1
+}
+
+
+// sign in, sign up, sign out process //
+
+//signUP//
+
+let current_user = null
+
+let myHeaders = new Headers();
+const signUpButton = document.getElementById("signup-form-submit"); 
+const logInButton = document.getElementById("login-form-submit"); 
+
+
+signUpButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const loginForm = document.getElementById("sign-up-form");    
+  const username = loginForm.username.value;
+  const password = loginForm.password.value;
+
+  const data = {
+    username: username,
+    password: password,
+  }
+
+  fetch("http://locaLhost:3000/new", { 
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data), 
+  }).then(
+    (response => response.json()
+  )
+).then(data => {
+  console.log(data);
+  current_user = new userData(data)
+  });
+})
+
+//logIn//
+
+logInButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const loginForm = document.getElementById("login-form");    
+  const username = loginForm.username.value;
+  const password = loginForm.password.value;
+
+  const data = {
+    username: username,
+    password: password,
+  }
+
+  fetch("http://locaLhost:3000/login", { 
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data), 
+  }).then(
+    (response => response.json()
+  )
+).then(data => {
+  console.log(data);
+  current_user = new userData(data)
+  displayCharacter(current_user.characters[0])
+  removeSignUpLogIn()
+  addLogout()
+  });
+})
+
+//create user//
+
+class userData{
+  constructor(data) {
+    this.name = data.user.username
+    this.id = data.user.id
+    this.characters = data.characters
+    this.currentCharIndex = 0
+  }
+}
+
+function removeSignUpLogIn(){
+  let elem = document.getElementById('navbar')
+  elem.remove()
+}
+
+function addSignUpLogIn(){
+  let elem = document.getElementById('navbar')
+  elem.add()
+}
+
+/*function addCharSheet(){
+  let elem = document.getElementById("charsheet")
+  elem.innerHTML+= 
+}*/
+
+
+function addLogout(){
+  let elem=document.getElementById('title') 
+  elem.innerHTML+="<button id='logout' class='button' onclick='logout()'>Logout</button>"
+}
+
+logout = () => {
+  console.log("hi")
+  let elem = document.getElementById('logout')
+  current_user = null
+  elem.remove()
+  //addSignUpLogIn()
 }
