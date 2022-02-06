@@ -70,7 +70,7 @@ saveButton.addEventListener("click", (e) => {
 
 const nextButton = document.getElementById("next");
 const previousButton = document.getElementById("previous")
-
+/*
 nextButton.addEventListener("click", (e) => {
   e.preventDefault();
   current_user.currentCharIndex = current_user.currentCharIndex < current_user.characters.length - 1 ? current_user.currentCharIndex + 1 : alert("End of the character List") 
@@ -79,7 +79,24 @@ nextButton.addEventListener("click", (e) => {
 
 previousButton.addEventListener("click", (e) => {
   e.preventDefault();
-  current_user.currentCharIndex = current_user.currentCharIndex < current_user.characters.length - 1 && current_user.currentCharIndex > 0 ? current_user.currentCharIndex - 1 : alert("No more Preious Characters")
+  current_user.currentCharIndex = current_user.currentCharIndex < current_user.characters.length - 1 || current_user.currentCharIndex == current_user.characters.length ? current_user.currentCharIndex - 1 : alert("No more Preious Characters")
+  displayCharacter(current_user.characters[current_user.currentCharIndex])
+})
+*/
+
+nextButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  current_user.currentCharIndex = current_user.currentCharIndex + 1;
+  current_user.currentCharIndex = current_user.currentCharIndex % current_user.characters.length
+  displayCharacter(current_user.characters[current_user.currentCharIndex])
+})
+
+previousButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (current_user.currentCharIndex == 0) {
+    current_user.currentCharIndex = current_user.characters.length
+  }
+  current_user.currentCharIndex = current_user.currentCharIndex - 1;
   displayCharacter(current_user.characters[current_user.currentCharIndex])
 })
 
