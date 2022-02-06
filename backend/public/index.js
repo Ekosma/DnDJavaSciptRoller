@@ -116,7 +116,7 @@ let myHeaders = new Headers();
 const signUpButton = document.getElementById("signup-form-submit"); 
 const logInButton = document.getElementById("login-form-submit"); 
 
-
+/*
 signUpButton.addEventListener("click", (e) => {
   e.preventDefault();
   const loginForm = document.getElementById("sign-up-form");    
@@ -140,8 +140,11 @@ signUpButton.addEventListener("click", (e) => {
 ).then(data => {
   console.log(data);
   current_user = new userData(data)
+  removeSignUpLogIn()
+  addLogout()
   });
 })
+*/
 
 //logIn//
 
@@ -186,20 +189,9 @@ class userData{
 }
 
 function removeSignUpLogIn(){
-  let elem = document.getElementById('navbar')
+  let elem = document.getElementById('modal')
   elem.remove()
 }
-
-function addSignUpLogIn(){
-  let elem = document.getElementById('navbar')
-  elem.add()
-}
-
-/*function addCharSheet(){
-  let elem = document.getElementById("charsheet")
-  elem.innerHTML+= 
-}*/
-
 
 function addLogout(){
   let elem=document.getElementById('title') 
@@ -212,4 +204,11 @@ logout = () => {
   current_user = null
   elem.remove()
   //addSignUpLogIn()
+}
+
+function addSignUp() {
+  let elem = document.getElementById("userForm")
+  let modal = document.getElementById('modal')
+  elem.remove()
+  modal.innerHTML += "<div id='signUpForm' > <form id='sign-up-form'> <input type='text' name='username' id='username-field' class='login-form-field' placeholder='Username'> <input type='password' name='password' id='password-field' class='login-form-field' placeholder='Password'> <input type='submit' value='Sign Up' id='signup-form-submit'> </form> </div>"
 }

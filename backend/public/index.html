@@ -14,25 +14,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="navbar"> 
-    navbar
-    <div id="signUp" >
-      <form id="sign-up-form">
-        <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-        <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-        <input type="submit" value="Sign Up" id="signup-form-submit">
-      </form>
-    </div>
-    <div id="signIn" >
-      <form id="login-form">
-        <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-        <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-        <input type="submit" value="Log In" id="login-form-submit">
-      </form>
+  <div id="modal" class="modal hide fade in" data-keyboard="false" data-backdrop="static"> 
+    <div id="userForm">
+      <div id="signTitle">
+        WELCOME
+      </div>
+      <div id="signIn" >
+        <form id="login-form">
+          <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+          <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+          <input type="submit" value="Log In" id="login-form-submit">
+        </form>
+      </div>
+    <div id="signUp" onclick="addSignUp()">
+      Don't have an account? 
+      <button>
+        Sign Up
+      </button>
     </div>
   </div>
-  <div id="mainContent"></div>
- <div id="charsheet">
+  </div>
+  <div id="charsheet">
     <div class="title" id="title">
       Title
     </div>

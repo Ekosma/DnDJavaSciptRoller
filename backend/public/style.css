@@ -1,3 +1,84 @@
+
+
+#modal {
+  display: table;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: darkred;
+  height: 90%;
+  width: 90%;
+  border: black;
+  border-radius: 10px;
+}
+
+#userForm, #signUpForm  {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  margin: 10px;
+}
+
+#signUp, #signIn,#signUpForm{
+  padding: 10px;
+  margin: 10px;
+}
+
+body {
+  display: table;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: beige;
+  height: 90%;
+  width: 90%;
+}
+
+#charsheet {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+Old Temp
+
 body {
   display: flex;
   text-align: center;
@@ -23,8 +104,8 @@ body {
 
 #charsheet {
   display: flex;
+  position: absolute;
   flex-direction: column;
-  width: 100%;
 }
 
 .form_box {
@@ -57,3 +138,4 @@ body {
 .group_3{
   display: flex;
 }
+*/
