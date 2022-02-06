@@ -69,10 +69,17 @@ saveButton.addEventListener("click", (e) => {
 // routing to char_sheets //
 
 const nextButton = document.getElementById("next");
+const previousButton = document.getElementById("previous")
 
 nextButton.addEventListener("click", (e) => {
   e.preventDefault();
-  current_user.currentCharIndex = current_user.currentCharIndex < current_user.characters.length - 1 ? current_user.currentCharIndex + 1 : 0 
+  current_user.currentCharIndex = current_user.currentCharIndex < current_user.characters.length - 1 ? current_user.currentCharIndex + 1 : alert("End of the character List") 
+  displayCharacter(current_user.characters[current_user.currentCharIndex])
+})
+
+previousButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  current_user.currentCharIndex = current_user.currentCharIndex < current_user.characters.length - 1 && current_user.currentCharIndex > 0 ? current_user.currentCharIndex - 1 : alert("No more Preious Characters")
   displayCharacter(current_user.characters[current_user.currentCharIndex])
 })
 

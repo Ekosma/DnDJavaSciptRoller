@@ -10,7 +10,7 @@
   height: 90%;
   width: 90%;
   border: black;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 #userForm, #signUpForm  {
@@ -41,6 +41,9 @@ body {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
+  border: black;
+  border-radius: 20px;
+  background: white;
 }
 
 
