@@ -70,19 +70,6 @@ saveButton.addEventListener("click", (e) => {
 
 const nextButton = document.getElementById("next");
 const previousButton = document.getElementById("previous")
-/*
-nextButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  current_user.currentCharIndex = current_user.currentCharIndex < current_user.characters.length - 1 ? current_user.currentCharIndex + 1 : alert("End of the character List") 
-  displayCharacter(current_user.characters[current_user.currentCharIndex])
-})
-
-previousButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  current_user.currentCharIndex = current_user.currentCharIndex < current_user.characters.length - 1 || current_user.currentCharIndex == current_user.characters.length ? current_user.currentCharIndex - 1 : alert("No more Preious Characters")
-  displayCharacter(current_user.characters[current_user.currentCharIndex])
-})
-*/
 
 nextButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -136,39 +123,9 @@ newForm = () => {
 
 let current_user = null
 
-let myHeaders = new Headers();
-const signUpButton = document.getElementById("signup-form-submit"); 
+let myHeaders = new Headers(); 
 const logInButton = document.getElementById("login-form-submit"); 
 
-/*
-signUpButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  const loginForm = document.getElementById("sign-up-form");    
-  const username = loginForm.username.value;
-  const password = loginForm.password.value;
-
-  const data = {
-    username: username,
-    password: password,
-  }
-
-  fetch("http://locaLhost:3000/new", { 
-    method: "POST",
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data), 
-  }).then(
-    (response => response.json()
-  )
-).then(data => {
-  console.log(data);
-  current_user = new userData(data)
-  removeSignUpLogIn()
-  addLogout()
-  });
-})
-*/
 
 //logIn//
 
@@ -235,4 +192,32 @@ function addSignUp() {
   let modal = document.getElementById('modal')
   elem.remove()
   modal.innerHTML += "<div id='signUpForm' > <form id='sign-up-form'> <input type='text' name='username' id='username-field' class='login-form-field' placeholder='Username'> <input type='password' name='password' id='password-field' class='login-form-field' placeholder='Password'> <input type='submit' value='Sign Up' id='signup-form-submit'> </form> </div>"
+  const signUpButton = document.getElementById("signup-form-submit");
+  signUpButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const loginForm = document.getElementById("sign-up-form");    
+    const username = loginForm.username.value;
+    const password = loginForm.password.value;
+  
+    const data = {
+      username: username,
+      password: password,
+    }
+  
+    fetch("http://locaLhost:3000/new", { 
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data), 
+    }).then(
+      (response => response.json()
+    )
+  ).then(data => {
+    console.log(data);
+    current_user = new userData(data)
+    removeSignUpLogIn()
+    addLogout()
+    });
+  })
 }

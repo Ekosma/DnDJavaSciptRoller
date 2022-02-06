@@ -49,12 +49,12 @@ body {
 .form {
   display: flex;
   flex-direction: column;
-  vertical-align: middle;
 }
 
 .form_box{
   padding: 5px 50px;
   margin: 5px;
+  width: 110px;
 }
 
 .group_2, .group_3, .fourcore{
@@ -68,102 +68,3 @@ body {
   margin: 10px;
   padding: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-Old Temp
-
-body {
-  display: flex;
-  text-align: center;
-}
-
-#navbar {
-  background: #A62300;
-  height: 100%;
-  width: 100%;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  padding: 50px;
-  margin: 80px;
-  border-style: solid;
-  width: 50%;
-  align-self: center;
-  background: cornsilk;
-  border-radius: 10px;
-}
-
-#charsheet {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-}
-
-.form_box {
-  display: flex;
-  text-align: center;
-  margin: 20px;
-  padding: 5px 10px;
-}
-
-.button {
-  align-self: center;
-  border: 1px black solid;
-  border-radius: 50px;
-  text-align: center;
-  padding: 15px 10px;
-  margin: 15px;
-}
-
-.main_traits {
-  display: flex;
-  flex-direction: column;
-
-}
-
-.group_2 {
-  display: flex;
-  
-}
-
-.group_3{
-  display: flex;
-}
-*/
