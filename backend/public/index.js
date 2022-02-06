@@ -75,7 +75,7 @@ nextButton.addEventListener("click", (e) => {
   e.preventDefault();
   current_user.currentCharIndex = current_user.currentCharIndex + 1;
   current_user.currentCharIndex = current_user.currentCharIndex % current_user.characters.length
-  displayCharacter(current_user.characters[current_user.currentCharIndex])
+  current_user.displayCharacter(current_user.currentCharIndex);
 })
 
 previousButton.addEventListener("click", (e) => {
@@ -84,21 +84,10 @@ previousButton.addEventListener("click", (e) => {
     current_user.currentCharIndex = current_user.characters.length
   }
   current_user.currentCharIndex = current_user.currentCharIndex - 1;
-  displayCharacter(current_user.characters[current_user.currentCharIndex])
+  current_user.displayCharacter(current_user.currentCharIndex);
 })
 
-displayCharacter = (charData) => {
-  document.getElementById("randNameTrait").innerHTML =  charData.name;
-  document.getElementById("randRaceTrait").innerHTML =  charData.race;
-  document.getElementById("randCharClassTrait").innerHTML =  charData.character_class;
-  document.getElementById("randAlignTrait").innerHTML =  charData.alignment;
-  document.getElementById("randStrRoll").innerHTML =  charData.strength;
-  document.getElementById("randDexRoll").innerHTML =  charData.dexterity;
-  document.getElementById("randConRoll").innerHTML =  charData.constitution;
-  document.getElementById("randIntRoll").innerHTML =  charData.intelligence;
-  document.getElementById("randWisRoll").innerHTML =  charData.wisdom;
-  document.getElementById("randCharRoll").innerHTML =  charData.charisma;
-}
+
 
 // Form Reset //
 
@@ -152,7 +141,7 @@ logInButton.addEventListener("click", (e) => {
 ).then(data => {
   console.log(data);
   current_user = new userData(data)
-  displayCharacter(current_user.characters[0])
+  current_user.displayCharacter(0);
   removeSignUpLogIn()
   addLogout()
   });
@@ -166,6 +155,19 @@ class userData{
     this.id = data.user.id
     this.characters = data.characters
     this.currentCharIndex = 0
+  }
+  displayCharacter = (index) => {
+    let charData = this.characters[index];
+    document.getElementById("randNameTrait").innerHTML =  charData.name;
+    document.getElementById("randRaceTrait").innerHTML =  charData.race;
+    document.getElementById("randCharClassTrait").innerHTML =  charData.character_class;
+    document.getElementById("randAlignTrait").innerHTML =  charData.alignment;
+    document.getElementById("randStrRoll").innerHTML =  charData.strength;
+    document.getElementById("randDexRoll").innerHTML =  charData.dexterity;
+    document.getElementById("randConRoll").innerHTML =  charData.constitution;
+    document.getElementById("randIntRoll").innerHTML =  charData.intelligence;
+    document.getElementById("randWisRoll").innerHTML =  charData.wisdom;
+    document.getElementById("randCharRoll").innerHTML =  charData.charisma;
   }
 }
 
