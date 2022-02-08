@@ -124,7 +124,7 @@ let myHeaders = new Headers();
 
 function addLogIn() {
   let elem = document.getElementById("userForm")
-  elem.innerHTML += "<div id='signTitle'> <b>WELCOME</b> </div> <div id='signIn'> <form id='login-form'> <input type='text' name='username' id='username-field' class='login-form-field' placeholder='Username'> <input type='password' name='password' id='password-field' class='login-form-field' placeholder='Password'> <input type='submit' value='Log In' id='login-form-submit'> </form> </div> <div id='signUp' onclick='addSignUp()'> Don't have an account? <button> Sign Up </button>"
+  elem.innerHTML += "<div id='signTitle'> <b>WELCOME</b> </div> <div id='signIn'> <form id='login-form'> <input type='text' name='username' id='username-field' class='login-form-field' placeholder='Username'> <input type='password' name='password' id='password-field' class='login-form-field' placeholder='Password'> <input type='submit' class='button' value='Log In' id='login-form-submit'> </form> </div> <div id='signUp' onclick='addSignUp()'> Don't have an account? <button class='button'> Sign Up </button>"
   const logInButton = document.getElementById("login-form-submit");
   logInButton.addEventListener("click", (e) => {
     e.preventDefault();

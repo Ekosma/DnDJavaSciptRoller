@@ -6,11 +6,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: darkred;
+  background: white;
   height: 90%;
   width: 90%;
-  border: black;
   border-radius: 20px;
+  border:3px solid black;
 }
 
 #userForm, #signUpForm  {
@@ -19,6 +19,7 @@
   vertical-align: middle;
   padding: 10px;
   margin: 10px;
+  
 }
 
 #signUp, #signIn,#signUpForm{
@@ -43,7 +44,13 @@ body {
   vertical-align: middle;
   border: black;
   border-radius: 20px;
-  background: white;
+  box-shadow: 0px 1px 0px 0px #1c1b18;
+	background-color:white;
+	border-radius:22px;
+	border: solid #8b0000;
+  border-width: 40px 150px ;
+  outline: 10px black;
+  box-shadow: 10px black;
 }
 
 .form {
@@ -67,4 +74,27 @@ body {
 .charalign, .namerace {
   margin: 10px;
   padding: 10px;
+}
+
+.button {
+	box-shadow: 0px 1px 0px 0px #1c1b18;
+	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+	background-color:#eae0c2;
+	border-radius:11px;
+	border:2px solid #333029;
+	display:inline-block;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:7px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.button:hover {
+	background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+	background-color:#ccc2a6;
+}
+.button:active {
+	position:relative;
+	top:1px;
 }
