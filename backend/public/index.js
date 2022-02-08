@@ -1,4 +1,8 @@
 
+window.onload = addLogIn()
+
+
+
 const names = ["Dian", "Nese", "Falledrick", "Mae", "Valhein", "Dol", "Earl", "Cedria", "Azulei", "Yun", "Cybel", "Ina", "Foolly", "Skili", "Juddol", "Janver", "Viska", "Hirschendy", "Silka", "Hellsturn", "Essa", "Mykonos", "Fenton", "Tyrena", "Inqoul", "Mankov", "Derilia", "Hexema", "Wyton", "Kaedum", "Gouram", "Libertia", "Berasailles", "Juxta", "Tae’hr", "Comtol", "Gherak", "Hest", "Qony", "Masamka", "Twyll", "Tenos", "Axim", "Westrynda", "Saphros", "Olkham", "Handok", "Kemetra", "Yos", "Wentingle", "Ames", "Molosh", "Inkov", "Phasasia", "Ziedinghal", "Bregul", "Eishvack", "Lora", "Krenting", "Symbole", "Elignoir", "Keligkrul", "Qwey", "Vindinglag", "Kusakira", "Weme", "Fayd", "Rushvita", "Vulkor", "Amers", "Ortos", "Vanius", "Chandellia", "Lilikol", "Catca", "Cormus", "Yuela", "Ariban", "Tryton", "Fesscha", "Opalul", "Zakzos", "Hortimer", "Anklos", "Dushasiez", "Polop", "Mektal", "Orinphus", "Denatra", "Elkazzi", "Dyne", "Domos", "Letryal", "Manniv", "Sylestia", "Esnol", "Fasafuros", "Ghanfer", "Kahnite", "Sweyda", "Uylis", "Retenia", "Bassos", "Arkensval", "Impelos", "Grandius", "Fulcrux", "Lassahein", "Edsveda", "Earakun", "Fous", "Maas", "Basenphal", "Jubidya", "Divya", "Kosunten", "Ordayius", "Donfer", "Gangher", "Escha", "Manchul", "Kempos", "Kulo", "Urtench", "Kesta", "Helahona", "Ryte", "Falcia", "Umannos", "Urkensvall", "Fedra", "Bulkensar", "Comia", "Tyul", "Lasendarl"]
 const races = ["Dragonborn", "Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Half-Orc", "Human", "Tiefling"]
 const charClasses = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rouge", "Sorceror", "Warlock", "Wizard"]
@@ -113,39 +117,46 @@ newForm = () => {
 let current_user = null
 
 let myHeaders = new Headers(); 
-const logInButton = document.getElementById("login-form-submit"); 
+ 
 
 
 //logIn//
 
-logInButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  const loginForm = document.getElementById("login-form");    
-  const username = loginForm.username.value;
-  const password = loginForm.password.value;
+function addLogIn() {
+  let elem = document.getElementById("signTitle")
+  elem.innerHTML += "<div id='signIn'> <form id='login-form'> <input type='text' name='username' id='username-field' class='login-form-field' placeholder='Username'> <input type='password' name='password' id='password-field' class='login-form-field' placeholder='Password'> <input type='submit' value='Log In' id='login-form-submit'> </form> </div>"
+  const logInButton = document.getElementById("login-form-submit");
+  logInButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const loginForm = document.getElementById("login-form");    
+    const username = loginForm.username.value;
+    const password = loginForm.password.value;
+  
+    const data = {
+      username: username,
+      password: password,
+    }
+  
+    fetch("http://locaLhost:3000/login", { 
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data), 
+    }).then(
+      (response => response.json()
+    )
+  ).then(data => {
+    console.log(data);
+    current_user = new userData(data)
+    current_user.displayCharacter(0);
+    removeSignUpLogIn()
+    addLogout()
+    });
+  })
+}
 
-  const data = {
-    username: username,
-    password: password,
-  }
 
-  fetch("http://locaLhost:3000/login", { 
-    method: "POST",
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data), 
-  }).then(
-    (response => response.json()
-  )
-).then(data => {
-  console.log(data);
-  current_user = new userData(data)
-  current_user.displayCharacter(0);
-  removeSignUpLogIn()
-  addLogout()
-  });
-})
 
 //create user//
 
@@ -186,7 +197,7 @@ logout = () => {
   let elem = document.getElementById('logout')
   current_user = null
   elem.remove()
-  //addSignUpLogIn()
+  addLogIn()
 }
 
 function addSignUp() {

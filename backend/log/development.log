@@ -5552,3 +5552,52 @@ Processing by CharactersController#create as */*
 Completed 201 Created in 16ms (Views: 5.5ms | ActiveRecord: 4.3ms | Allocations: 4761)
 
 
+Started POST "/login" for 127.0.0.1 at 2022-02-07 11:55:54 -0600
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (1.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 434ms (Views: 19.6ms | ActiveRecord: 5.4ms | Allocations: 16552)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-07 11:56:08 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Inkov", "race"=>"Halfling", "character_class"=>"Ranger", "alignment"=>"Chaotic Neutral", "strength"=>"14", "dexterity"=>"10", "constitution"=>"11", "intelligence"=>"14", "wisdom"=>"11", "charisma"=>"14", "user_id"=>3, "application"=>{"name"=>"Inkov", "race"=>"Halfling", "character_class"=>"Ranger", "alignment"=>"Chaotic Neutral", "strength"=>"14", "dexterity"=>"10", "constitution"=>"11", "intelligence"=>"14", "wisdom"=>"11", "charisma"=>"14", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+  [1m[36mCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Inkov"], ["race", "Halfling"], ["character_class", "Ranger"], ["alignment", "Chaotic Neutral"], ["strength", 14], ["dexterity", 10], ["constitution", 11], ["intelligence", 14], ["wisdom", 11], ["charisma", 14], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+  [1m[36mCharacter Load (1.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:22:in `create'
+Completed 201 Created in 22ms (Views: 6.9ms | ActiveRecord: 7.3ms | Allocations: 5141)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-07 11:57:55 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 293ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 3623)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-08 10:10:43 -0600
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 404ms (Views: 27.5ms | ActiveRecord: 2.6ms | Allocations: 16764)
+
+
