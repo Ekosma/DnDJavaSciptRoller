@@ -6125,3 +6125,89 @@ Processing by ApplicationController#login as */*
 Completed 200 OK in 294ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 3601)
 
 
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-08 11:57:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-08 11:57:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-08 11:57:58 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-08 11:57:58 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-08 11:58:26 -0600
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-08 11:58:26 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-08 11:59:03 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-08 11:59:03 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-08 11:59:22 -0600
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-08 11:59:22 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-08 11:59:27 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (1.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 323ms (Views: 8.8ms | ActiveRecord: 4.2ms | Allocations: 4060)
+
+
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-08 12:00:47 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-08 12:00:47 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-08 12:00:54 -0600
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-08 12:00:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-08 12:00:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-08 12:00:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-08 12:01:08 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 294ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 3604)
+
+

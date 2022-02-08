@@ -49,8 +49,7 @@ body {
 	border-radius:22px;
 	border: solid #8b0000;
   border-width: 40px 150px ;
-  outline: 10px black;
-  box-shadow: 10px black;
+  outline: 0.5rem solid black;
 }
 
 .form {
