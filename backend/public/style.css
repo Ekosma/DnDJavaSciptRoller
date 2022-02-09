@@ -19,7 +19,7 @@
   vertical-align: middle;
   padding: 10px;
   margin: 10px;
-  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #signUp, #signIn,#signUpForm{
@@ -50,6 +50,7 @@ body {
 	border: solid #8b0000;
   border-width: 40px 150px ;
   outline: 0.5rem solid black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .form {
