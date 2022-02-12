@@ -1,4 +1,3 @@
-
 window.onload = addLogIn()
 
 const names = ["Dian", "Nese", "Falledrick", "Mae", "Valhein", "Dol", "Earl", "Cedria", "Azulei", "Yun", "Cybel", "Ina", "Foolly", "Skili", "Juddol", "Janver", "Viska", "Hirschendy", "Silka", "Hellsturn", "Essa", "Mykonos", "Fenton", "Tyrena", "Inqoul", "Mankov", "Derilia", "Hexema", "Wyton", "Kaedum", "Gouram", "Libertia", "Berasailles", "Juxta", "Tae’hr", "Comtol", "Gherak", "Hest", "Qony", "Masamka", "Twyll", "Tenos", "Axim", "Westrynda", "Saphros", "Olkham", "Handok", "Kemetra", "Yos", "Wentingle", "Ames", "Molosh", "Inkov", "Phasasia", "Ziedinghal", "Bregul", "Eishvack", "Lora", "Krenting", "Symbole", "Elignoir", "Keligkrul", "Qwey", "Vindinglag", "Kusakira", "Weme", "Fayd", "Rushvita", "Vulkor", "Amers", "Ortos", "Vanius", "Chandellia", "Lilikol", "Catca", "Cormus", "Yuela", "Ariban", "Tryton", "Fesscha", "Opalul", "Zakzos", "Hortimer", "Anklos", "Dushasiez", "Polop", "Mektal", "Orinphus", "Denatra", "Elkazzi", "Dyne", "Domos", "Letryal", "Manniv", "Sylestia", "Esnol", "Fasafuros", "Ghanfer", "Kahnite", "Sweyda", "Uylis", "Retenia", "Bassos", "Arkensval", "Impelos", "Grandius", "Fulcrux", "Lassahein", "Edsveda", "Earakun", "Fous", "Maas", "Basenphal", "Jubidya", "Divya", "Kosunten", "Ordayius", "Donfer", "Gangher", "Escha", "Manchul", "Kempos", "Kulo", "Urtench", "Kesta", "Helahona", "Ryte", "Falcia", "Umannos", "Urkensvall", "Fedra", "Bulkensar", "Comia", "Tyul", "Lasendarl"]
@@ -70,28 +69,6 @@ saveButton.addEventListener("click", (e) => {
 
 // routing to char_sheets //
 
-const nextButton = document.getElementById("next");
-const previousButton = document.getElementById("previous")
-
-nextButton.addEventListener("click", (e) => {
-  console.log("HELP");
-  e.preventDefault();
-  console.log("HELP");
-  current_user.currentCharIndex = current_user.currentCharIndex + 1;
-  current_user.currentCharIndex = current_user.currentCharIndex % current_user.characters.length
-  current_user.displayCharacter(current_user.currentCharIndex);
-})
-
-previousButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (current_user.currentCharIndex == 0) {
-    current_user.currentCharIndex = current_user.characters.length
-  }
-  current_user.currentCharIndex = current_user.currentCharIndex - 1;
-  current_user.displayCharacter(current_user.currentCharIndex);
-})
-
-
 
 // Form Reset //
 
@@ -148,8 +125,12 @@ function addLogIn() {
     )
   ).then(data => {
     console.log(data);
-    current_user = new userData(data)
-    current_user.displayCharacter(0);
+    current_user = new userData(data);
+    if (current_user.characters.length === 0) {
+      newForm()
+    } else {
+      current_user.displayCharacter(0);
+    }
     removeSignUpLogIn()
     addLogout()
     });
@@ -190,12 +171,31 @@ function removeSignUpLogIn(){
 function addLogout(){
   let elem=document.getElementById('charsheet') 
   elem.innerHTML+="<button id='logout' class='button' onclick='logout()'>Logout</button>"
+  //add next eventListener 
+  let nextButton = document.getElementById("next");
+  nextButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    current_user.currentCharIndex = current_user.currentCharIndex + 1;
+    current_user.currentCharIndex = current_user.currentCharIndex % current_user.characters.length
+    current_user.displayCharacter(current_user.currentCharIndex);
+  })
+  // add back eventListener
+  let previousButton = document.getElementById("previous")
+  previousButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (current_user.currentCharIndex == 0) {
+      current_user.currentCharIndex = current_user.characters.length
+    }
+    current_user.currentCharIndex = current_user.currentCharIndex - 1;
+    current_user.displayCharacter(current_user.currentCharIndex);
+  })
 }
 
 logout = () => {
   console.log("hi")
   let elem = document.getElementById('logout')
-  current_user = null
+  current_user = 0
+  current_user.currentCharIndex = null
   elem.remove()
   addModal()
   addLogIn()
@@ -204,8 +204,6 @@ logout = () => {
 function addModal() {
   document.body.innerHTML = document.body.innerHTML += "<div id='modal' class='modal hide fade in' data-keyboard='false' data-backdrop='static'> <div id='userForm'> </div> </div>"
 }
-
-
 
 function addSignUp() {
   let elem = document.getElementById("userForm")
@@ -236,8 +234,8 @@ function addSignUp() {
   ).then(data => {
     console.log(data);
     current_user = new userData(data)
-    removeSignUpLogIn()
-    addLogout()
+    removeSignUpLogIn();
+    addLogout();
     });
   })
 }
