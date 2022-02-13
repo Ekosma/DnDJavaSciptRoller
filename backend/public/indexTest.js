@@ -24,8 +24,10 @@ class userData{
 
 
 function addLogIn() {
+  //adds login form
   let elem = document.getElementById("userForm")
   elem.innerHTML += "<div id='signTitle'> <b>Welcome to DnD Character Generator</b> </div> <div id='signIn'> <form id='login-form'> <input type='text' name='username' id='username-field' class='login-form-field' placeholder='Username'> <input type='password' name='password' id='password-field' class='login-form-field' placeholder='Password'> <input type='submit' class='button' value='Log In' id='login-form-submit'> </form> </div> <div id='signUp' onclick='addSignUp()'> Don't have an account? <button class='button'> Sign Up </button>"
+  //creates eventListener for log in button
   const logInButton = document.getElementById("login-form-submit");
   logInButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -47,9 +49,12 @@ function addLogIn() {
     )
   ).then(data => {
     console.log(data);
+    //instansiates user
     current_user = new userData(data);
+    //removes log in page
     let elem = document.getElementById('modal')
     elem.remove()
+    //adds all characters button
     let allchar = document.getElementById('charsheet')
     allchar.innerHTML += "<button id='allChar' class='button' onclick='allChar()'> All Characters </button>"
   
@@ -58,6 +63,7 @@ function addLogIn() {
 }
 
 newForm = () => {
+  //creates empty form
   document.getElementById("randNameTrait").innerHTML =  [];
   document.getElementById("randRaceTrait").innerHTML =  [];
   document.getElementById("randCharClassTrait").innerHTML =  [];
@@ -150,12 +156,7 @@ saveButton.addEventListener("click", (e) => {
   })
 })
 
-
-
-
-
-
-
+//function to pull all saved characters and format page
 
 function allChar() {
   //checks if there is currently an array of characters
@@ -164,37 +165,40 @@ function allChar() {
     alert("No characters to view.")
   } else {
     console.log("else")
-  //add next and back buttons
-  let elem = document.getElementById('charsheet')
-  elem.innerHTML += "<button id='previous' class='button'> Previous </button>"
-  elem.innerHTML += "<button id='next' class='button'> Next </button>"
-  //add next event listener
-  let nextButton = document.getElementById("next");
-  nextButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    current_user.currentCharIndex = current_user.currentCharIndex + 1;
-    current_user.currentCharIndex = current_user.currentCharIndex % current_user.characters.length
-    current_user.displayCharacter(current_user.currentCharIndex);
-  })
-  // add back eventListener
-  let previousButton = document.getElementById("previous")
-  previousButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (current_user.currentCharIndex == 0) {
-      current_user.currentCharIndex = current_user.characters.length
-    }
-    current_user.currentCharIndex = current_user.currentCharIndex - 1;
-    current_user.displayCharacter(current_user.currentCharIndex);
-  })
-  let charSheet = document.getElementById("charsheet")
-  let allChar = document.getElementById("allChar")
-  let save = document.getElementById("save")
-  let ranButt = document.getElementById("ranButt")
-  allChar.remove()
-  save.remove()
-  ranButt.remove()
-  charSheet.innerHTML += "<button id= 'newForm' onclick='newForm()' class='button'> Generate New Character</button>"
-}
+    //removes save, random, and all characters button, adds new form button
+    let charSheet = document.getElementById("charsheet")
+    let allChar = document.getElementById("allChar")
+    let save = document.getElementById("save")
+    let ranButt = document.getElementById("ranButt")
+    allChar.remove()
+    save.remove()
+    ranButt.remove()
+    charSheet.innerHTML += "<button id= 'newForm' onclick='newForm()' class='button'> Generate New Character</button>"
+    //add next and back buttons
+    let elem = document.getElementById('charsheet')
+    elem.innerHTML += "<button id='previous' class='button'> Previous </button>"
+    elem.innerHTML += "<button id='next' class='button'> Next </button>"
+    //add next event listener
+    let nextButton = document.getElementById("next");
+    nextButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("next")
+      current_user.currentCharIndex = current_user.currentCharIndex + 1;
+      current_user.currentCharIndex = current_user.currentCharIndex % current_user.characters.length
+      current_user.displayCharacter(current_user.currentCharIndex);
+    })
+    // add back eventListener
+    let previousButton = document.getElementById("previous")
+    previousButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("preious")
+      if (current_user.currentCharIndex == 0) {
+        current_user.currentCharIndex = current_user.characters.length
+      }
+      current_user.currentCharIndex = current_user.currentCharIndex - 1;
+      current_user.displayCharacter(current_user.currentCharIndex);
+    })
+  }
 }
 
 
