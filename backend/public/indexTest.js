@@ -63,6 +63,46 @@ function addLogIn() {
   })
 }
 
+function addSignUp() {
+  let elem = document.getElementById("userForm")
+  let modal = document.getElementById('modal')
+  elem.remove()
+  modal.innerHTML += "<div id='signUpForm' > <form id='sign-up-form'> <input type='text' name='username' id='username-field' class='login-form-field' placeholder='Username'> <input type='password' name='password' id='password-field' class='login-form-field' placeholder='Password'> <input type='submit' class='button' value='Sign Up' id='signup-form-submit'> </form> </div>"
+  const signUpButton = document.getElementById("signup-form-submit");
+  signUpButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const loginForm = document.getElementById("sign-up-form");    
+    const username = loginForm.username.value;
+    const password = loginForm.password.value;
+  
+    const data = {
+      username: username,
+      password: password,
+    }
+  
+    fetch("http://locaLhost:3000/new", { 
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data), 
+    }).then(
+      (response => response.json()
+    )
+  ).then(data => {
+    console.log(data);
+    //instantiates user
+    current_user = new userData(data);
+    //removes log in page
+    let elem = document.getElementById('modal')
+    elem.remove()
+    //adds all characters button
+    let allchar = document.getElementById('charsheet')
+    allchar.innerHTML += "<button id='allChar' class='button' onclick='allChar()'> All Characters </button> <button id='save' class='button' onclick='save()'> Save </button> <button id=ranButt' onclick='randomGenerator()' class='button'> Randomize </button>"
+    });
+  })
+}
+
 newForm = () => {
   //creates empty form
   document.getElementById("randNameTrait").innerHTML =  [];
@@ -143,7 +183,7 @@ class Character {
 //function to pull all saved characters and format page
 function allChar() {
   //checks if there is currently an array of characters
-  if (current_user.characters.length === 0) {
+  if (current_user.characters === undefined || current_user.characters.length === 0) {
     console.log("if")
     alert("No characters to view.")
   } else {
