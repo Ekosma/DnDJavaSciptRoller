@@ -58,7 +58,7 @@ function addLogIn() {
     elem.remove()
     //adds all characters button
     let allchar = document.getElementById('charsheet')
-    allchar.innerHTML += "<button id='allChar' class='button' onclick='allChar()'> All Characters </button>"
+    allchar.innerHTML += "<button id='allChar' class='button' onclick='allChar()'> All Characters </button> <button id='save' class='button' onclick='save()'> Save </button> <button id=ranButt' onclick='randomGenerator()' class='button'> Randomize </button>"
     });
   })
 }
@@ -206,12 +206,10 @@ function save() {
 function logout() {
   console.log("logout")
   let allChar = document.getElementById("allChar")
-  if(typeof(allChar) != 'undefined' && allChar != null){
-    allChar.remove()
-  } else {
-    console.log('not needed')
+  let button = document.getElementsByClassName('button')
+  for (;button.length;) {
+      button[0].remove();
   }
-  
   document.body.innerHTML = document.body.innerHTML += "<div id='modal' class='modal hide fade in' data-keyboard='false' data-backdrop='static'> <div id='userForm'> </div> </div>"
   addLogIn()
   document.getElementById("randNameTrait").innerHTML =  [];

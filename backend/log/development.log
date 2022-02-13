@@ -9272,3 +9272,91 @@ Processing by ApplicationController#login as */*
 Completed 200 OK in 512ms (Views: 10.5ms | ActiveRecord: 0.9ms | Allocations: 3841)
 
 
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-13 13:01:33 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:01:36 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 336ms (Views: 5.8ms | ActiveRecord: 0.6ms | Allocations: 3842)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:01:43 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"ben", "password"=>"[FILTERED]", "application"=>{"username"=>"ben", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ben"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 21) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 1637ms (Views: 7.0ms | ActiveRecord: 0.9ms | Allocations: 1205)
+
+
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-13 13:03:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:03:50 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 365ms (Views: 5.1ms | ActiveRecord: 0.5ms | Allocations: 3843)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:03:57 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"ben", "password"=>"[FILTERED]", "application"=>{"username"=>"ben", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ben"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 21) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 316ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 1201)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:04:58 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 519ms (Views: 5.1ms | ActiveRecord: 0.5ms | Allocations: 3842)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:05:10 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"ben", "password"=>"[FILTERED]", "application"=>{"username"=>"ben", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ben"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 21) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 327ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 1201)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:05:39 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (1.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 1591ms (Views: 37.4ms | ActiveRecord: 1.4ms | Allocations: 3846)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:05:46 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"ben", "password"=>"[FILTERED]", "application"=>{"username"=>"ben", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ben"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 21) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 370ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 1201)
+
+
