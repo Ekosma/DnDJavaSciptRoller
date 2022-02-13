@@ -150,12 +150,11 @@ function allChar() {
     console.log("else")
     //removes save, random, and all characters button, adds new form button
     let charSheet = document.getElementById("charsheet")
-    let allChar = document.getElementById("allChar")
-    let save = document.getElementById("save")
-    let ranButt = document.getElementById("ranButt")
-    allChar.remove()
-    save.remove()
-    ranButt.remove()
+    //loops to delete all buttons on page. Must be 0 instead of i as length varries ITS ALIVE (object cough cough)!!!
+    let button = document.getElementsByClassName('button')
+    for (;button.length;) {
+        button[0].remove();
+    }
     charSheet.innerHTML += "<button id= 'newForm' onclick='newForm()' class='button'> Generate New Character</button>"
     //add next and back buttons
     current_user.displayCharacter(0)
@@ -206,8 +205,25 @@ function save() {
 //logout function
 function logout() {
   console.log("logout")
+  let allChar = document.getElementById("allChar")
+  if(typeof(allChar) != 'undefined' && allChar != null){
+    allChar.remove()
+  } else {
+    console.log('not needed')
+  }
+  
   document.body.innerHTML = document.body.innerHTML += "<div id='modal' class='modal hide fade in' data-keyboard='false' data-backdrop='static'> <div id='userForm'> </div> </div>"
   addLogIn()
+  document.getElementById("randNameTrait").innerHTML =  [];
+  document.getElementById("randRaceTrait").innerHTML =  [];
+  document.getElementById("randCharClassTrait").innerHTML =  [];
+  document.getElementById("randAlignTrait").innerHTML =  [];
+  document.getElementById("randStrRoll").innerHTML =  [];
+  document.getElementById("randDexRoll").innerHTML =  [];
+  document.getElementById("randConRoll").innerHTML =  [];
+  document.getElementById("randIntRoll").innerHTML =  [];
+  document.getElementById("randWisRoll").innerHTML =  [];
+  document.getElementById("randCharRoll").innerHTML =  [];
 
   /* Technically works lol
   window.location.reload(); */
