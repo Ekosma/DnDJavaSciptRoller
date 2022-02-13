@@ -77,7 +77,7 @@ newForm = () => {
   document.getElementById("randCharRoll").innerHTML =  [];
   let charsheet = document.getElementById('charsheet')
   //adds all char and save button
-  charsheet.innerHTML += "<button id='allChar' class='button' onclick='allChar()'> All Characters </button> <button id='save' class='button'> Save </button> <button id='ranButt' onclick='randomGenerator()' class='button'> Randomize </button>"
+  charsheet.innerHTML += "<button id='allChar' class='button' onclick='allChar()'> All Characters </button> <button id='save' class='button' onclick='save()'> Save </button> <button id='ranButt' onclick='randomGenerator()' class='button'> Randomize </button>"
   //remove new form button
   let newForm = document.getElementById('newForm')
   newForm.remove()
@@ -205,7 +205,6 @@ function save() {
 //logout function
 function logout() {
   console.log("logout")
-  let allChar = document.getElementById("allChar")
   let button = document.getElementsByClassName('button')
   for (;button.length;) {
       button[0].remove();
