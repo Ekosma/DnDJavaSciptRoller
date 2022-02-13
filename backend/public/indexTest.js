@@ -158,6 +158,7 @@ function allChar() {
     ranButt.remove()
     charSheet.innerHTML += "<button id= 'newForm' onclick='newForm()' class='button'> Generate New Character</button>"
     //add next and back buttons
+    current_user.displayCharacter(0)
     let elem = document.getElementById('charsheet')
     elem.innerHTML += "<button id='previous' class='button'> Previous </button>"
     elem.innerHTML += "<button id='next' class='button'> Next </button>"
@@ -187,6 +188,7 @@ function allChar() {
 //save Character //
 function save() {
   console.log("save")
+  //instantiates new character
   let data = new Character()
   fetch("http://locaLhost:3000/characters", { 
     method: "POST",
@@ -201,7 +203,15 @@ function save() {
   })
 }
 
+//logout function
+function logout() {
+  console.log("logout")
+  document.body.innerHTML = document.body.innerHTML += "<div id='modal' class='modal hide fade in' data-keyboard='false' data-backdrop='static'> <div id='userForm'> </div> </div>"
+  addLogIn()
 
+  /* Technically works lol
+  window.location.reload(); */
+}
 
 
 
