@@ -50,7 +50,9 @@ function addLogIn() {
     current_user = new userData(data);
     let elem = document.getElementById('modal')
     elem.remove()
-    newForm()
+    let allchar = document.getElementById('charsheet')
+    allchar.innerHTML += "<button id='allChar' class='button' onclick='allChar()'> All Characters </button>"
+  
     });
   })
 }
@@ -66,8 +68,13 @@ newForm = () => {
   document.getElementById("randIntRoll").innerHTML =  [];
   document.getElementById("randWisRoll").innerHTML =  [];
   document.getElementById("randCharRoll").innerHTML =  [];
-  let elem = document.getElementById('charsheet')
-  elem.innerHTML += "<button id='allChar' class='button' onclick='allChar()'> All Characters </button>"
+  let charsheet = document.getElementById('charsheet')
+  //adds all char and save button
+  charsheet.innerHTML += "<button id='allChar' class='button' onclick='allChar()'> All Characters </button> <button id='save' class='button'> Save </button> <button id='ranButt' onclick='randomGenerator()' class='button'> Randomize </button>"
+  //remove new form button
+  let newForm = document.getElementById('newForm')
+  newForm.remove()
+  //removes previous and next button if exists
   let previous = document.getElementById('previous');
   let next = document.getElementById("next");
   previous.remove()
@@ -179,12 +186,14 @@ function allChar() {
     current_user.currentCharIndex = current_user.currentCharIndex - 1;
     current_user.displayCharacter(current_user.currentCharIndex);
   })
+  let charSheet = document.getElementById("charsheet")
   let allChar = document.getElementById("allChar")
   let save = document.getElementById("save")
   let ranButt = document.getElementById("ranButt")
   allChar.remove()
   save.remove()
   ranButt.remove()
+  charSheet.innerHTML += "<button id= 'newForm' onclick='newForm()' class='button'> Generate New Character</button>"
 }
 }
 
