@@ -7156,3 +7156,375 @@ Processing by ApplicationController#login as */*
 Completed 200 OK in 292ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 1201)
 
 
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 14:41:54 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started POST "/new" for 127.0.0.1 at 2022-02-12 14:42:01 -0600
+Processing by ApplicationController#create as */*
+  Parameters: {"username"=>"ben", "password"=>"[FILTERED]", "application"=>{"username"=>"ben", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :application[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ben"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+Completed 422 Unprocessable Entity in 337ms (Views: 22.3ms | ActiveRecord: 3.1ms | Allocations: 4128)
+
+
+Started POST "/new" for 127.0.0.1 at 2022-02-12 14:42:11 -0600
+Processing by ApplicationController#create as */*
+  Parameters: {"username"=>"ben", "password"=>"[FILTERED]", "application"=>{"username"=>"ben", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ben"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `create'
+Completed 422 Unprocessable Entity in 351ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 2348)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-12 14:43:05 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jerry", "password"=>"[FILTERED]", "application"=>{"username"=>"jerry", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jerry"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+Completed 200 OK in 9ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 503)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-12 14:43:11 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jerry", "password"=>"[FILTERED]", "application"=>{"username"=>"jerry", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jerry"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 492)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-12 14:43:16 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jerry", "password"=>"[FILTERED]", "application"=>{"username"=>"jerry", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jerry"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 492)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-12 14:50:18 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "application"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+Completed 200 OK in 37ms (Views: 1.0ms | ActiveRecord: 6.5ms | Allocations: 951)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-12 14:50:24 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "application"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 492)
+
+
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 14:50:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-12 14:50:38 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-12 14:50:42 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "application"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 491)
+
+
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 14:53:02 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-12 14:53:02 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-12 14:53:04 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "application"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 491)
+
+
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 14:53:30 -0600
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-12 14:53:30 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-12 14:53:31 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "application"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 491)
+
+
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 14:54:08 -0600
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-12 14:54:08 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-12 14:54:10 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "application"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 491)
+
+
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 20:33:23 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-12 20:43:40 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"rae", "password"=>"[FILTERED]", "application"=>{"username"=>"rae", "password"=>"[FILTERED]"}}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "rae"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (1.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 4) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 825ms (Views: 5.6ms | ActiveRecord: 10.5ms | Allocations: 1780)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-12 20:43:54 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"monkey", "password"=>"[FILTERED]", "application"=>{"username"=>"monkey", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "monkey"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (1.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 17) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 484ms (Views: 17.6ms | ActiveRecord: 1.3ms | Allocations: 1201)
+
+
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-12 20:53:37 -0600
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 20:53:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-12 20:56:19 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (1.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 1469ms (Views: 25.2ms | ActiveRecord: 4.8ms | Allocations: 4063)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-12 20:56:21 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 744ms (Views: 24.0ms | ActiveRecord: 0.7ms | Allocations: 3603)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-12 20:56:24 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (19.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 1156ms (Views: 55.5ms | ActiveRecord: 20.5ms | Allocations: 3606)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-12 20:58:33 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 931ms (Views: 25.5ms | ActiveRecord: 0.9ms | Allocations: 3606)
+
+
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 20:58:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 21:04:16 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-12 21:04:26 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (4.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 1075ms (Views: 15.7ms | ActiveRecord: 15.4ms | Allocations: 4064)
+
+
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-12 21:04:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 21:04:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-12 21:04:55 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 1364ms (Views: 178.3ms | ActiveRecord: 0.9ms | Allocations: 3605)
+
+
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 21:05:59 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-12 21:05:59 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-12 21:06:04 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (10.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 1067ms (Views: 173.4ms | ActiveRecord: 11.1ms | Allocations: 3605)
+
+
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 21:06:14 -0600
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-12 21:06:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-12 21:06:58 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 21:06:58 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-12 21:07:03 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 1052ms (Views: 62.7ms | ActiveRecord: 0.7ms | Allocations: 3605)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-12 21:07:24 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 896ms (Views: 6.6ms | ActiveRecord: 0.6ms | Allocations: 3603)
+
+
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 21:08:24 -0600
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-12 21:08:24 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-12 21:08:27 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 1007ms (Views: 33.4ms | ActiveRecord: 1.0ms | Allocations: 3622)
+
+
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-12 21:08:46 -0600
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 21:08:46 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-12 21:08:49 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 920ms (Views: 12.0ms | ActiveRecord: 1.1ms | Allocations: 3602)
+
+
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-12 21:09:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-12 21:09:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-12 21:09:51 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 1103ms (Views: 29.4ms | ActiveRecord: 0.8ms | Allocations: 3602)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-12 21:20:25 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (8.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 1208ms (Views: 194.0ms | ActiveRecord: 12.8ms | Allocations: 4064)
+
+
