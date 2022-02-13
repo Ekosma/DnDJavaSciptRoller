@@ -1,5 +1,7 @@
+//adds login modal on load
 window.onload = addLogIn()
 
+//instantiates user class.
 class userData{
   constructor(data) {
     this.name = data.user.username
@@ -7,6 +9,7 @@ class userData{
     this.characters = data.characters
     this.currentCharIndex = 0
   }
+  //displays data based on characters array
   displayCharacter = (index) => {
     let charData = this.characters[index];
     document.getElementById("randNameTrait").innerHTML =  charData.name;
@@ -21,7 +24,6 @@ class userData{
     document.getElementById("randCharRoll").innerHTML =  charData.charisma;
   }
 }
-
 
 function addLogIn() {
   //adds login form
@@ -49,7 +51,7 @@ function addLogIn() {
     )
   ).then(data => {
     console.log(data);
-    //instansiates user
+    //instantiates user
     current_user = new userData(data);
     //removes log in page
     let elem = document.getElementById('modal')
@@ -57,7 +59,6 @@ function addLogIn() {
     //adds all characters button
     let allchar = document.getElementById('charsheet')
     allchar.innerHTML += "<button id='allChar' class='button' onclick='allChar()'> All Characters </button>"
-  
     });
   })
 }
@@ -89,24 +90,26 @@ newForm = () => {
 }
 
 //form fillers and random generator 
-
 const names = ["Dian", "Nese", "Falledrick", "Mae", "Valhein", "Dol", "Earl", "Cedria", "Azulei", "Yun", "Cybel", "Ina", "Foolly", "Skili", "Juddol", "Janver", "Viska", "Hirschendy", "Silka", "Hellsturn", "Essa", "Mykonos", "Fenton", "Tyrena", "Inqoul", "Mankov", "Derilia", "Hexema", "Wyton", "Kaedum", "Gouram", "Libertia", "Berasailles", "Juxta", "Tae’hr", "Comtol", "Gherak", "Hest", "Qony", "Masamka", "Twyll", "Tenos", "Axim", "Westrynda", "Saphros", "Olkham", "Handok", "Kemetra", "Yos", "Wentingle", "Ames", "Molosh", "Inkov", "Phasasia", "Ziedinghal", "Bregul", "Eishvack", "Lora", "Krenting", "Symbole", "Elignoir", "Keligkrul", "Qwey", "Vindinglag", "Kusakira", "Weme", "Fayd", "Rushvita", "Vulkor", "Amers", "Ortos", "Vanius", "Chandellia", "Lilikol", "Catca", "Cormus", "Yuela", "Ariban", "Tryton", "Fesscha", "Opalul", "Zakzos", "Hortimer", "Anklos", "Dushasiez", "Polop", "Mektal", "Orinphus", "Denatra", "Elkazzi", "Dyne", "Domos", "Letryal", "Manniv", "Sylestia", "Esnol", "Fasafuros", "Ghanfer", "Kahnite", "Sweyda", "Uylis", "Retenia", "Bassos", "Arkensval", "Impelos", "Grandius", "Fulcrux", "Lassahein", "Edsveda", "Earakun", "Fous", "Maas", "Basenphal", "Jubidya", "Divya", "Kosunten", "Ordayius", "Donfer", "Gangher", "Escha", "Manchul", "Kempos", "Kulo", "Urtench", "Kesta", "Helahona", "Ryte", "Falcia", "Umannos", "Urkensvall", "Fedra", "Bulkensar", "Comia", "Tyul", "Lasendarl"]
 const races = ["Dragonborn", "Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Half-Orc", "Human", "Tiefling"]
 const charClasses = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rouge", "Sorceror", "Warlock", "Wizard"]
 const allignments = ["Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral", "True Neutral", "Chaotic Neutral", "Lawful Evil", "Neutral Evil", "Chaotic Neutral", "Unaligned"]
 
+//pulls random trait from array
 const getRandomTrait = (arr) => {
   const randomIndex = Math.floor(Math.random() * arr.length);
   const trait = arr[randomIndex];
   return trait;
 }
 
+//generates random number from 1-20
 function randomRoll() {
   let theRoll = Array.from({length: 4}, () => Math.floor(Math.random() * 6)+1);
   theRoll.sort().shift()
   return theRoll.reduce((a, b) => a + b, 0)
 }
 
+//assigns random roll to page
 function randomGenerator() {
   document.getElementById("randNameTrait").innerHTML =  getRandomTrait(names);
   document.getElementById("randRaceTrait").innerHTML =  getRandomTrait(races);
@@ -120,6 +123,7 @@ function randomGenerator() {
   document.getElementById("randCharRoll").innerHTML =  randomRoll();
 }
 
+//instantiates characters
 class Character {
   constructor() {
     this.name = document.getElementById("randNameTrait").innerHTML
@@ -136,28 +140,7 @@ class Character {
   }
 }
 
-//save Character //
-//BROKEN??//
-const saveButton = document.getElementById("save");
-
-saveButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  let data = new Character()
-  fetch("http://locaLhost:3000/characters", { 
-    method: "POST",
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data), 
-  }).then(response => response.json())
-  .then(response => { 
-    current_user.characters = response;
-    console.log(current_user.characters);
-  })
-})
-
 //function to pull all saved characters and format page
-
 function allChar() {
   //checks if there is currently an array of characters
   if (current_user.characters.length === 0) {
@@ -199,6 +182,23 @@ function allChar() {
       current_user.displayCharacter(current_user.currentCharIndex);
     })
   }
+}
+
+//save Character //
+function save() {
+  console.log("save")
+  let data = new Character()
+  fetch("http://locaLhost:3000/characters", { 
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data), 
+  }).then(response => response.json())
+  .then(response => { 
+    current_user.characters = response;
+    console.log(current_user.characters);
+  })
 }
 
 
