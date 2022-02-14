@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   post 'new', to: 'application#create'
   post 'login', to: 'application#login'
-  post 'characters', to: 'characters#create'
-  
+
+
   resources :characters 
   #end
   resources :users do

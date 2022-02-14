@@ -74,7 +74,6 @@ function addSignUp() {
     const loginForm = document.getElementById("sign-up-form");    
     const username = loginForm.username.value;
     const password = loginForm.password.value;
-  
     const data = {
       username: username,
       password: password,
@@ -195,9 +194,10 @@ function allChar() {
     for (;button.length;) {
         button[0].remove();
     }
-    charSheet.innerHTML += "<button id= 'newForm' onclick='newForm()' class='button'> Generate New Character</button>"
+    charSheet.innerHTML += "<button id= 'newForm' onclick='newForm()' class='button'> Generate New Character</button><button id='delete' onclick='deleteChar()' class='button'> Delete </button>"
     //add next and back buttons
     current_user.displayCharacter(0)
+    current_user.currentCharIndex = 0
     let elem = document.getElementById('charsheet')
     elem.innerHTML += "<button id='previous' class='button'> Previous </button>"
     elem.innerHTML += "<button id='next' class='button'> Next </button>"
@@ -227,19 +227,23 @@ function allChar() {
 //save Character //
 function save() {
   console.log("save")
+  if (document.getElementById("randNameTrait").innerHTML.trim() === "" ) {
+    alert("No Character to Save")
+  } else {
   //instantiates new character
-  let data = new Character()
-  fetch("http://locaLhost:3000/characters", { 
-    method: "POST",
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data), 
-  }).then(response => response.json())
-  .then(response => { 
-    current_user.characters = response;
-    console.log(current_user.characters);
-  })
+    let data = new Character()
+    fetch("http://locaLhost:3000/characters", { 
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data), 
+    }).then(response => response.json())
+    .then(response => { 
+      current_user.characters = response;
+      console.log(current_user.characters);
+    })
+  }
 }
 
 //logout function
@@ -261,11 +265,30 @@ function logout() {
   document.getElementById("randIntRoll").innerHTML =  [];
   document.getElementById("randWisRoll").innerHTML =  [];
   document.getElementById("randCharRoll").innerHTML =  [];
-
   /* Technically works lol
   window.location.reload(); */
 }
 
-
+//delete character
+function deleteChar() {
+  console.log("delete")
+  let data = current_user.characters[current_user.currentCharIndex].id
+  fetch(`http://locaLhost:3000/characters/${data}`, { 
+    method: "DELETE",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data), 
+  }).then(response => response.json())
+  .then(response => { 
+    current_user.characters = response;
+    console.log(current_user.characters);
+    if (current_user.characters.length === 0) {
+      newForm()
+    } else {
+      allChar()
+    }
+  })
+}
 
 

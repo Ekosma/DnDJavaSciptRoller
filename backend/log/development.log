@@ -9652,3 +9652,2190 @@ Processing by CharactersController#create as */*
 Completed 201 Created in 13ms (Views: 1.8ms | ActiveRecord: 5.0ms | Allocations: 2541)
 
 
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-13 13:23:11 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:23:30 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"ben", "password"=>"[FILTERED]", "application"=>{"username"=>"ben", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ben"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 21) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 310ms (Views: 2.7ms | ActiveRecord: 0.6ms | Allocations: 1561)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:23:56 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 1027ms (Views: 14.6ms | ActiveRecord: 0.7ms | Allocations: 3963)
+
+
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-13 13:27:50 -0600
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-13 13:27:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:27:54 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+Completed 200 OK in 1952ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 537)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:27:57 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+Completed 200 OK in 1178ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 530)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:28:08 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 418ms (Views: 7.7ms | ActiveRecord: 1.2ms | Allocations: 3966)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:29:10 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (1.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 397ms (Views: 9.8ms | ActiveRecord: 3.4ms | Allocations: 3966)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:29:37 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (1.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 368ms (Views: 6.6ms | ActiveRecord: 1.4ms | Allocations: 3962)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:35:30 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (2.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 743ms (Views: 41.1ms | ActiveRecord: 6.3ms | Allocations: 12845)
+
+
+Started DELETE "/characters" for 127.0.0.1 at 2022-02-13 13:35:33 -0600
+  
+AbstractController::ActionNotFound (The action 'delete' could not be found for CharactersController):
+  
+actionpack (6.1.4.4) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.4.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:36:17 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (1.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 347ms (Views: 14.4ms | ActiveRecord: 5.0ms | Allocations: 13724)
+
+
+Started DELETE "/characters" for 127.0.0.1 at 2022-02-13 13:36:22 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"name"=>"Chandellia", "race"=>"Human", "character_class"=>"Wizard", "alignment"=>"Chaotic Neutral", "strength"=>"12", "dexterity"=>"14", "constitution"=>"5", "intelligence"=>"14", "wisdom"=>"12", "charisma"=>"15", "user_id"=>3, "application"=>{"name"=>"Chandellia", "race"=>"Human", "character_class"=>"Wizard", "alignment"=>"Chaotic Neutral", "strength"=>"12", "dexterity"=>"14", "constitution"=>"5", "intelligence"=>"14", "wisdom"=>"12", "charisma"=>"15", "user_id"=>3}}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 148)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Character without an ID):
+  
+app/controllers/characters_controller.rb:46:in `set_character'
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:38:49 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (1.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 345ms (Views: 14.4ms | ActiveRecord: 6.0ms | Allocations: 13703)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 13:38:55 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Lora", "race"=>"Gnome", "character_class"=>"Barbarian", "alignment"=>"Chaotic Neutral", "strength"=>"18", "dexterity"=>"13", "constitution"=>"14", "intelligence"=>"7", "wisdom"=>"14", "charisma"=>"10", "user_id"=>3, "application"=>{"name"=>"Lora", "race"=>"Gnome", "character_class"=>"Barbarian", "alignment"=>"Chaotic Neutral", "strength"=>"18", "dexterity"=>"13", "constitution"=>"14", "intelligence"=>"7", "wisdom"=>"14", "charisma"=>"10", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.9ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lora"], ["race", "Gnome"], ["character_class", "Barbarian"], ["alignment", "Chaotic Neutral"], ["strength", 18], ["dexterity", 13], ["constitution", 14], ["intelligence", 7], ["wisdom", 14], ["charisma", 10], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 22ms (Views: 8.9ms | ActiveRecord: 4.8ms | Allocations: 5415)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 13:39:21 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"ben", "password"=>"[FILTERED]", "application"=>{"username"=>"ben", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ben"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 21) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 338ms (Views: 11.9ms | ActiveRecord: 2.8ms | Allocations: 12504)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 13:39:24 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Manchul", "race"=>"Dragonborn", "character_class"=>"Wizard", "alignment"=>"Chaotic Neutral", "strength"=>"7", "dexterity"=>"10", "constitution"=>"10", "intelligence"=>"10", "wisdom"=>"10", "charisma"=>"14", "user_id"=>21, "application"=>{"name"=>"Manchul", "race"=>"Dragonborn", "character_class"=>"Wizard", "alignment"=>"Chaotic Neutral", "strength"=>"7", "dexterity"=>"10", "constitution"=>"10", "intelligence"=>"10", "wisdom"=>"10", "charisma"=>"14", "user_id"=>21}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Manchul"], ["race", "Dragonborn"], ["character_class", "Wizard"], ["alignment", "Chaotic Neutral"], ["strength", 7], ["dexterity", 10], ["constitution", 10], ["intelligence", 10], ["wisdom", 10], ["charisma", 14], ["user_id", 21]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 21) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 12ms (Views: 3.0ms | ActiveRecord: 3.4ms | Allocations: 2975)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 20:59:59 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 353ms (Views: 23.5ms | ActiveRecord: 2.6ms | Allocations: 12866)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:08:45 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 337ms (Views: 14.7ms | ActiveRecord: 1.1ms | Allocations: 12863)
+
+
+Started DELETE "/characters" for 127.0.0.1 at 2022-02-13 21:08:52 -0600
+  
+ActionController::RoutingError (No route matches [DELETE] "/characters"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:09:42 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 339ms (Views: 16.4ms | ActiveRecord: 0.8ms | Allocations: 4083)
+
+
+Started DELETE "/characters/:id" for 127.0.0.1 at 2022-02-13 21:09:45 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>0, "id"=>":id", "application"=>{"_json"=>0}}
+  [1m[36mCharacter Load (1.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:45:in `set_character'
+Completed 404 Not Found in 5ms (ActiveRecord: 1.2ms | Allocations: 624)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Character with 'id'=:id):
+  
+app/controllers/characters_controller.rb:45:in `set_character'
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:10:02 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 341ms (Views: 7.4ms | ActiveRecord: 0.6ms | Allocations: 4081)
+
+
+Started DELETE "/characters/data" for 127.0.0.1 at 2022-02-13 21:10:05 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>0, "id"=>"data", "application"=>{"_json"=>0}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:45:in `set_character'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 481)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Character with 'id'=data):
+  
+app/controllers/characters_controller.rb:45:in `set_character'
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:12:36 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 344ms (Views: 16.8ms | ActiveRecord: 3.2ms | Allocations: 13823)
+
+
+Started DELETE "/characters/22" for 127.0.0.1 at 2022-02-13 21:12:42 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>22, "id"=>"22", "application"=>{"_json"=>22}}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:44:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:37:in `destroy'
+  [1m[36mCharacter Destroy (1.5ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 22]]
+  ↳ app/controllers/characters_controller.rb:37:in `destroy'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:37:in `destroy'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 4.3ms | Allocations: 1970)
+
+
+Started DELETE "/characters/NaN" for 127.0.0.1 at 2022-02-13 21:13:41 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>nil, "id"=>"NaN", "application"=>{"_json"=>nil}}
+  [1m[36mCharacter Load (0.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:44:in `set_character'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 481)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Character with 'id'=NaN):
+  
+app/controllers/characters_controller.rb:44:in `set_character'
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:14:15 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 343ms (Views: 16.0ms | ActiveRecord: 3.3ms | Allocations: 14919)
+
+
+Started DELETE "/characters/21" for 127.0.0.1 at 2022-02-13 21:14:21 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>21, "id"=>"21", "application"=>{"_json"=>21}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:45:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:37:in `destroy'
+  [1m[36mCharacter Destroy (0.9ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 21]]
+  ↳ app/controllers/characters_controller.rb:37:in `destroy'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:37:in `destroy'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/controllers/characters_controller.rb:39:in `destroy'
+Completed 200 OK in 20ms (Views: 10.4ms | ActiveRecord: 3.5ms | Allocations: 7150)
+
+
+Started DELETE "/characters/21" for 127.0.0.1 at 2022-02-13 21:14:24 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>21, "id"=>"21", "application"=>{"_json"=>21}}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:45:in `set_character'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 481)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Character with 'id'=21):
+  
+app/controllers/characters_controller.rb:45:in `set_character'
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:14:32 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 311ms (Views: 5.0ms | ActiveRecord: 0.6ms | Allocations: 3841)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:16:56 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (1.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 352ms (Views: 14.9ms | ActiveRecord: 4.6ms | Allocations: 16294)
+
+
+Started DELETE "/characters/21" for 127.0.0.1 at 2022-02-13 21:17:02 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>21, "id"=>"21", "application"=>{"_json"=>21}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 620)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Character with 'id'=21):
+  
+app/controllers/characters_controller.rb:46:in `set_character'
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:17:34 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 311ms (Views: 4.5ms | ActiveRecord: 0.6ms | Allocations: 3841)
+
+
+Started DELETE "/characters/1" for 127.0.0.1 at 2022-02-13 21:18:29 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>1, "id"=>"1", "application"=>{"_json"=>1}}
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.8ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 30ms (Views: 6.2ms | ActiveRecord: 5.3ms | Allocations: 4974)
+
+
+Started DELETE "/characters/1" for 127.0.0.1 at 2022-02-13 21:18:43 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>1, "id"=>"1", "application"=>{"_json"=>1}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 481)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Character with 'id'=1):
+  
+app/controllers/characters_controller.rb:46:in `set_character'
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:18:49 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 338ms (Views: 24.3ms | ActiveRecord: 0.5ms | Allocations: 3722)
+
+
+Started DELETE "/characters/1" for 127.0.0.1 at 2022-02-13 21:18:53 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>1, "id"=>"1", "application"=>{"_json"=>1}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms | Allocations: 481)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Character with 'id'=1):
+  
+app/controllers/characters_controller.rb:46:in `set_character'
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:19:09 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 327ms (Views: 11.7ms | ActiveRecord: 1.3ms | Allocations: 3721)
+
+
+Started DELETE "/characters/1" for 127.0.0.1 at 2022-02-13 21:19:18 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>1, "id"=>"1", "application"=>{"_json"=>1}}
+  [1m[36mCharacter Load (0.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.1ms | Allocations: 481)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Character with 'id'=1):
+  
+app/controllers/characters_controller.rb:46:in `set_character'
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:19:29 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 366ms (Views: 6.6ms | ActiveRecord: 0.6ms | Allocations: 3721)
+
+
+Started DELETE "/characters/0" for 127.0.0.1 at 2022-02-13 21:19:32 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>0, "id"=>"0", "application"=>{"_json"=>0}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 481)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Character with 'id'=0):
+  
+app/controllers/characters_controller.rb:46:in `set_character'
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:21:09 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 344ms (Views: 6.2ms | ActiveRecord: 0.8ms | Allocations: 3721)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:21:55 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 315ms (Views: 5.1ms | ActiveRecord: 0.8ms | Allocations: 3722)
+
+
+Started DELETE "/characters/15" for 127.0.0.1 at 2022-02-13 21:22:00 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>15, "id"=>"15", "application"=>{"_json"=>15}}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.5ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 15]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 20ms (Views: 5.0ms | ActiveRecord: 6.5ms | Allocations: 4839)
+
+
+Started DELETE "/characters/38" for 127.0.0.1 at 2022-02-13 21:22:22 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>38, "id"=>"38", "application"=>{"_json"=>38}}
+  [1m[36mCharacter Load (0.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.0ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 38]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (1.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 21ms (Views: 6.1ms | ActiveRecord: 5.8ms | Allocations: 4717)
+
+
+Started DELETE "/characters/13" for 127.0.0.1 at 2022-02-13 21:22:24 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>13, "id"=>"13", "application"=>{"_json"=>13}}
+  [1m[36mCharacter Load (1.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (3.9ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 27ms (Views: 6.9ms | ActiveRecord: 10.9ms | Allocations: 4595)
+
+
+Started DELETE "/characters/40" for 127.0.0.1 at 2022-02-13 21:22:24 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>40, "id"=>"40", "application"=>{"_json"=>40}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.5ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 40]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 3.4ms | Allocations: 4473)
+
+
+Started DELETE "/characters/25" for 127.0.0.1 at 2022-02-13 21:22:25 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>25, "id"=>"25", "application"=>{"_json"=>25}}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.7ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 25]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 17ms (Views: 6.8ms | ActiveRecord: 3.8ms | Allocations: 4351)
+
+
+Started DELETE "/characters/29" for 127.0.0.1 at 2022-02-13 21:22:26 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>29, "id"=>"29", "application"=>{"_json"=>29}}
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.5ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 29]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (1.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 34ms (Views: 19.9ms | ActiveRecord: 7.3ms | Allocations: 4230)
+
+
+Started DELETE "/characters/14" for 127.0.0.1 at 2022-02-13 21:22:27 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>14, "id"=>"14", "application"=>{"_json"=>14}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.5ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 13ms (Views: 3.9ms | ActiveRecord: 3.1ms | Allocations: 4107)
+
+
+Started DELETE "/characters/18" for 127.0.0.1 at 2022-02-13 21:22:28 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>18, "id"=>"18", "application"=>{"_json"=>18}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.8ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 18]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (1.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 18ms (Views: 8.1ms | ActiveRecord: 4.5ms | Allocations: 3985)
+
+
+Started DELETE "/characters/28" for 127.0.0.1 at 2022-02-13 21:22:29 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>28, "id"=>"28", "application"=>{"_json"=>28}}
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.9ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 28]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (1.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 21ms (Views: 5.7ms | ActiveRecord: 4.9ms | Allocations: 3863)
+
+
+Started DELETE "/characters/17" for 127.0.0.1 at 2022-02-13 21:22:29 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>17, "id"=>"17", "application"=>{"_json"=>17}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.6ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 17]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 13ms (Views: 4.2ms | ActiveRecord: 3.1ms | Allocations: 3741)
+
+
+Started DELETE "/characters/27" for 127.0.0.1 at 2022-02-13 21:22:31 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>27, "id"=>"27", "application"=>{"_json"=>27}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.8ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 27]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 12ms (Views: 3.1ms | ActiveRecord: 3.4ms | Allocations: 3619)
+
+
+Started DELETE "/characters/12" for 127.0.0.1 at 2022-02-13 21:22:32 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>12, "id"=>"12", "application"=>{"_json"=>12}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.1ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 16ms (Views: 4.2ms | ActiveRecord: 5.6ms | Allocations: 3497)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:26:11 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 320ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 2282)
+
+
+Started DELETE "/characters/20" for 127.0.0.1 at 2022-02-13 21:26:15 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>20, "id"=>"20", "application"=>{"_json"=>20}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.3ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 20]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 17ms (Views: 2.9ms | ActiveRecord: 7.1ms | Allocations: 3375)
+
+
+Started DELETE "/characters/4" for 127.0.0.1 at 2022-02-13 21:26:22 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>4, "id"=>"4", "application"=>{"_json"=>4}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.9ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 14ms (Views: 2.9ms | ActiveRecord: 3.4ms | Allocations: 3253)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:26:37 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Krenting", "race"=>"Half-Elf", "character_class"=>"Fighter", "alignment"=>"Neutral Evil", "strength"=>"7", "dexterity"=>"18", "constitution"=>"7", "intelligence"=>"15", "wisdom"=>"10", "charisma"=>"16", "user_id"=>3, "application"=>{"name"=>"Krenting", "race"=>"Half-Elf", "character_class"=>"Fighter", "alignment"=>"Neutral Evil", "strength"=>"7", "dexterity"=>"18", "constitution"=>"7", "intelligence"=>"15", "wisdom"=>"10", "charisma"=>"16", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.9ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Krenting"], ["race", "Half-Elf"], ["character_class", "Fighter"], ["alignment", "Neutral Evil"], ["strength", 7], ["dexterity", 18], ["constitution", 7], ["intelligence", 15], ["wisdom", 10], ["charisma", 16], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 20ms (Views: 4.3ms | ActiveRecord: 9.0ms | Allocations: 3432)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:26:39 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Kesta", "race"=>"Half-Elf", "character_class"=>"Fighter", "alignment"=>"Lawful Evil", "strength"=>"9", "dexterity"=>"15", "constitution"=>"6", "intelligence"=>"14", "wisdom"=>"4", "charisma"=>"12", "user_id"=>3, "application"=>{"name"=>"Kesta", "race"=>"Half-Elf", "character_class"=>"Fighter", "alignment"=>"Lawful Evil", "strength"=>"9", "dexterity"=>"15", "constitution"=>"6", "intelligence"=>"14", "wisdom"=>"4", "charisma"=>"12", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.0ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kesta"], ["race", "Half-Elf"], ["character_class", "Fighter"], ["alignment", "Lawful Evil"], ["strength", 9], ["dexterity", 15], ["constitution", 6], ["intelligence", 14], ["wisdom", 4], ["charisma", 12], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 18ms (Views: 5.0ms | ActiveRecord: 4.2ms | Allocations: 3518)
+
+
+Started DELETE "/characters/42" for 127.0.0.1 at 2022-02-13 21:26:47 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>42, "id"=>"42", "application"=>{"_json"=>42}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.1ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 42]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 18ms (Views: 3.2ms | ActiveRecord: 7.1ms | Allocations: 3376)
+
+
+Started DELETE "/characters/26" for 127.0.0.1 at 2022-02-13 21:26:47 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>26, "id"=>"26", "application"=>{"_json"=>26}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.1ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 26]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 18ms (Views: 3.1ms | ActiveRecord: 7.2ms | Allocations: 3253)
+
+
+Started DELETE "/characters/16" for 127.0.0.1 at 2022-02-13 21:26:48 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>16, "id"=>"16", "application"=>{"_json"=>16}}
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.2ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 16]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 19ms (Views: 5.0ms | ActiveRecord: 6.5ms | Allocations: 3131)
+
+
+Started DELETE "/characters/11" for 127.0.0.1 at 2022-02-13 21:26:49 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>11, "id"=>"11", "application"=>{"_json"=>11}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.9ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (1.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 16ms (Views: 5.0ms | ActiveRecord: 3.9ms | Allocations: 3009)
+
+
+Started DELETE "/characters/2" for 127.0.0.1 at 2022-02-13 21:26:50 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>2, "id"=>"2", "application"=>{"_json"=>2}}
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.7ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (1.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 16ms (Views: 4.0ms | ActiveRecord: 4.0ms | Allocations: 2887)
+
+
+Started DELETE "/characters/30" for 127.0.0.1 at 2022-02-13 21:26:53 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>30, "id"=>"30", "application"=>{"_json"=>30}}
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (2.9ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 30]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 17ms (Views: 1.8ms | ActiveRecord: 6.5ms | Allocations: 2764)
+
+
+Started DELETE "/characters/19" for 127.0.0.1 at 2022-02-13 21:26:54 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>19, "id"=>"19", "application"=>{"_json"=>19}}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.9ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 14ms (Views: 2.7ms | ActiveRecord: 4.9ms | Allocations: 2642)
+
+
+Started DELETE "/characters/31" for 127.0.0.1 at 2022-02-13 21:27:00 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>31, "id"=>"31", "application"=>{"_json"=>31}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.3ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 31]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 11ms (Views: 2.2ms | ActiveRecord: 4.0ms | Allocations: 2520)
+
+
+Started DELETE "/characters/43" for 127.0.0.1 at 2022-02-13 21:27:03 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>43, "id"=>"43", "application"=>{"_json"=>43}}
+  [1m[36mCharacter Load (0.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.8ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 43]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 5.1ms | Allocations: 2398)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:27:18 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Fedra", "race"=>"Elf", "character_class"=>"Fighter", "alignment"=>"Chaotic Neutral", "strength"=>"13", "dexterity"=>"13", "constitution"=>"15", "intelligence"=>"12", "wisdom"=>"11", "charisma"=>"17", "user_id"=>3, "application"=>{"name"=>"Fedra", "race"=>"Elf", "character_class"=>"Fighter", "alignment"=>"Chaotic Neutral", "strength"=>"13", "dexterity"=>"13", "constitution"=>"15", "intelligence"=>"12", "wisdom"=>"11", "charisma"=>"17", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.5ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fedra"], ["race", "Elf"], ["character_class", "Fighter"], ["alignment", "Chaotic Neutral"], ["strength", 13], ["dexterity", 13], ["constitution", 15], ["intelligence", 12], ["wisdom", 11], ["charisma", 17], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 11ms (Views: 2.0ms | ActiveRecord: 4.0ms | Allocations: 2541)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:27:20 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Kahnite", "race"=>"Dwarf", "character_class"=>"Wizard", "alignment"=>"Unaligned", "strength"=>"13", "dexterity"=>"15", "constitution"=>"12", "intelligence"=>"10", "wisdom"=>"16", "charisma"=>"16", "user_id"=>3, "application"=>{"name"=>"Kahnite", "race"=>"Dwarf", "character_class"=>"Wizard", "alignment"=>"Unaligned", "strength"=>"13", "dexterity"=>"15", "constitution"=>"12", "intelligence"=>"10", "wisdom"=>"16", "charisma"=>"16", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kahnite"], ["race", "Dwarf"], ["character_class", "Wizard"], ["alignment", "Unaligned"], ["strength", 13], ["dexterity", 15], ["constitution", 12], ["intelligence", 10], ["wisdom", 16], ["charisma", 16], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 13ms (Views: 1.9ms | ActiveRecord: 3.2ms | Allocations: 2663)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:27:21 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Orinphus", "race"=>"Human", "character_class"=>"Rouge", "alignment"=>"Lawful Neutral", "strength"=>"11", "dexterity"=>"12", "constitution"=>"13", "intelligence"=>"8", "wisdom"=>"15", "charisma"=>"11", "user_id"=>3, "application"=>{"name"=>"Orinphus", "race"=>"Human", "character_class"=>"Rouge", "alignment"=>"Lawful Neutral", "strength"=>"11", "dexterity"=>"12", "constitution"=>"13", "intelligence"=>"8", "wisdom"=>"15", "charisma"=>"11", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (2.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Orinphus"], ["race", "Human"], ["character_class", "Rouge"], ["alignment", "Lawful Neutral"], ["strength", 11], ["dexterity", 12], ["constitution", 13], ["intelligence", 8], ["wisdom", 15], ["charisma", 11], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 14ms (Views: 1.7ms | ActiveRecord: 6.2ms | Allocations: 2785)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:27:23 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Lassahein", "race"=>"Halfling", "character_class"=>"Barbarian", "alignment"=>"Neutral Good", "strength"=>"12", "dexterity"=>"9", "constitution"=>"14", "intelligence"=>"14", "wisdom"=>"14", "charisma"=>"10", "user_id"=>3, "application"=>{"name"=>"Lassahein", "race"=>"Halfling", "character_class"=>"Barbarian", "alignment"=>"Neutral Good", "strength"=>"12", "dexterity"=>"9", "constitution"=>"14", "intelligence"=>"14", "wisdom"=>"14", "charisma"=>"10", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lassahein"], ["race", "Halfling"], ["character_class", "Barbarian"], ["alignment", "Neutral Good"], ["strength", 12], ["dexterity", 9], ["constitution", 14], ["intelligence", 14], ["wisdom", 14], ["charisma", 10], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 24ms (Views: 14.0ms | ActiveRecord: 3.9ms | Allocations: 2909)
+
+
+Started DELETE "/characters/42" for 127.0.0.1 at 2022-02-13 21:27:29 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>42, "id"=>"42", "application"=>{"_json"=>42}}
+  [1m[36mCharacter Load (0.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.4ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 42]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (1.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 16ms (Views: 3.8ms | ActiveRecord: 5.6ms | Allocations: 2764)
+
+
+Started DELETE "/characters/43" for 127.0.0.1 at 2022-02-13 21:27:32 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>43, "id"=>"43", "application"=>{"_json"=>43}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.5ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 43]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 12ms (Views: 2.4ms | ActiveRecord: 5.7ms | Allocations: 2642)
+
+
+Started DELETE "/characters/45" for 127.0.0.1 at 2022-02-13 21:27:37 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>45, "id"=>"45", "application"=>{"_json"=>45}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.1ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 45]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 11ms (Views: 2.9ms | ActiveRecord: 3.3ms | Allocations: 2520)
+
+
+Started DELETE "/characters/44" for 127.0.0.1 at 2022-02-13 21:27:40 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>44, "id"=>"44", "application"=>{"_json"=>44}}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.5ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 44]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 7.5ms | Allocations: 2398)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:27:47 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Earl", "race"=>"Tiefling", "character_class"=>"Wizard", "alignment"=>"Chaotic Good", "strength"=>"11", "dexterity"=>"15", "constitution"=>"15", "intelligence"=>"11", "wisdom"=>"12", "charisma"=>"12", "user_id"=>3, "application"=>{"name"=>"Earl", "race"=>"Tiefling", "character_class"=>"Wizard", "alignment"=>"Chaotic Good", "strength"=>"11", "dexterity"=>"15", "constitution"=>"15", "intelligence"=>"11", "wisdom"=>"12", "charisma"=>"12", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (3.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Earl"], ["race", "Tiefling"], ["character_class", "Wizard"], ["alignment", "Chaotic Good"], ["strength", 11], ["dexterity", 15], ["constitution", 15], ["intelligence", 11], ["wisdom", 12], ["charisma", 12], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 18ms (Views: 3.5ms | ActiveRecord: 5.6ms | Allocations: 2541)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:27:48 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Saphros", "race"=>"Dragonborn", "character_class"=>"Barbarian", "alignment"=>"True Neutral", "strength"=>"8", "dexterity"=>"10", "constitution"=>"14", "intelligence"=>"11", "wisdom"=>"5", "charisma"=>"11", "user_id"=>3, "application"=>{"name"=>"Saphros", "race"=>"Dragonborn", "character_class"=>"Barbarian", "alignment"=>"True Neutral", "strength"=>"8", "dexterity"=>"10", "constitution"=>"14", "intelligence"=>"11", "wisdom"=>"5", "charisma"=>"11", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.4ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Saphros"], ["race", "Dragonborn"], ["character_class", "Barbarian"], ["alignment", "True Neutral"], ["strength", 8], ["dexterity", 10], ["constitution", 14], ["intelligence", 11], ["wisdom", 5], ["charisma", 11], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 14ms (Views: 3.6ms | ActiveRecord: 3.7ms | Allocations: 2663)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:27:49 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Ziedinghal", "race"=>"Human", "character_class"=>"Fighter", "alignment"=>"Neutral Evil", "strength"=>"9", "dexterity"=>"11", "constitution"=>"10", "intelligence"=>"16", "wisdom"=>"11", "charisma"=>"14", "user_id"=>3, "application"=>{"name"=>"Ziedinghal", "race"=>"Human", "character_class"=>"Fighter", "alignment"=>"Neutral Evil", "strength"=>"9", "dexterity"=>"11", "constitution"=>"10", "intelligence"=>"16", "wisdom"=>"11", "charisma"=>"14", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ziedinghal"], ["race", "Human"], ["character_class", "Fighter"], ["alignment", "Neutral Evil"], ["strength", 9], ["dexterity", 11], ["constitution", 10], ["intelligence", 16], ["wisdom", 11], ["charisma", 14], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 10ms (Views: 2.1ms | ActiveRecord: 3.2ms | Allocations: 2785)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:27:50 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Mykonos", "race"=>"Dragonborn", "character_class"=>"Warlock", "alignment"=>"Chaotic Neutral", "strength"=>"11", "dexterity"=>"9", "constitution"=>"7", "intelligence"=>"15", "wisdom"=>"11", "charisma"=>"13", "user_id"=>3, "application"=>{"name"=>"Mykonos", "race"=>"Dragonborn", "character_class"=>"Warlock", "alignment"=>"Chaotic Neutral", "strength"=>"11", "dexterity"=>"9", "constitution"=>"7", "intelligence"=>"15", "wisdom"=>"11", "charisma"=>"13", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (5.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mykonos"], ["race", "Dragonborn"], ["character_class", "Warlock"], ["alignment", "Chaotic Neutral"], ["strength", 11], ["dexterity", 9], ["constitution", 7], ["intelligence", 15], ["wisdom", 11], ["charisma", 13], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 19ms (Views: 2.2ms | ActiveRecord: 9.7ms | Allocations: 2908)
+
+
+Started DELETE "/characters/43" for 127.0.0.1 at 2022-02-13 21:27:55 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>43, "id"=>"43", "application"=>{"_json"=>43}}
+  [1m[36mCharacter Load (1.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.2ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 43]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (1.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 18ms (Views: 2.6ms | ActiveRecord: 5.7ms | Allocations: 2764)
+
+
+Started DELETE "/characters/44" for 127.0.0.1 at 2022-02-13 21:27:57 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>44, "id"=>"44", "application"=>{"_json"=>44}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.8ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 44]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 15ms (Views: 1.7ms | ActiveRecord: 5.3ms | Allocations: 2642)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:28:22 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+Completed 200 OK in 318ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 529)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:28:25 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 315ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 1441)
+
+
+Started DELETE "/characters/42" for 127.0.0.1 at 2022-02-13 21:28:33 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>42, "id"=>"42", "application"=>{"_json"=>42}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.7ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 42]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 15ms (Views: 2.7ms | ActiveRecord: 3.5ms | Allocations: 2520)
+
+
+Started DELETE "/characters/45" for 127.0.0.1 at 2022-02-13 21:28:35 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>45, "id"=>"45", "application"=>{"_json"=>45}}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.7ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 45]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 17ms (Views: 2.6ms | ActiveRecord: 6.5ms | Allocations: 2398)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:28:39 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Handok", "race"=>"Tiefling", "character_class"=>"Monk", "alignment"=>"Chaotic Good", "strength"=>"9", "dexterity"=>"13", "constitution"=>"5", "intelligence"=>"12", "wisdom"=>"13", "charisma"=>"15", "user_id"=>3, "application"=>{"name"=>"Handok", "race"=>"Tiefling", "character_class"=>"Monk", "alignment"=>"Chaotic Good", "strength"=>"9", "dexterity"=>"13", "constitution"=>"5", "intelligence"=>"12", "wisdom"=>"13", "charisma"=>"15", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.0ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Handok"], ["race", "Tiefling"], ["character_class", "Monk"], ["alignment", "Chaotic Good"], ["strength", 9], ["dexterity", 13], ["constitution", 5], ["intelligence", 12], ["wisdom", 13], ["charisma", 15], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 16ms (Views: 3.6ms | ActiveRecord: 5.8ms | Allocations: 2542)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:28:41 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Ziedinghal", "race"=>"Human", "character_class"=>"Paladin", "alignment"=>"Lawful Good", "strength"=>"10", "dexterity"=>"13", "constitution"=>"13", "intelligence"=>"16", "wisdom"=>"6", "charisma"=>"17", "user_id"=>3, "application"=>{"name"=>"Ziedinghal", "race"=>"Human", "character_class"=>"Paladin", "alignment"=>"Lawful Good", "strength"=>"10", "dexterity"=>"13", "constitution"=>"13", "intelligence"=>"16", "wisdom"=>"6", "charisma"=>"17", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.9ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ziedinghal"], ["race", "Human"], ["character_class", "Paladin"], ["alignment", "Lawful Good"], ["strength", 10], ["dexterity", 13], ["constitution", 13], ["intelligence", 16], ["wisdom", 6], ["charisma", 17], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 14ms (Views: 2.1ms | ActiveRecord: 3.9ms | Allocations: 2663)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:28:42 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Mankov", "race"=>"Gnome", "character_class"=>"Monk", "alignment"=>"Lawful Neutral", "strength"=>"17", "dexterity"=>"11", "constitution"=>"12", "intelligence"=>"12", "wisdom"=>"10", "charisma"=>"11", "user_id"=>3, "application"=>{"name"=>"Mankov", "race"=>"Gnome", "character_class"=>"Monk", "alignment"=>"Lawful Neutral", "strength"=>"17", "dexterity"=>"11", "constitution"=>"12", "intelligence"=>"12", "wisdom"=>"10", "charisma"=>"11", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mankov"], ["race", "Gnome"], ["character_class", "Monk"], ["alignment", "Lawful Neutral"], ["strength", 17], ["dexterity", 11], ["constitution", 12], ["intelligence", 12], ["wisdom", 10], ["charisma", 11], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (1.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 17ms (Views: 3.9ms | ActiveRecord: 5.9ms | Allocations: 2785)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:28:43 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Saphros", "race"=>"Tiefling", "character_class"=>"Cleric", "alignment"=>"True Neutral", "strength"=>"11", "dexterity"=>"15", "constitution"=>"9", "intelligence"=>"9", "wisdom"=>"8", "charisma"=>"11", "user_id"=>3, "application"=>{"name"=>"Saphros", "race"=>"Tiefling", "character_class"=>"Cleric", "alignment"=>"True Neutral", "strength"=>"11", "dexterity"=>"15", "constitution"=>"9", "intelligence"=>"9", "wisdom"=>"8", "charisma"=>"11", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Saphros"], ["race", "Tiefling"], ["character_class", "Cleric"], ["alignment", "True Neutral"], ["strength", 11], ["dexterity", 15], ["constitution", 9], ["intelligence", 9], ["wisdom", 8], ["charisma", 11], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 16ms (Views: 3.8ms | ActiveRecord: 4.4ms | Allocations: 2908)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:28:45 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Fous", "race"=>"Elf", "character_class"=>"Bard", "alignment"=>"Chaotic Neutral", "strength"=>"9", "dexterity"=>"17", "constitution"=>"18", "intelligence"=>"12", "wisdom"=>"9", "charisma"=>"14", "user_id"=>3, "application"=>{"name"=>"Fous", "race"=>"Elf", "character_class"=>"Bard", "alignment"=>"Chaotic Neutral", "strength"=>"9", "dexterity"=>"17", "constitution"=>"18", "intelligence"=>"12", "wisdom"=>"9", "charisma"=>"14", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fous"], ["race", "Elf"], ["character_class", "Bard"], ["alignment", "Chaotic Neutral"], ["strength", 9], ["dexterity", 17], ["constitution", 18], ["intelligence", 12], ["wisdom", 9], ["charisma", 14], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 15ms (Views: 3.4ms | ActiveRecord: 4.1ms | Allocations: 3030)
+
+
+Started DELETE "/characters/46" for 127.0.0.1 at 2022-02-13 21:28:51 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>46, "id"=>"46", "application"=>{"_json"=>46}}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.7ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 46]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 11ms (Views: 2.2ms | ActiveRecord: 3.1ms | Allocations: 2887)
+
+
+Started DELETE "/characters/42" for 127.0.0.1 at 2022-02-13 21:28:52 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>42, "id"=>"42", "application"=>{"_json"=>42}}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.5ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 42]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 14ms (Views: 3.5ms | ActiveRecord: 5.4ms | Allocations: 2764)
+
+
+Started DELETE "/characters/44" for 127.0.0.1 at 2022-02-13 21:28:52 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>44, "id"=>"44", "application"=>{"_json"=>44}}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.9ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 44]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 17ms (Views: 3.4ms | ActiveRecord: 6.6ms | Allocations: 2642)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:28:55 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Vanius", "race"=>"Human", "character_class"=>"Bard", "alignment"=>"Lawful Neutral", "strength"=>"9", "dexterity"=>"10", "constitution"=>"15", "intelligence"=>"10", "wisdom"=>"14", "charisma"=>"14", "user_id"=>3, "application"=>{"name"=>"Vanius", "race"=>"Human", "character_class"=>"Bard", "alignment"=>"Lawful Neutral", "strength"=>"9", "dexterity"=>"10", "constitution"=>"15", "intelligence"=>"10", "wisdom"=>"14", "charisma"=>"14", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vanius"], ["race", "Human"], ["character_class", "Bard"], ["alignment", "Lawful Neutral"], ["strength", 9], ["dexterity", 10], ["constitution", 15], ["intelligence", 10], ["wisdom", 14], ["charisma", 14], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 14ms (Views: 5.1ms | ActiveRecord: 3.1ms | Allocations: 2785)
+
+
+Started DELETE "/characters/45" for 127.0.0.1 at 2022-02-13 21:28:57 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>45, "id"=>"45", "application"=>{"_json"=>45}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (2.0ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 45]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 18ms (Views: 2.3ms | ActiveRecord: 8.6ms | Allocations: 2642)
+
+
+Started DELETE "/characters/46" for 127.0.0.1 at 2022-02-13 21:29:00 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>46, "id"=>"46", "application"=>{"_json"=>46}}
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.4ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 46]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 16ms (Views: 1.7ms | ActiveRecord: 7.7ms | Allocations: 2520)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:29:04 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Jubidya", "race"=>"Elf", "character_class"=>"Barbarian", "alignment"=>"Unaligned", "strength"=>"9", "dexterity"=>"12", "constitution"=>"18", "intelligence"=>"16", "wisdom"=>"14", "charisma"=>"11", "user_id"=>3, "application"=>{"name"=>"Jubidya", "race"=>"Elf", "character_class"=>"Barbarian", "alignment"=>"Unaligned", "strength"=>"9", "dexterity"=>"12", "constitution"=>"18", "intelligence"=>"16", "wisdom"=>"14", "charisma"=>"11", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jubidya"], ["race", "Elf"], ["character_class", "Barbarian"], ["alignment", "Unaligned"], ["strength", 9], ["dexterity", 12], ["constitution", 18], ["intelligence", 16], ["wisdom", 14], ["charisma", 11], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (1.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 19ms (Views: 2.9ms | ActiveRecord: 8.7ms | Allocations: 2663)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:29:05 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Cybel", "race"=>"Tiefling", "character_class"=>"Bard", "alignment"=>"Lawful Good", "strength"=>"15", "dexterity"=>"14", "constitution"=>"15", "intelligence"=>"14", "wisdom"=>"9", "charisma"=>"10", "user_id"=>3, "application"=>{"name"=>"Cybel", "race"=>"Tiefling", "character_class"=>"Bard", "alignment"=>"Lawful Good", "strength"=>"15", "dexterity"=>"14", "constitution"=>"15", "intelligence"=>"14", "wisdom"=>"9", "charisma"=>"10", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cybel"], ["race", "Tiefling"], ["character_class", "Bard"], ["alignment", "Lawful Good"], ["strength", 15], ["dexterity", 14], ["constitution", 15], ["intelligence", 14], ["wisdom", 9], ["charisma", 10], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 32ms (Views: 5.6ms | ActiveRecord: 3.3ms | Allocations: 5154)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:29:07 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Dushasiez", "race"=>"Human", "character_class"=>"Ranger", "alignment"=>"Neutral Good", "strength"=>"8", "dexterity"=>"13", "constitution"=>"13", "intelligence"=>"16", "wisdom"=>"14", "charisma"=>"13", "user_id"=>3, "application"=>{"name"=>"Dushasiez", "race"=>"Human", "character_class"=>"Ranger", "alignment"=>"Neutral Good", "strength"=>"8", "dexterity"=>"13", "constitution"=>"13", "intelligence"=>"16", "wisdom"=>"14", "charisma"=>"13", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dushasiez"], ["race", "Human"], ["character_class", "Ranger"], ["alignment", "Neutral Good"], ["strength", 8], ["dexterity", 13], ["constitution", 13], ["intelligence", 16], ["wisdom", 14], ["charisma", 13], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 11ms (Views: 2.7ms | ActiveRecord: 2.9ms | Allocations: 2908)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:29:08 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Hexema", "race"=>"Elf", "character_class"=>"Druid", "alignment"=>"Lawful Evil", "strength"=>"14", "dexterity"=>"11", "constitution"=>"12", "intelligence"=>"8", "wisdom"=>"7", "charisma"=>"14", "user_id"=>3, "application"=>{"name"=>"Hexema", "race"=>"Elf", "character_class"=>"Druid", "alignment"=>"Lawful Evil", "strength"=>"14", "dexterity"=>"11", "constitution"=>"12", "intelligence"=>"8", "wisdom"=>"7", "charisma"=>"14", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Hexema"], ["race", "Elf"], ["character_class", "Druid"], ["alignment", "Lawful Evil"], ["strength", 14], ["dexterity", 11], ["constitution", 12], ["intelligence", 8], ["wisdom", 7], ["charisma", 14], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 14ms (Views: 3.9ms | ActiveRecord: 3.3ms | Allocations: 3030)
+
+
+Started DELETE "/characters/46" for 127.0.0.1 at 2022-02-13 21:29:12 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>46, "id"=>"46", "application"=>{"_json"=>46}}
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.7ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 46]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 16ms (Views: 2.4ms | ActiveRecord: 5.2ms | Allocations: 2887)
+
+
+Started DELETE "/characters/47" for 127.0.0.1 at 2022-02-13 21:29:13 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>47, "id"=>"47", "application"=>{"_json"=>47}}
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (2.4ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 47]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 16ms (Views: 2.5ms | ActiveRecord: 5.2ms | Allocations: 2764)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:32:15 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 318ms (Views: 2.0ms | ActiveRecord: 1.8ms | Allocations: 1562)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:32:22 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Skili", "race"=>"Gnome", "character_class"=>"Wizard", "alignment"=>"Chaotic Good", "strength"=>"12", "dexterity"=>"8", "constitution"=>"11", "intelligence"=>"7", "wisdom"=>"12", "charisma"=>"9", "user_id"=>3, "application"=>{"name"=>"Skili", "race"=>"Gnome", "character_class"=>"Wizard", "alignment"=>"Chaotic Good", "strength"=>"12", "dexterity"=>"8", "constitution"=>"11", "intelligence"=>"7", "wisdom"=>"12", "charisma"=>"9", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.5ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Skili"], ["race", "Gnome"], ["character_class", "Wizard"], ["alignment", "Chaotic Good"], ["strength", 12], ["dexterity", 8], ["constitution", 11], ["intelligence", 7], ["wisdom", 12], ["charisma", 9], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 15ms (Views: 2.6ms | ActiveRecord: 5.6ms | Allocations: 2908)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:32:23 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Fenton", "race"=>"Dragonborn", "character_class"=>"Monk", "alignment"=>"Lawful Good", "strength"=>"13", "dexterity"=>"18", "constitution"=>"12", "intelligence"=>"10", "wisdom"=>"14", "charisma"=>"9", "user_id"=>3, "application"=>{"name"=>"Fenton", "race"=>"Dragonborn", "character_class"=>"Monk", "alignment"=>"Lawful Good", "strength"=>"13", "dexterity"=>"18", "constitution"=>"12", "intelligence"=>"10", "wisdom"=>"14", "charisma"=>"9", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fenton"], ["race", "Dragonborn"], ["character_class", "Monk"], ["alignment", "Lawful Good"], ["strength", 13], ["dexterity", 18], ["constitution", 12], ["intelligence", 10], ["wisdom", 14], ["charisma", 9], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 14ms (Views: 2.7ms | ActiveRecord: 5.0ms | Allocations: 3030)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:32:24 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Kaedum", "race"=>"Halfling", "character_class"=>"Druid", "alignment"=>"True Neutral", "strength"=>"7", "dexterity"=>"14", "constitution"=>"11", "intelligence"=>"6", "wisdom"=>"11", "charisma"=>"10", "user_id"=>3, "application"=>{"name"=>"Kaedum", "race"=>"Halfling", "character_class"=>"Druid", "alignment"=>"True Neutral", "strength"=>"7", "dexterity"=>"14", "constitution"=>"11", "intelligence"=>"6", "wisdom"=>"11", "charisma"=>"10", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kaedum"], ["race", "Halfling"], ["character_class", "Druid"], ["alignment", "True Neutral"], ["strength", 7], ["dexterity", 14], ["constitution", 11], ["intelligence", 6], ["wisdom", 11], ["charisma", 10], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 17ms (Views: 2.8ms | ActiveRecord: 4.7ms | Allocations: 3152)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:32:25 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Hellsturn", "race"=>"Elf", "character_class"=>"Fighter", "alignment"=>"True Neutral", "strength"=>"12", "dexterity"=>"9", "constitution"=>"10", "intelligence"=>"17", "wisdom"=>"6", "charisma"=>"13", "user_id"=>3, "application"=>{"name"=>"Hellsturn", "race"=>"Elf", "character_class"=>"Fighter", "alignment"=>"True Neutral", "strength"=>"12", "dexterity"=>"9", "constitution"=>"10", "intelligence"=>"17", "wisdom"=>"6", "charisma"=>"13", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Hellsturn"], ["race", "Elf"], ["character_class", "Fighter"], ["alignment", "True Neutral"], ["strength", 12], ["dexterity", 9], ["constitution", 10], ["intelligence", 17], ["wisdom", 6], ["charisma", 13], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 12ms (Views: 2.8ms | ActiveRecord: 3.0ms | Allocations: 3274)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:32:27 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Lassahein", "race"=>"Halfling", "character_class"=>"Wizard", "alignment"=>"Lawful Neutral", "strength"=>"14", "dexterity"=>"14", "constitution"=>"14", "intelligence"=>"10", "wisdom"=>"9", "charisma"=>"8", "user_id"=>3, "application"=>{"name"=>"Lassahein", "race"=>"Halfling", "character_class"=>"Wizard", "alignment"=>"Lawful Neutral", "strength"=>"14", "dexterity"=>"14", "constitution"=>"14", "intelligence"=>"10", "wisdom"=>"9", "charisma"=>"8", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lassahein"], ["race", "Halfling"], ["character_class", "Wizard"], ["alignment", "Lawful Neutral"], ["strength", 14], ["dexterity", 14], ["constitution", 14], ["intelligence", 10], ["wisdom", 9], ["charisma", 8], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 10ms (Views: 2.9ms | ActiveRecord: 2.8ms | Allocations: 3396)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:32:28 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Qony", "race"=>"Half-Elf", "character_class"=>"Bard", "alignment"=>"Neutral Good", "strength"=>"12", "dexterity"=>"14", "constitution"=>"12", "intelligence"=>"11", "wisdom"=>"13", "charisma"=>"18", "user_id"=>3, "application"=>{"name"=>"Qony", "race"=>"Half-Elf", "character_class"=>"Bard", "alignment"=>"Neutral Good", "strength"=>"12", "dexterity"=>"14", "constitution"=>"12", "intelligence"=>"11", "wisdom"=>"13", "charisma"=>"18", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Qony"], ["race", "Half-Elf"], ["character_class", "Bard"], ["alignment", "Neutral Good"], ["strength", 12], ["dexterity", 14], ["constitution", 12], ["intelligence", 11], ["wisdom", 13], ["charisma", 18], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 12ms (Views: 2.7ms | ActiveRecord: 3.2ms | Allocations: 3518)
+
+
+Started DELETE "/characters/49" for 127.0.0.1 at 2022-02-13 21:32:35 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>49, "id"=>"49", "application"=>{"_json"=>49}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.6ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 49]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 16ms (Views: 3.5ms | ActiveRecord: 4.3ms | Allocations: 3376)
+
+
+Started DELETE "/characters/45" for 127.0.0.1 at 2022-02-13 21:32:38 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>45, "id"=>"45", "application"=>{"_json"=>45}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (3.2ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 45]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 16ms (Views: 2.7ms | ActiveRecord: 5.8ms | Allocations: 3253)
+
+
+Started DELETE "/characters/47" for 127.0.0.1 at 2022-02-13 21:32:40 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>47, "id"=>"47", "application"=>{"_json"=>47}}
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.2ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 47]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 15ms (Views: 2.9ms | ActiveRecord: 3.8ms | Allocations: 3131)
+
+
+Started DELETE "/characters/44" for 127.0.0.1 at 2022-02-13 21:32:40 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>44, "id"=>"44", "application"=>{"_json"=>44}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.8ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 44]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 16ms (Views: 2.9ms | ActiveRecord: 5.6ms | Allocations: 3009)
+
+
+Started DELETE "/characters/48" for 127.0.0.1 at 2022-02-13 21:32:41 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>48, "id"=>"48", "application"=>{"_json"=>48}}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.9ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 48]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 15ms (Views: 2.4ms | ActiveRecord: 3.9ms | Allocations: 2887)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:32:44 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Manchul", "race"=>"Dragonborn", "character_class"=>"Fighter", "alignment"=>"Lawful Evil", "strength"=>"15", "dexterity"=>"14", "constitution"=>"8", "intelligence"=>"16", "wisdom"=>"13", "charisma"=>"13", "user_id"=>3, "application"=>{"name"=>"Manchul", "race"=>"Dragonborn", "character_class"=>"Fighter", "alignment"=>"Lawful Evil", "strength"=>"15", "dexterity"=>"14", "constitution"=>"8", "intelligence"=>"16", "wisdom"=>"13", "charisma"=>"13", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (2.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Manchul"], ["race", "Dragonborn"], ["character_class", "Fighter"], ["alignment", "Lawful Evil"], ["strength", 15], ["dexterity", 14], ["constitution", 8], ["intelligence", 16], ["wisdom", 13], ["charisma", 13], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 20ms (Views: 4.5ms | ActiveRecord: 6.4ms | Allocations: 3030)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:32:45 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Sweyda", "race"=>"Elf", "character_class"=>"Rouge", "alignment"=>"Chaotic Good", "strength"=>"10", "dexterity"=>"11", "constitution"=>"17", "intelligence"=>"14", "wisdom"=>"13", "charisma"=>"14", "user_id"=>3, "application"=>{"name"=>"Sweyda", "race"=>"Elf", "character_class"=>"Rouge", "alignment"=>"Chaotic Good", "strength"=>"10", "dexterity"=>"11", "constitution"=>"17", "intelligence"=>"14", "wisdom"=>"13", "charisma"=>"14", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sweyda"], ["race", "Elf"], ["character_class", "Rouge"], ["alignment", "Chaotic Good"], ["strength", 10], ["dexterity", 11], ["constitution", 17], ["intelligence", 14], ["wisdom", 13], ["charisma", 14], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 13ms (Views: 2.9ms | ActiveRecord: 4.3ms | Allocations: 3152)
+
+
+Started DELETE "/characters/50" for 127.0.0.1 at 2022-02-13 21:32:47 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>50, "id"=>"50", "application"=>{"_json"=>50}}
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.0ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 50]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 17ms (Views: 3.3ms | ActiveRecord: 5.3ms | Allocations: 3009)
+
+
+Started DELETE "/characters/52" for 127.0.0.1 at 2022-02-13 21:32:47 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>52, "id"=>"52", "application"=>{"_json"=>52}}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.5ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 52]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (1.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 14ms (Views: 3.2ms | ActiveRecord: 4.1ms | Allocations: 2887)
+
+
+Started DELETE "/characters/51" for 127.0.0.1 at 2022-02-13 21:32:48 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>51, "id"=>"51", "application"=>{"_json"=>51}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.0ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 51]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 14ms (Views: 3.1ms | ActiveRecord: 4.0ms | Allocations: 2764)
+
+
+Started DELETE "/characters/46" for 127.0.0.1 at 2022-02-13 21:32:48 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>46, "id"=>"46", "application"=>{"_json"=>46}}
+  [1m[36mCharacter Load (0.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.8ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 46]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 14ms (Views: 2.7ms | ActiveRecord: 5.0ms | Allocations: 2642)
+
+
+Started DELETE "/characters/53" for 127.0.0.1 at 2022-02-13 21:32:49 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>53, "id"=>"53", "application"=>{"_json"=>53}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.2ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 53]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 15ms (Views: 2.4ms | ActiveRecord: 5.4ms | Allocations: 2520)
+
+
+Started DELETE "/characters/43" for 127.0.0.1 at 2022-02-13 21:32:50 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>43, "id"=>"43", "application"=>{"_json"=>43}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.5ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 43]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (1.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 28ms (Views: 2.3ms | ActiveRecord: 5.2ms | Allocations: 2399)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:35:31 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 316ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1201)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:35:39 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Denatra", "race"=>"Elf", "character_class"=>"Bard", "alignment"=>"Chaotic Neutral", "strength"=>"11", "dexterity"=>"14", "constitution"=>"15", "intelligence"=>"12", "wisdom"=>"4", "charisma"=>"5", "user_id"=>3, "application"=>{"name"=>"Denatra", "race"=>"Elf", "character_class"=>"Bard", "alignment"=>"Chaotic Neutral", "strength"=>"11", "dexterity"=>"14", "constitution"=>"15", "intelligence"=>"12", "wisdom"=>"4", "charisma"=>"5", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.0ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Denatra"], ["race", "Elf"], ["character_class", "Bard"], ["alignment", "Chaotic Neutral"], ["strength", 11], ["dexterity", 14], ["constitution", 15], ["intelligence", 12], ["wisdom", 4], ["charisma", 5], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 17ms (Views: 2.3ms | ActiveRecord: 7.7ms | Allocations: 2541)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:35:40 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Tyul", "race"=>"Dragonborn", "character_class"=>"Sorceror", "alignment"=>"Lawful Good", "strength"=>"13", "dexterity"=>"9", "constitution"=>"11", "intelligence"=>"15", "wisdom"=>"12", "charisma"=>"12", "user_id"=>3, "application"=>{"name"=>"Tyul", "race"=>"Dragonborn", "character_class"=>"Sorceror", "alignment"=>"Lawful Good", "strength"=>"13", "dexterity"=>"9", "constitution"=>"11", "intelligence"=>"15", "wisdom"=>"12", "charisma"=>"12", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (10.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tyul"], ["race", "Dragonborn"], ["character_class", "Sorceror"], ["alignment", "Lawful Good"], ["strength", 13], ["dexterity", 9], ["constitution", 11], ["intelligence", 15], ["wisdom", 12], ["charisma", 12], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 39ms (Views: 7.5ms | ActiveRecord: 20.3ms | Allocations: 2663)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:35:40 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Vindinglag", "race"=>"Human", "character_class"=>"Bard", "alignment"=>"Chaotic Neutral", "strength"=>"13", "dexterity"=>"13", "constitution"=>"11", "intelligence"=>"15", "wisdom"=>"14", "charisma"=>"7", "user_id"=>3, "application"=>{"name"=>"Vindinglag", "race"=>"Human", "character_class"=>"Bard", "alignment"=>"Chaotic Neutral", "strength"=>"13", "dexterity"=>"13", "constitution"=>"11", "intelligence"=>"15", "wisdom"=>"14", "charisma"=>"7", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (2.5ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vindinglag"], ["race", "Human"], ["character_class", "Bard"], ["alignment", "Chaotic Neutral"], ["strength", 13], ["dexterity", 13], ["constitution", 11], ["intelligence", 15], ["wisdom", 14], ["charisma", 7], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 18ms (Views: 1.9ms | ActiveRecord: 9.0ms | Allocations: 2785)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:35:41 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Divya", "race"=>"Half-Elf", "character_class"=>"Barbarian", "alignment"=>"Chaotic Good", "strength"=>"12", "dexterity"=>"12", "constitution"=>"13", "intelligence"=>"12", "wisdom"=>"14", "charisma"=>"12", "user_id"=>3, "application"=>{"name"=>"Divya", "race"=>"Half-Elf", "character_class"=>"Barbarian", "alignment"=>"Chaotic Good", "strength"=>"12", "dexterity"=>"12", "constitution"=>"13", "intelligence"=>"12", "wisdom"=>"14", "charisma"=>"12", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Divya"], ["race", "Half-Elf"], ["character_class", "Barbarian"], ["alignment", "Chaotic Good"], ["strength", 12], ["dexterity", 12], ["constitution", 13], ["intelligence", 12], ["wisdom", 14], ["charisma", 12], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 10ms (Views: 1.7ms | ActiveRecord: 4.3ms | Allocations: 2908)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:35:42 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Falledrick", "race"=>"Tiefling", "character_class"=>"Fighter", "alignment"=>"Neutral Good", "strength"=>"16", "dexterity"=>"14", "constitution"=>"10", "intelligence"=>"17", "wisdom"=>"13", "charisma"=>"9", "user_id"=>3, "application"=>{"name"=>"Falledrick", "race"=>"Tiefling", "character_class"=>"Fighter", "alignment"=>"Neutral Good", "strength"=>"16", "dexterity"=>"14", "constitution"=>"10", "intelligence"=>"17", "wisdom"=>"13", "charisma"=>"9", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Falledrick"], ["race", "Tiefling"], ["character_class", "Fighter"], ["alignment", "Neutral Good"], ["strength", 16], ["dexterity", 14], ["constitution", 10], ["intelligence", 17], ["wisdom", 13], ["charisma", 9], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 18ms (Views: 4.3ms | ActiveRecord: 4.1ms | Allocations: 3030)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:35:43 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Juxta", "race"=>"Elf", "character_class"=>"Fighter", "alignment"=>"Neutral Evil", "strength"=>"14", "dexterity"=>"10", "constitution"=>"9", "intelligence"=>"13", "wisdom"=>"9", "charisma"=>"14", "user_id"=>3, "application"=>{"name"=>"Juxta", "race"=>"Elf", "character_class"=>"Fighter", "alignment"=>"Neutral Evil", "strength"=>"14", "dexterity"=>"10", "constitution"=>"9", "intelligence"=>"13", "wisdom"=>"9", "charisma"=>"14", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Juxta"], ["race", "Elf"], ["character_class", "Fighter"], ["alignment", "Neutral Evil"], ["strength", 14], ["dexterity", 10], ["constitution", 9], ["intelligence", 13], ["wisdom", 9], ["charisma", 14], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 14ms (Views: 4.3ms | ActiveRecord: 3.6ms | Allocations: 3152)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:35:44 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Gherak", "race"=>"Tiefling", "character_class"=>"Druid", "alignment"=>"Neutral Evil", "strength"=>"11", "dexterity"=>"15", "constitution"=>"15", "intelligence"=>"13", "wisdom"=>"15", "charisma"=>"11", "user_id"=>3, "application"=>{"name"=>"Gherak", "race"=>"Tiefling", "character_class"=>"Druid", "alignment"=>"Neutral Evil", "strength"=>"11", "dexterity"=>"15", "constitution"=>"15", "intelligence"=>"13", "wisdom"=>"15", "charisma"=>"11", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gherak"], ["race", "Tiefling"], ["character_class", "Druid"], ["alignment", "Neutral Evil"], ["strength", 11], ["dexterity", 15], ["constitution", 15], ["intelligence", 13], ["wisdom", 15], ["charisma", 11], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (1.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 12ms (Views: 3.0ms | ActiveRecord: 3.8ms | Allocations: 3274)
+
+
+Started DELETE "/characters/42" for 127.0.0.1 at 2022-02-13 21:35:46 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>42, "id"=>"42", "application"=>{"_json"=>42}}
+  [1m[36mCharacter Load (0.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.5ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 42]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 11ms (Views: 2.0ms | ActiveRecord: 4.2ms | Allocations: 3131)
+
+
+Started DELETE "/characters/45" for 127.0.0.1 at 2022-02-13 21:35:47 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>45, "id"=>"45", "application"=>{"_json"=>45}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.8ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 45]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 18ms (Views: 3.4ms | ActiveRecord: 5.6ms | Allocations: 3009)
+
+
+Started DELETE "/characters/46" for 127.0.0.1 at 2022-02-13 21:35:47 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>46, "id"=>"46", "application"=>{"_json"=>46}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.8ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 46]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 21ms (Views: 3.3ms | ActiveRecord: 9.7ms | Allocations: 2887)
+
+
+Started DELETE "/characters/48" for 127.0.0.1 at 2022-02-13 21:35:49 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>48, "id"=>"48", "application"=>{"_json"=>48}}
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (2.2ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 48]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 22ms (Views: 2.9ms | ActiveRecord: 9.3ms | Allocations: 2764)
+
+
+Started DELETE "/characters/47" for 127.0.0.1 at 2022-02-13 21:35:50 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>47, "id"=>"47", "application"=>{"_json"=>47}}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (1.3ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 47]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 16ms (Views: 2.8ms | ActiveRecord: 4.8ms | Allocations: 2643)
+
+
+Started DELETE "/characters/43" for 127.0.0.1 at 2022-02-13 21:35:50 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>43, "id"=>"43", "application"=>{"_json"=>43}}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.7ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 43]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 14ms (Views: 1.5ms | ActiveRecord: 6.3ms | Allocations: 2520)
+
+
+Started DELETE "/characters/44" for 127.0.0.1 at 2022-02-13 21:35:51 -0600
+Processing by CharactersController#destroy as */*
+  Parameters: {"_json"=>44, "id"=>"44", "application"=>{"_json"=>44}}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:46:in `set_character'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Destroy (0.8ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."id" = ?[0m  [["id", 44]]
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:38:in `destroy'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:40:in `destroy'
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 3.9ms | Allocations: 2398)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:40:43 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 320ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 1201)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:42:35 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 314ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 1201)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:43:15 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 311ms (Views: 2.0ms | ActiveRecord: 0.7ms | Allocations: 1201)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:44:15 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 328ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 1201)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:46:43 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 321ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 1201)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:46:49 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Urtench", "race"=>"Human", "character_class"=>"Sorceror", "alignment"=>"Chaotic Good", "strength"=>"11", "dexterity"=>"12", "constitution"=>"13", "intelligence"=>"8", "wisdom"=>"14", "charisma"=>"16", "user_id"=>3, "application"=>{"name"=>"Urtench", "race"=>"Human", "character_class"=>"Sorceror", "alignment"=>"Chaotic Good", "strength"=>"11", "dexterity"=>"12", "constitution"=>"13", "intelligence"=>"8", "wisdom"=>"14", "charisma"=>"16", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.0ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Urtench"], ["race", "Human"], ["character_class", "Sorceror"], ["alignment", "Chaotic Good"], ["strength", 11], ["dexterity", 12], ["constitution", 13], ["intelligence", 8], ["wisdom", 14], ["charisma", 16], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 15ms (Views: 1.5ms | ActiveRecord: 6.1ms | Allocations: 2541)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:46:59 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"", "race"=>"", "character_class"=>"", "alignment"=>"", "strength"=>"", "dexterity"=>"", "constitution"=>"", "intelligence"=>"", "wisdom"=>"", "charisma"=>"", "user_id"=>3, "application"=>{"name"=>"", "race"=>"", "character_class"=>"", "alignment"=>"", "strength"=>"", "dexterity"=>"", "constitution"=>"", "intelligence"=>"", "wisdom"=>"", "charisma"=>"", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+Completed 422 Unprocessable Entity in 28ms (Views: 26.6ms | ActiveRecord: 0.0ms | Allocations: 5163)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:47:18 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 316ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1323)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:48:02 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 307ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1321)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:48:03 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"\n            \n          ", "race"=>"\n            \n          ", "character_class"=>"\n            \n          ", "alignment"=>"\n            \n          ", "strength"=>"\n            \n          ", "dexterity"=>"\n            \n          ", "constitution"=>"\n            \n          ", "intelligence"=>"\n            \n          ", "wisdom"=>"\n            \n          ", "charisma"=>"\n            \n          ", "user_id"=>3, "application"=>{"name"=>"\n            \n          ", "race"=>"\n            \n          ", "character_class"=>"\n            \n          ", "alignment"=>"\n            \n          ", "strength"=>"\n            \n          ", "dexterity"=>"\n            \n          ", "constitution"=>"\n            \n          ", "intelligence"=>"\n            \n          ", "wisdom"=>"\n            \n          ", "charisma"=>"\n            \n          ", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 3441)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:48:36 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 325ms (Views: 1.6ms | ActiveRecord: 0.6ms | Allocations: 1323)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:48:40 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Esnol", "race"=>"Dwarf", "character_class"=>"Barbarian", "alignment"=>"Neutral Evil", "strength"=>"15", "dexterity"=>"16", "constitution"=>"8", "intelligence"=>"11", "wisdom"=>"14", "charisma"=>"11", "user_id"=>3, "application"=>{"name"=>"Esnol", "race"=>"Dwarf", "character_class"=>"Barbarian", "alignment"=>"Neutral Evil", "strength"=>"15", "dexterity"=>"16", "constitution"=>"8", "intelligence"=>"11", "wisdom"=>"14", "charisma"=>"11", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Esnol"], ["race", "Dwarf"], ["character_class", "Barbarian"], ["alignment", "Neutral Evil"], ["strength", 15], ["dexterity", 16], ["constitution", 8], ["intelligence", 11], ["wisdom", 14], ["charisma", 11], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 12ms (Views: 1.7ms | ActiveRecord: 4.5ms | Allocations: 2663)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:48:46 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"", "race"=>"", "character_class"=>"", "alignment"=>"", "strength"=>"", "dexterity"=>"", "constitution"=>"", "intelligence"=>"", "wisdom"=>"", "charisma"=>"", "user_id"=>3, "application"=>{"name"=>"", "race"=>"", "character_class"=>"", "alignment"=>"", "strength"=>"", "dexterity"=>"", "constitution"=>"", "intelligence"=>"", "wisdom"=>"", "charisma"=>"", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+Completed 422 Unprocessable Entity in 10ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3436)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:52:56 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 311ms (Views: 1.7ms | ActiveRecord: 0.9ms | Allocations: 1443)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:53:21 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 314ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1441)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:53:24 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Kusakira", "race"=>"Dwarf", "character_class"=>"Warlock", "alignment"=>"Chaotic Good", "strength"=>"12", "dexterity"=>"14", "constitution"=>"12", "intelligence"=>"12", "wisdom"=>"15", "charisma"=>"10", "user_id"=>3, "application"=>{"name"=>"Kusakira", "race"=>"Dwarf", "character_class"=>"Warlock", "alignment"=>"Chaotic Good", "strength"=>"12", "dexterity"=>"14", "constitution"=>"12", "intelligence"=>"12", "wisdom"=>"15", "charisma"=>"10", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.2ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kusakira"], ["race", "Dwarf"], ["character_class", "Warlock"], ["alignment", "Chaotic Good"], ["strength", 12], ["dexterity", 14], ["constitution", 12], ["intelligence", 12], ["wisdom", 15], ["charisma", 10], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (1.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 14ms (Views: 2.7ms | ActiveRecord: 3.8ms | Allocations: 2785)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:53:32 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"", "race"=>"", "character_class"=>"", "alignment"=>"", "strength"=>"", "dexterity"=>"", "constitution"=>"", "intelligence"=>"", "wisdom"=>"", "charisma"=>"", "user_id"=>3, "application"=>{"name"=>"", "race"=>"", "character_class"=>"", "alignment"=>"", "strength"=>"", "dexterity"=>"", "constitution"=>"", "intelligence"=>"", "wisdom"=>"", "charisma"=>"", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 3438)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-13 21:53:55 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 317ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 1563)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-13 21:53:59 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Basenphal", "race"=>"Elf", "character_class"=>"Cleric", "alignment"=>"True Neutral", "strength"=>"14", "dexterity"=>"11", "constitution"=>"14", "intelligence"=>"16", "wisdom"=>"11", "charisma"=>"16", "user_id"=>3, "application"=>{"name"=>"Basenphal", "race"=>"Elf", "character_class"=>"Cleric", "alignment"=>"True Neutral", "strength"=>"14", "dexterity"=>"11", "constitution"=>"14", "intelligence"=>"16", "wisdom"=>"11", "charisma"=>"16", "user_id"=>3}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (1.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Basenphal"], ["race", "Elf"], ["character_class", "Cleric"], ["alignment", "True Neutral"], ["strength", 14], ["dexterity", 11], ["constitution", 14], ["intelligence", 16], ["wisdom", 11], ["charisma", 16], ["user_id", 3]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.5ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 13ms (Views: 2.9ms | ActiveRecord: 4.2ms | Allocations: 2908)
+
+

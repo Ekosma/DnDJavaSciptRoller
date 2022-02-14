@@ -14,9 +14,7 @@ class CharactersController < ApplicationController
 
   # POST /characters
   def create
-
     @character = Character.new(character_params)
-
     if @character.save
       characters = Character.where("user_id = ?", @character.user_id).alphabetical
       render json: characters, status: :created, location: @characters
@@ -36,8 +34,10 @@ class CharactersController < ApplicationController
 
   # DELETE /characters/1
   def destroy
+    @user_id = @character.user_id
     @character.destroy
-    #render json: {message:'Character Deleted'}
+    characters = Character.where("user_id = ?", @user_id).alphabetical
+    render json: characters, location: @characters
   end
 
   private
