@@ -115,16 +115,13 @@ newForm = () => {
   document.getElementById("randWisRoll").innerHTML =  [];
   document.getElementById("randCharRoll").innerHTML =  [];
   let charsheet = document.getElementById('charsheet')
+  let button = document.getElementsByClassName('button')
+    for (;button.length;) {
+        button[0].remove();
+    }
   //adds all char and save button
   charsheet.innerHTML += "<button id='allChar' class='button' onclick='allChar()'> All Characters </button> <button id='save' class='button' onclick='save()'> Save </button> <button id='ranButt' onclick='randomGenerator()' class='button'> Randomize </button>"
   //remove new form button
-  let newForm = document.getElementById('newForm')
-  newForm.remove()
-  //removes previous and next button if exists
-  let previous = document.getElementById('previous');
-  let next = document.getElementById("next");
-  previous.remove()
-  next.remove()
   //QUESTION is it okay to have uncaught promises if they do not affect anything?
 }
 
