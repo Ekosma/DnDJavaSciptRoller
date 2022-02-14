@@ -21,7 +21,7 @@ class ApplicationController < ActionController::API
       characters = Character.where("user_id = ?", user.id).alphabetical
       render json: {user: user, characters: characters}
     else
-      render json: {errors: "invalid username"}
+      render json: {errors: "Username or Password incorrect, Please try again."}
     end
   end
 

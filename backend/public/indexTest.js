@@ -40,6 +40,9 @@ function addLogIn() {
       username: username,
       password: password,
     }
+    if (username === "" || password === "") {
+      alert("Field(s) can not be left Blank.")
+    } else {
     fetch("http://locaLhost:3000/login", { 
       method: "POST",
       headers: {
@@ -52,6 +55,10 @@ function addLogIn() {
   ).then(data => {
     console.log(data);
     //instantiates user
+    let errors = JSON.stringify(data.errors)
+    if (errors !== undefined) {
+      alert(errors)
+    } else {
     current_user = new userData(data);
     //removes log in page
     let elem = document.getElementById('modal')
@@ -59,7 +66,9 @@ function addLogIn() {
     //adds all characters button
     let allchar = document.getElementById('charsheet')
     allchar.innerHTML += "<button id='allChar' class='button' onclick='allChar()'> All Characters </button> <button id='save' class='button' onclick='save()'> Save </button> <button id=ranButt' onclick='randomGenerator()' class='button'> Randomize </button>"
+    }
     });
+    }
   })
 }
 
@@ -78,27 +87,35 @@ function addSignUp() {
       username: username,
       password: password,
     }
-  
-    fetch("http://locaLhost:3000/new", { 
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data), 
-    }).then(
-      (response => response.json()
-    )
-  ).then(data => {
-    console.log(data);
-    //instantiates user
-    current_user = new userData(data);
-    //removes log in page
-    let elem = document.getElementById('modal')
-    elem.remove()
-    //adds all characters button
-    let allchar = document.getElementById('charsheet')
-    allchar.innerHTML += "<button id='allChar' class='button' onclick='allChar()'> All Characters </button> <button id='save' class='button' onclick='save()'> Save </button> <button id=ranButt' onclick='randomGenerator()' class='button'> Randomize </button>"
-    });
+    if (username === "" || password === "") {
+      alert("Field(s) can not be left Blank.")
+    } else {
+      fetch("http://locaLhost:3000/new", { 
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data), 
+      }).then(
+        (response => response.json()
+      )
+    ).then(data => {
+      console.log(data);
+      let errors = JSON.stringify(data.data)
+      if (errors !== undefined) {
+        alert(errors)
+      } else {
+      //instantiates user
+      current_user = new userData(data);
+      //removes log in page
+      let elem = document.getElementById('modal')
+      elem.remove()
+      //adds all characters button
+      let allchar = document.getElementById('charsheet')
+      allchar.innerHTML += "<button id='allChar' class='button' onclick='allChar()'> All Characters </button> <button id='save' class='button' onclick='save()'> Save </button> <button id=ranButt' onclick='randomGenerator()' class='button'> Randomize </button>"
+      } 
+      });
+    }
   })
 }
 
