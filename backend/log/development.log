@@ -12285,3 +12285,23 @@ Processing by ApplicationController#login as */*
 Completed 200 OK in 322ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 1964)
 
 
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2022-02-13 22:38:02 -0600
+Started GET "/favicon.svg" for 127.0.0.1 at 2022-02-13 22:38:02 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.svg"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-02-15 09:17:23 -0600
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (1.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 396ms (Views: 20.1ms | ActiveRecord: 5.3ms | Allocations: 14868)
+
+

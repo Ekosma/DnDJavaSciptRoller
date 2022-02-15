@@ -26,9 +26,14 @@ class userData{
 }
 
 function addLogIn() {
+  //checks if came from signup page to remove
+  if (document.getElementById('signUpForm')) {
+    document.getElementById('signUpForm').remove()
+  }
+  
   //adds login form
   let elem = document.getElementById("userForm")
-  elem.innerHTML += "<div id='signTitle'> <b>Welcome to DnD Character Generator</b> </div> <div id='signIn'> <form id='login-form'> <input type='text' name='username' id='username-field' class='login-form-field' placeholder='Username'> <input type='password' name='password' id='password-field' class='login-form-field' placeholder='Password'> <input type='submit' class='button' value='Log In' id='login-form-submit'> </form> </div> <div id='signUp' onclick='addSignUp()'> Don't have an account? <button class='button'> Sign Up </button>"
+  elem.innerHTML += "<div id='startPage'><div id='signTitle'> <b>Welcome to DnD Character Generator</b> </div> <div id='signIn'> <form id='login-form'> <input type='text' name='username' id='username-field' class='login-form-field' placeholder='Username'> <input type='password' name='password' id='password-field' class='login-form-field' placeholder='Password'> <input type='submit' class='button' value='Log In' id='login-form-submit'> </form> </div> <div id='signUp' onclick='addSignUp()'> Don't have an account? <button class='button'> Sign Up </button></div>"
   //creates eventListener for log in button
   const logInButton = document.getElementById("login-form-submit");
   logInButton.addEventListener("click", (e) => {
@@ -36,10 +41,12 @@ function addLogIn() {
     const loginForm = document.getElementById("login-form");    
     const username = loginForm.username.value;
     const password = loginForm.password.value;
+    //creates data to send to backend
     const data = {
       username: username,
       password: password,
     }
+    //if either field blank, stops process
     if (username === "" || password === "") {
       alert("Field(s) can not be left Blank.")
     } else {
@@ -73,20 +80,22 @@ function addLogIn() {
 }
 
 function addSignUp() {
-  let elem = document.getElementById("userForm")
+  let elem = document.getElementById("startPage")
   let modal = document.getElementById('modal')
   elem.remove()
-  modal.innerHTML += "<div id='signUpForm' > <form id='sign-up-form'> <input type='text' name='username' id='username-field' class='login-form-field' placeholder='Username'> <input type='password' name='password' id='password-field' class='login-form-field' placeholder='Password'> <input type='submit' class='button' value='Sign Up' id='signup-form-submit'> </form> </div>"
+  modal.innerHTML += " <div id='signUpForm' >  <b>Sign up for DnD Character Generator Here </b> <form id='sign-up-form'> <input type='text' name='username' id='username-field' class='login-form-field' placeholder='Username'> <input type='password' name='password' id='password-field' class='login-form-field' placeholder='Password'> <input type='submit' class='button' value='Sign Up' id='signup-form-submit'> </form> Already have an  account? <button id='login' onclick='addLogIn()' class='button'> log in</button></div>>"
   const signUpButton = document.getElementById("signup-form-submit");
   signUpButton.addEventListener("click", (e) => {
     e.preventDefault();
     const loginForm = document.getElementById("sign-up-form");    
     const username = loginForm.username.value;
     const password = loginForm.password.value;
+    //creates object to pass to backend
     const data = {
       username: username,
       password: password,
     }
+    //checks if fields are blank
     if (username === "" || password === "") {
       alert("Field(s) can not be left Blank.")
     } else {
@@ -102,6 +111,7 @@ function addSignUp() {
     ).then(data => {
       console.log(data);
       let errors = JSON.stringify(data.data)
+      //states why user can not be added
       if (errors !== undefined) {
         alert(errors)
       } else {
@@ -132,6 +142,7 @@ newForm = () => {
   document.getElementById("randWisRoll").innerHTML =  [];
   document.getElementById("randCharRoll").innerHTML =  [];
   let charsheet = document.getElementById('charsheet')
+  //removes all buttons
   let button = document.getElementsByClassName('button')
     for (;button.length;) {
         button[0].remove();
