@@ -1,24 +1,15 @@
-# README
+Dnd Character Generator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a DnD Character Generator, a JavaScript application with a Rails API, which allows you to randomize and generate pre-made characters for all kinds of adventures.
 
-Things you may want to cover:
+Installation
+In order to run the application, make sure you have installed all of the necessary gems by running the following:
 
-* Ruby version
+$ bundle install
 
-* System dependencies
+Usage
+In order to start the server for the application, enter the following line in your terminal when you are in the DnDJavaScriptRoller/backend file:
 
-* Configuration
+rails s
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Next, go to local host in your browser and create some characters!
