@@ -12305,3 +12305,55 @@ Processing by ApplicationController#login as */*
 Completed 200 OK in 396ms (Views: 20.1ms | ActiveRecord: 5.3ms | Allocations: 14868)
 
 
+Started POST "/login" for 127.0.0.1 at 2022-02-15 09:32:11 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"jack", "password"=>"[FILTERED]", "application"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 3) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 332ms (Views: 13.5ms | ActiveRecord: 3.0ms | Allocations: 14896)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-15 09:32:59 -0600
+Processing by ApplicationController#login as */*
+  Parameters: {"username"=>"ben", "password"=>"[FILTERED]", "application"=>{"username"=>"ben", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ben"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `login'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 21) ORDER BY name[0m
+  ↳ app/controllers/application_controller.rb:22:in `login'
+Completed 200 OK in 304ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 1221)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-15 09:33:03 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Nese", "race"=>"Tiefling", "character_class"=>"Monk", "alignment"=>"Unaligned", "strength"=>"12", "dexterity"=>"12", "constitution"=>"14", "intelligence"=>"11", "wisdom"=>"17", "charisma"=>"14", "user_id"=>21, "application"=>{"name"=>"Nese", "race"=>"Tiefling", "character_class"=>"Monk", "alignment"=>"Unaligned", "strength"=>"12", "dexterity"=>"12", "constitution"=>"14", "intelligence"=>"11", "wisdom"=>"17", "charisma"=>"14", "user_id"=>21}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.9ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Nese"], ["race", "Tiefling"], ["character_class", "Monk"], ["alignment", "Unaligned"], ["strength", 12], ["dexterity", 12], ["constitution", 14], ["intelligence", 11], ["wisdom", 17], ["charisma", 14], ["user_id", 21]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 21) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 12ms (Views: 1.8ms | ActiveRecord: 3.4ms | Allocations: 2821)
+
+
+Started POST "/characters" for 127.0.0.1 at 2022-02-15 09:33:12 -0600
+Processing by CharactersController#create as */*
+  Parameters: {"name"=>"Yun", "race"=>"Human", "character_class"=>"Cleric", "alignment"=>"Unaligned", "strength"=>"12", "dexterity"=>"14", "constitution"=>"14", "intelligence"=>"13", "wisdom"=>"12", "charisma"=>"12", "user_id"=>21, "application"=>{"name"=>"Yun", "race"=>"Human", "character_class"=>"Cleric", "alignment"=>"Unaligned", "strength"=>"12", "dexterity"=>"14", "constitution"=>"14", "intelligence"=>"13", "wisdom"=>"12", "charisma"=>"12", "user_id"=>21}}
+[31mUnpermitted parameter: :application[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Create (0.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "race", "character_class", "alignment", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Yun"], ["race", "Human"], ["character_class", "Cleric"], ["alignment", "Unaligned"], ["strength", 12], ["dexterity", 14], ["constitution", 14], ["intelligence", 13], ["wisdom", 12], ["charisma", 12], ["user_id", 21]]
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:18:in `create'
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE (user_id = 21) ORDER BY name[0m
+  ↳ app/controllers/characters_controller.rb:20:in `create'
+Completed 201 Created in 15ms (Views: 2.3ms | ActiveRecord: 5.0ms | Allocations: 2666)
+
+
