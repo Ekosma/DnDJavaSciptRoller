@@ -83,7 +83,7 @@ function addSignUp() {
   let elem = document.getElementById("startPage")
   let modal = document.getElementById('modal')
   elem.remove()
-  modal.innerHTML += " <div id='signUpForm' >  <b>Sign up for DnD Character Generator Here </b> <form id='sign-up-form'> <input type='text' name='username' id='username-field' class='login-form-field' placeholder='Username'> <input type='password' name='password' id='password-field' class='login-form-field' placeholder='Password'> <input type='submit' class='button' value='Sign Up' id='signup-form-submit'> </form> Already have an  account? <button id='login' onclick='addLogIn()' class='button'> log in</button></div>>"
+  modal.innerHTML += " <div id='signUpForm' >  <b>Sign up for DnD Character Generator Here </b> <form id='sign-up-form'> <input type='text' name='username' id='username-field' class='login-form-field' placeholder='Username'> <input type='password' name='password' id='password-field' class='login-form-field' placeholder='Password'> <input type='submit' class='button' value='Sign Up' id='signup-form-submit'> </form> Already have an  account? <button id='login' onclick='addLogIn()' class='button'> Log In</button></div>>"
   const signUpButton = document.getElementById("signup-form-submit");
   signUpButton.addEventListener("click", (e) => {
     e.preventDefault();
